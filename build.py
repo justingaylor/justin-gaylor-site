@@ -33,7 +33,7 @@ SITE_TITLE    = "Justin Gaylor"
 SITE_TAGLINE  = "Scribe · Artificer · Wanderer"
 BASE_URL      = "https://gaylor.quest"
 
-AUTHOR_EMAIL  = "justin.d.gaylor@proton.me"
+AUTHOR_EMAIL  = "justin.gaylor@proton.me"
 GITHUB_URL    = "https://github.com/justingaylor"
 BLUESKY_URL   = "https://bsky.app/profile/justingaylor.bsky.social"
 LINKEDIN_URL  = "https://www.linkedin.com/in/justin-gaylor-a9326b2"
