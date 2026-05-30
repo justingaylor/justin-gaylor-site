@@ -159,6 +159,18 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 }
 .btn:hover::before { opacity: 1; }
 
+/* ── Hero quest line ── */
+.hero-quest {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  color: var(--green-hi);
+  text-shadow: 0 0 22px rgba(0,220,80,0.35);
+  letter-spacing: 0.01em;
+  margin-bottom: 1.75rem;
+  line-height: 1.3;
+}
+
 /* ── Hero ── */
 #hero {
   min-height: 100vh; display: flex; flex-direction: column;
@@ -363,7 +375,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 
 TYPEWRITER_JS = """
 const phrases = [
-  "Teller of tales. Forger of tools.",
+  "Teller of tales. Conjurer of code.",
   "Words by night. Code by day.",
   "Born of the '80s. Shaped by the screen.",
   "Stories for those who stayed up past midnight.",
@@ -580,6 +592,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
   </p>
   <h1 class="hero-name">JUSTIN<br>GAYLOR</h1>
   <p class="hero-subtitle">SCRIBE &nbsp;·&nbsp; ARTIFICER &nbsp;·&nbsp; WANDERER</p>
+  <p class="hero-quest">Each day is a quest.</p>
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
     <a href="#writing" class="btn">TALES &amp; LORE</a>
