@@ -1,0 +1,22 @@
+# Projects are structured data, so they live in a single YAML file.
+# Add a new entry to show a project on the homepage.
+# 'pinned: true' puts it at the top regardless of date.
+
+- name: project-name-here
+  description: What does this do and why did you build it? One or two honest sentences — what problem does it solve and for whom?
+  tags: [Python, "Open Source"]
+  url: https://github.com/yourusername/project
+  date: 2024-06-01
+  pinned: true
+
+- name: another-creation
+  description: Another description. The best ones tell you what it does and hint at the thinking behind it. Even small tools are worth showing.
+  tags: [Rust, CLI]
+  url: https://github.com/yourusername/another
+  date: 2024-01-15
+
+- name: a-third-relic
+  description: Side projects, experiments, libraries. The forge never sleeps.
+  tags: [JS]
+  url: https://github.com/yourusername
+  date: 2023-09-01
