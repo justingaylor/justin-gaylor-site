@@ -31,7 +31,7 @@ import markdown as md_lib
 
 SITE_TITLE    = "Justin Gaylor"
 SITE_TAGLINE  = "Scribe · Artificer · Wanderer"
-BASE_URL      = ""          # Leave empty for relative links. Set to "https://yourdomain.com" for absolute.
+BASE_URL      = "https://gaylor.quest"
 
 AUTHOR_EMAIL  = "justin.d.gaylor@proton.me"
 GITHUB_URL    = "https://github.com/justingaylor"
@@ -718,6 +718,10 @@ def build():
     print(f"  ► {len(stories)} stories")
     print(f"  ► {len(blog)} blog posts")
     print(f"  ► {len(projects)} projects")
+
+    # Custom domain for GitHub Pages
+    (DIST_DIR / "CNAME").write_text("gaylor.quest\n", encoding="utf-8")
+    print(f"  ✓  dist/CNAME")
 
     # Build index
     (DIST_DIR / "index.html").write_text(
