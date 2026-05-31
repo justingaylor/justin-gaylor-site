@@ -258,6 +258,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 .card-tag { font-family: 'VT323', monospace; font-size: 0.8rem; color: var(--text-dim); letter-spacing: 0.2em; margin-bottom: 0.4rem; }
 .card-title { font-family: 'IM Fell English', serif; font-size: 1.3rem; color: var(--green); line-height: 1.2; margin-bottom: 0.7rem; }
 .card-excerpt { font-style: italic; font-size: 0.9rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 1.2rem; }
+.card-readtime { font-family: 'VT323', monospace; font-size: 0.78rem; color: var(--text-dim); letter-spacing: 0.12em; margin-bottom: 1rem; }
 .card-link { font-family: 'VT323', monospace; font-size: 0.9rem; color: var(--text-dim); text-decoration: none; letter-spacing: 0.12em; transition: color 0.2s; }
 .card-link::before { content: '► '; font-size: 0.8em; }
 .card-link:hover { color: var(--green); }
@@ -271,7 +272,9 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 }
 .blog-entry:first-child { border-top: 1px solid var(--border); }
 .blog-entry:hover { background: var(--green-glow); padding-left: 0.6rem; }
+.blog-date-col { display: flex; flex-direction: column; gap: 0.1rem; }
 .blog-date { font-family: 'VT323', monospace; font-size: 0.88rem; color: var(--text-dim); letter-spacing: 0.1em; padding-top: 0.2rem; white-space: nowrap; }
+.blog-readtime { font-family: 'VT323', monospace; font-size: 0.78rem; color: var(--text-dim); letter-spacing: 0.08em; opacity: 0.7; }
 .blog-title { font-family: 'IM Fell English', serif; font-size: 1.05rem; color: var(--text); margin-bottom: 0.3rem; transition: color 0.2s; }
 .blog-entry:hover .blog-title { color: var(--green); }
 .blog-summary { font-style: italic; font-size: 0.88rem; color: var(--text-dim); }
@@ -583,6 +586,17 @@ def render_md(text: str) -> str:
     return md_lib.markdown(text, extensions=["fenced_code", "tables"])
 
 
+def word_stats(body: str) -> tuple[int, str]:
+    """Return (word_count, read_time_str) for a markdown body."""
+    text = re.sub(r'```.*?```', ' ', body, flags=re.DOTALL)
+    text = re.sub(r'`[^`]+`', ' ', text)
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    text = re.sub(r'[#*_~>|]', ' ', text)
+    wc = len(text.split())
+    minutes = max(1, round(wc / 200))
+    return wc, f"{minutes} min read"
+
+
 def slugify(path: Path) -> str:
     """Strip leading YYYY-MM-DD- from filename to get URL slug."""
     name = path.stem
@@ -666,6 +680,7 @@ def load_posts(folder: str) -> list[dict]:
     for p in sorted(content_path.glob("*.md")):
         meta, body = parse_file(p)
         slug = slugify(p)
+        wc, rt = word_stats(body)
         posts.append({
             "slug":    slug,
             "path":    p,
@@ -675,6 +690,8 @@ def load_posts(folder: str) -> list[dict]:
             "type":    meta.get("type", folder.rstrip("s").title()),
             "meta":    meta,
             "body":    body,
+            "wc":      wc,
+            "rt":      rt,
         })
     posts.sort(key=lambda x: x["date"], reverse=True)
     return posts
@@ -716,6 +733,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
           <p class="card-tag">{s['type'].upper()}</p>
           <h3 class="card-title">{s['title']}</h3>
           <p class="card-excerpt">{s['summary']}</p>
+          <p class="card-readtime">{s['wc']:,} words &nbsp;·&nbsp; {s['rt']}</p>
           <a href="stories/{s['slug']}.html" class="card-link">READ THE SCROLL</a>
         </div>""" for s in stories)
     else:
@@ -725,7 +743,10 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
     if blog:
         blog_entries = "\n".join(f"""
         <a href="blog/{b['slug']}.html" class="blog-entry reveal">
-          <span class="blog-date">{fmt_date(b['date'])}</span>
+          <div class="blog-date-col">
+            <span class="blog-date">{fmt_date(b['date'])}</span>
+            <span class="blog-readtime">{b['rt']}</span>
+          </div>
           <div>
             <p class="blog-title">{b['title']}</p>
             <p class="blog-summary">{b['summary']}</p>
@@ -857,7 +878,7 @@ def build_post_page(post: dict, section: str) -> str:
         kicker = f"{post['type'].upper()} · {fmt_date(post['date'])}"
 
     back_label = "BACK TO THE CHRONICLE" if section == "blog" else "BACK TO TALES &amp; LORE"
-    back_href  = f"../#blog" if section == "blog" else f"../index.html#writing"
+    back_href  = f"../index.html#blog" if section == "blog" else f"../index.html#writing"
 
     thoughts = post['meta'].get('thoughts', '')
     thoughts_html = f"""
@@ -871,7 +892,7 @@ def build_post_page(post: dict, section: str) -> str:
   <div class="post-header">
     <p class="post-kicker">{kicker}</p>
     <h1 class="post-title">{post['title']}</h1>
-    <p class="post-meta">SCRIBED BY JUSTIN GAYLOR · {fmt_date_iso(post['date'])}</p>
+    <p class="post-meta">SCRIBED BY JUSTIN GAYLOR · {fmt_date_iso(post['date'])} · {post['wc']:,} WORDS · {post['rt'].upper()}</p>
   </div>
   <hr class="post-divider">{thoughts_html}
   <div class="post-body">
