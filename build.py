@@ -642,8 +642,7 @@ def footer_html() -> str:
     return f"""
 <footer>
   <p class="rune-line">✦ ─────────────────────── ✦</p>
-  <p>JUSTIN GAYLOR &nbsp;·&nbsp; HANDBUILT BY THE SCRIBE &nbsp;·&nbsp;
-  <span id="yr"></span> &nbsp;·&nbsp; NO DARK MAGIC. NO TRACKING SPELLS.</p>
+  <p>JUSTIN GAYLOR &nbsp;·&nbsp; <span id="yr"></span> &nbsp;·&nbsp; NO DARK MAGIC. NO TRACKING SPELLS.</p>
 </footer>"""
 
 
