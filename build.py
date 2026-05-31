@@ -40,13 +40,13 @@ LINKEDIN_URL  = "https://www.linkedin.com/in/justin-gaylor-a9326b2"
 
 # Stat block on the About section — change these to whatever you like
 CHAR_STATS = [
-    ("CLASS",     "SCRIBE"),
-    ("GUILD",     "OPEN SOURCE"),
-    ("ORIGIN",    "DETROIT"),
-    ("ERA",       "BORN 198X"),
-    ("ARMS",      "KEYBOARD"),
-    ("SCHOOL",    "FICTION"),
-    ("ALIGNMENT", "CHAOTIC GOOD"),
+    ("CLASS",      "MAGIC USER"),
+    ("BACKGROUND", "SCRIBE"),
+    ("SCHOOL",     "FICTION"),
+    ("ORIGIN",     "MUNCIE, IN, USA"),
+    ("ERA",        "BORN 1982"),
+    ("ALIGNMENT",  "CHAOTIC GOOD"),
+    ("EQUIPMENT",  "KEYBOARD"),
 ]
 
 CONTENT_DIR = Path("content")
@@ -223,7 +223,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
   padding: 1.25rem 1rem; position: relative;
 }
 .char-sheet::before {
-  content: '✦ DOSSIER ✦'; font-family: 'VT323', monospace;
+  content: '✦ CHARACTER ✦'; font-family: 'VT323', monospace;
   font-size: 0.8rem; color: var(--green-dim); letter-spacing: 0.2em;
   display: block; text-align: center; margin-bottom: 1rem;
   padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
@@ -442,7 +442,7 @@ def nav_html(root_prefix="") -> str:
 <nav>
   <a class="nav-logo" href="{root_prefix}index.html"><span>✦</span>JUSTIN GAYLOR</a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="{root_prefix}index.html#about">DOSSIER</a></li>
+    <li><a href="{root_prefix}index.html#about">GREETINGS</a></li>
     <li><a href="{root_prefix}index.html#writing">TALES</a></li>
     <li><a href="{root_prefix}index.html#blog">CHRONICLE</a></li>
     <li><a href="{root_prefix}index.html#projects">CRAFTS</a></li>
@@ -596,7 +596,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
     <a href="#writing" class="btn">TALES &amp; LORE</a>
-    <a href="#projects" class="btn">THE FORGE</a>
+    <a href="#projects" class="btn">THE WORKSHOP</a>
     <a href="#contact" class="btn">SEND RAVEN</a>
   </div>
   <p class="hero-after">✦ ─────────────────────────────── ✦</p>
@@ -606,7 +606,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 
 <div class="section-wrap" id="about">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>THE DOSSIER</h2>
+    <h2 class="section-label"><span class="glyph">✦</span>GREETINGS</h2>
     <p class="section-sub">WHO WALKS THESE PAGES</p>
   </div>
   <div class="about-layout">
@@ -639,7 +639,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 
 <div class="section-wrap" id="projects">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>THE FORGE</h2>
+    <h2 class="section-label"><span class="glyph">✦</span>THE WORKSHOP</h2>
     <p class="section-sub">SOFTWARE · OPEN SOURCE · CREATIONS</p>
   </div>
   <div class="project-list">{project_items}</div>
@@ -687,7 +687,7 @@ def build_post_page(post: dict, section: str) -> str:
         kicker = f"{post['type'].upper()} · {fmt_date(post['date'])}"
 
     back_label = "BACK TO THE CHRONICLE" if section == "blog" else "BACK TO TALES &amp; LORE"
-    back_href  = f"../#blog" if section == "blog" else f"../#writing"
+    back_href  = f"../#blog" if section == "blog" else f"../index.html#writing"
 
     body = f"""
 <div class="post-wrap">

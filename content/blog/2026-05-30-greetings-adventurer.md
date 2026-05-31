@@ -8,8 +8,7 @@ Welcome to the site. It's plain HTML, a build script, and a folder full of Markd
 No database. No CMS. No JavaScript framework. Just text files and a terminal.
 
 That feels right for what I want to do here. I've been writing fiction on and off for years
-and keeping a private blog that I never published. This is me finally deciding that
-*done is better than perfect* and shipping the thing.
+and keeping my writings mostly private or shared selectively under a pseudonym. This is me finally deciding that _done is better than perfect_ and shipping the thing.
 
 ## What to expect
 
