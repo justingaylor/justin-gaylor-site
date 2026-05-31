@@ -320,6 +320,17 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 .post-body pre { background: var(--bg-panel); border: 1px solid var(--border); padding: 1.25rem; margin: 1.5rem 0; overflow-x: auto; }
 .post-body pre code { background: none; border: none; padding: 0; font-size: 0.92rem; }
 .post-body blockquote { border-left: 3px solid var(--green-dim); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-dim); font-style: italic; }
+.post-thoughts {
+  border-left: 3px solid var(--green-dim); background: var(--bg-panel2);
+  padding: 1.1rem 1.4rem; margin: 2rem 0 2.5rem;
+}
+.post-thoughts-label {
+  font-family: 'VT323', monospace; font-size: 0.78rem; color: var(--green-dim);
+  letter-spacing: 0.22em; margin-bottom: 0.6rem;
+}
+.post-thoughts p {
+  font-style: italic; font-size: 0.95rem; color: var(--text-dim); line-height: 1.75; margin: 0;
+}
 .post-footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 .back-link { font-family: 'VT323', monospace; font-size: 1rem; color: var(--text-dim); text-decoration: none; letter-spacing: 0.12em; transition: color 0.2s; }
 .back-link::before { content: '◄ '; }
@@ -349,12 +360,157 @@ footer .rune-line { margin-bottom: 0.5rem; color: var(--border-mid); }
   .tags { justify-content: flex-start; }
   .post-wrap { padding: 5.5rem 1.5rem 3rem; }
 }
+
+/* ── Theme: Amber phosphor ── */
+html.theme-amber {
+  --bg: #0e0900; --bg-solid: #0e0900;
+  --bg-panel: #160c00; --bg-panel2: #1c1100;
+  --green: #ffb000; --green-hi: #ffd060;
+  --green-dim: #8a5a00; --green-faint: #1c0f00;
+  --green-glow: rgba(200,130,0,0.08);
+  --text: #cc8800; --text-dim: #8a6000;
+  --border: #2e1800; --border-mid: #5c3200;
+}
+/* Typewriter font stack replaces VT323 + IM Fell */
+html.theme-amber body { font-family: 'Courier Prime', 'Courier New', monospace; }
+html.theme-amber .nav-logo,
+html.theme-amber .nav-links a,
+html.theme-amber .section-label,
+html.theme-amber .section-sub,
+html.theme-amber .hero-sys,
+html.theme-amber .hero-subtitle,
+html.theme-amber .hero-after,
+html.theme-amber .btn,
+html.theme-amber .hero-quest,
+html.theme-amber .card-tag,
+html.theme-amber .card-title,
+html.theme-amber .card-link,
+html.theme-amber .blog-date,
+html.theme-amber .stat-name,
+html.theme-amber .stat-val,
+html.theme-amber .project-name,
+html.theme-amber .project-link,
+html.theme-amber .back-link,
+html.theme-amber .post-kicker,
+html.theme-amber .post-meta,
+html.theme-amber .post-thoughts-label,
+html.theme-amber .contact-label,
+html.theme-amber .contact-icon,
+html.theme-amber footer { font-family: 'Courier Prime', 'Courier New', monospace; }
+html.theme-amber .hero-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 700; letter-spacing: 0.04em; line-height: 0.95;
+}
+html.theme-amber .hero-quest { font-style: italic; letter-spacing: 0.02em; }
+html.theme-amber .section-label { font-size: 2rem; letter-spacing: 0.04em; }
+/* No phosphor glow — typewriters don't shine */
+html.theme-amber .hero-name,
+html.theme-amber .section-label,
+html.theme-amber .nav-logo,
+html.theme-amber .post-title { text-shadow: none; }
+html.theme-amber .post-title { font-family: 'Courier Prime', monospace; font-size: clamp(1.8rem, 5vw, 2.8rem); }
+/* No scan lines — paper feel */
+html.theme-amber body::before { background: none; }
+html.theme-amber body::after { background: radial-gradient(ellipse at 50% 38%, transparent 65%, rgba(0,0,0,0.45) 100%); }
+/* Heavier borders, solid print feel */
+html.theme-amber .char-sheet,
+html.theme-amber .writing-card,
+html.theme-amber .project-item,
+html.theme-amber .contact-link { border-width: 2px; }
+html.theme-amber .writing-card::before { display: none; }
+html.theme-amber .btn { letter-spacing: 0.06em; }
+html.theme-amber .char-sheet::before { font-family: 'Courier Prime', monospace; letter-spacing: 0.1em; }
+html.theme-amber .stat-name { font-family: 'Courier Prime', monospace; font-size: 0.68rem; letter-spacing: 0.03em; }
+html.theme-amber .stat-val  { font-family: 'Courier Prime', monospace; font-size: 0.8rem; }
+
+/* ── Theme: Cyan grimdark ── */
+html.theme-cyan {
+  --bg: #060f14; --bg-solid: #060f14;
+  --bg-panel: #0a1a20; --bg-panel2: #0d2028;
+  --green: #2dd4d4; --green-hi: #4affff;
+  --green-dim: #1a6b7a; --green-faint: #0a1f25;
+  --green-glow: rgba(45,212,212,0.08);
+  --text: #4da8b8; --text-dim: #2d7a8a;
+  --border: #0f3a47; --border-mid: #1a5a6a;
+}
+/* Orbitron for display, Share Tech Mono for everything else */
+html.theme-cyan body { font-family: 'Share Tech Mono', monospace; line-height: 1.65; }
+html.theme-cyan .hero-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.2rem, 6.5vw, 5.2rem);
+  font-weight: 700; letter-spacing: 0.1em; line-height: 1.05;
+}
+html.theme-cyan .section-label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem; letter-spacing: 0.14em; font-weight: 700;
+}
+html.theme-cyan .nav-logo { font-family: 'Orbitron', sans-serif; font-size: 0.9rem; letter-spacing: 0.18em; }
+html.theme-cyan .card-title { font-family: 'Orbitron', sans-serif; font-size: 1rem; letter-spacing: 0.06em; }
+html.theme-cyan .post-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.5rem, 4vw, 2.4rem); letter-spacing: 0.08em; }
+html.theme-cyan .nav-links a,
+html.theme-cyan .hero-sys,
+html.theme-cyan .hero-subtitle,
+html.theme-cyan .hero-after,
+html.theme-cyan .btn,
+html.theme-cyan .section-sub,
+html.theme-cyan .card-tag,
+html.theme-cyan .card-link,
+html.theme-cyan .blog-date,
+html.theme-cyan .stat-name,
+html.theme-cyan .stat-val,
+html.theme-cyan .project-name,
+html.theme-cyan .project-link,
+html.theme-cyan .back-link,
+html.theme-cyan .post-kicker,
+html.theme-cyan .post-meta,
+html.theme-cyan .post-thoughts-label,
+html.theme-cyan .contact-label,
+html.theme-cyan .contact-icon,
+html.theme-cyan footer { font-family: 'Share Tech Mono', monospace; }
+html.theme-cyan .hero-quest { font-family: 'Share Tech Mono', monospace; font-style: normal; letter-spacing: 0.08em; }
+html.theme-cyan .hero-subtitle { letter-spacing: 0.3em; }
+html.theme-cyan .btn { letter-spacing: 0.18em; }
+/* Tinted blue scan lines instead of dark */
+html.theme-cyan body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(0,50,80,0.18) 0px, rgba(0,50,80,0.18) 1px,
+    transparent 1px, transparent 3px
+  );
+}
+/* Sharper vignette for grimdark feel */
+html.theme-cyan body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 40%, rgba(0,0,0,0.88) 100%);
+}
+/* Tighter border styling — angular, clinical */
+html.theme-cyan .writing-card,
+html.theme-cyan .project-item,
+html.theme-cyan .char-sheet,
+html.theme-cyan .contact-link { border-style: solid; }
+html.theme-cyan .char-sheet::before { font-family: 'Share Tech Mono', monospace; }
+html.theme-cyan .post-thoughts-label { font-family: 'Share Tech Mono', monospace; }
+html.theme-cyan .stat-name { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; letter-spacing: 0.03em; }
+html.theme-cyan .stat-val  { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }
+
+/* ── Theme picker ── */
+.theme-picker { display: flex; gap: 0.5rem; align-items: center; margin-left: 1rem; }
+.theme-dot {
+  width: 10px; height: 10px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.12); padding: 0;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.theme-dot:hover { transform: scale(1.4); }
+.theme-dot.active { transform: scale(1.3); outline: 1px solid rgba(255,255,255,0.4); outline-offset: 2px; }
+.theme-dot[data-theme="theme-green"] { background: #00e060; }
+.theme-dot[data-theme="theme-amber"] { background: #ffb000; }
+.theme-dot[data-theme="theme-cyan"]  { background: #2dd4d4; }
 """
 
 SHARED_HEAD = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('site-theme');if(t&&t!=='theme-green')document.documentElement.classList.add(t);})();</script>
 """
 
 NAV_JS = """
@@ -371,6 +527,15 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.06 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 document.getElementById('yr').textContent = new Date().getFullYear();
+const THEMES = ['theme-green', 'theme-amber', 'theme-cyan'];
+function applyTheme(t) {
+  document.documentElement.classList.remove(...THEMES);
+  if (t !== 'theme-green') document.documentElement.classList.add(t);
+  document.querySelectorAll('.theme-dot').forEach(d => d.classList.toggle('active', d.dataset.theme === t));
+  localStorage.setItem('site-theme', t);
+}
+applyTheme(localStorage.getItem('site-theme') || 'theme-green');
+document.querySelectorAll('.theme-dot').forEach(d => d.addEventListener('click', () => applyTheme(d.dataset.theme)));
 """
 
 TYPEWRITER_JS = """
@@ -448,6 +613,11 @@ def nav_html(root_prefix="") -> str:
     <li><a href="{root_prefix}index.html#projects">CRAFTS</a></li>
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
   </ul>
+  <div class="theme-picker" aria-label="Theme">
+    <button class="theme-dot" data-theme="theme-green" title="Green phosphor"></button>
+    <button class="theme-dot" data-theme="theme-amber" title="Amber phosphor"></button>
+    <button class="theme-dot" data-theme="theme-cyan"  title="Cyan grimdark"></button>
+  </div>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -689,6 +859,13 @@ def build_post_page(post: dict, section: str) -> str:
     back_label = "BACK TO THE CHRONICLE" if section == "blog" else "BACK TO TALES &amp; LORE"
     back_href  = f"../#blog" if section == "blog" else f"../index.html#writing"
 
+    thoughts = post['meta'].get('thoughts', '')
+    thoughts_html = f"""
+  <aside class="post-thoughts">
+    <p class="post-thoughts-label">✦ SCRIBE'S NOTE</p>
+    <p>{thoughts}</p>
+  </aside>""" if thoughts else ''
+
     body = f"""
 <div class="post-wrap">
   <div class="post-header">
@@ -696,7 +873,7 @@ def build_post_page(post: dict, section: str) -> str:
     <h1 class="post-title">{post['title']}</h1>
     <p class="post-meta">SCRIBED BY JUSTIN GAYLOR · {fmt_date_iso(post['date'])}</p>
   </div>
-  <hr class="post-divider">
+  <hr class="post-divider">{thoughts_html}
   <div class="post-body">
     {render_md(post['body'])}
   </div>
