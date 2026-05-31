@@ -1,6 +1,6 @@
 ---
 title: Greetings, Adventurer
-date: 2025-05-01
+date: 2026-05-30
 summary: The site is live. Here's what I'm planning to do with it and why.
 ---
 

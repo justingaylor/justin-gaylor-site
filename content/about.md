@@ -1,5 +1,5 @@
 ---
-updated: 2025-05-30
+updated: 2026-05-30
 ---
 
 Hail, traveller. I'm Justin – writer, builder, and something in between.
