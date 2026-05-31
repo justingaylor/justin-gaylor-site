@@ -2,21 +2,41 @@
 # Add a new entry to show a project on the homepage.
 # 'pinned: true' puts it at the top regardless of date.
 
-- name: project-name-here
-  description: What does this do and why did you build it? One or two honest sentences — what problem does it solve and for whom?
-  tags: [Python, "Open Source"]
-  url: https://github.com/yourusername/project
-  date: 2024-06-01
+- name: GRIMOIRE
+  description: GRIMOIRE (Generic Rule Implementation Model for Omniversal Interactive Roleplaying Engines) provides a declarative YAML-based specification format for encoding game systems — covering models, flows, tables, compendiums, prompts, and sources — and a Python loader that parses and validates those definitions into typed Python objects.
+  tags: ["Tabletop Role-Playing", "Standard", "Open Source"]
+  url: https://github.com/wyrdbound/grimoire
+  date: 2025-09-21
   pinned: true
 
-- name: another-creation
-  description: Another description. The best ones tell you what it does and hint at the thinking behind it. Even small tools are worth showing.
-  tags: [Rust, CLI]
-  url: https://github.com/yourusername/another
-  date: 2024-01-15
+- name: wyrdbound-dice
+  description: A Python library for flexible tabletop RPG dice rolling with support for advanced mechanics and custom expressions.
+  tags: ["Tabletop Role-Playing", "Python", "Open Source"]
+  url: https://github.com/wyrdbound/wydbound-dice
+  date: 2025-07-28
+  pinned: true
 
-- name: a-third-relic
-  description: Side projects, experiments, libraries. The forge never sleeps.
-  tags: [JS]
-  url: https://github.com/yourusername
-  date: 2023-09-01
+- name: wyrdbound-rng
+  description: A Python library for generating random names using syllable recombination and advanced algorithms like Bayesian analysis for realistic results.
+  tags: ["Tabletop Role-Playing", "Python", "Open Source"]
+  url: https://github.com/wyrdbound/wyrdbound-rng
+  date: 2023-07-28
+
+- name: grimoire-context
+  description: Immutable, hierarchical context management for use in GRIMOIRE.
+  tags: ["Tabletop Role-Playing", "Python", "Open Source"]
+  url: https://github.com/wyrdbound/grimoire-context
+  date: 2025-09-12
+
+- name: grimoire-model
+  description: Dict-like model system with schema validation, derived fields, and inheritance designed for integration with the Wyrdbound TTRPG Engine.
+  tags: ["Tabletop Role-Playing", "Python", "Open Source"]
+  url: https://github.com/wyrdbound/grimoire-context
+  date: 2025-09-12
+
+- name: wyrdflow
+  description: Python library designed for ML engineers and AI developers who need to build complex, maintainable agentic AI workflows. Built on top of LangChain, LangGraph, and LangSmith, Wyrdflow provides a class-based node system with built-in validation, retry logic, observability, and production-grade reliability.
+  tags: ["Tabletop Role-Playing", "Python", "Open Source"]
+  url: https://github.com/wyrdbound/wyrdflow
+  date: 2026-04-18
+  pinned: true
