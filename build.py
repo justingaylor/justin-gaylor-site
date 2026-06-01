@@ -41,11 +41,10 @@ LINKEDIN_URL  = "https://www.linkedin.com/in/justin-gaylor-a9326b2"
 # Stat block on the About section — change these to whatever you like
 CHAR_STATS = [
     ("CLASS",      "MAGIC USER"),
-    ("BACKGROUND", "SCRIBE"),
     ("SCHOOL",     "FICTION"),
+    ("BACKGROUND", "SCRIBE"),
     ("ORIGIN",     "MUNCIE, IN, USA"),
     ("ERA",        "BORN 1982"),
-    ("ALIGNMENT",  "CHAOTIC GOOD"),
     ("EQUIPMENT",  "KEYBOARD"),
 ]
 
@@ -1122,7 +1121,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
   </p>
   <h1 class="hero-name">JUSTIN<br>GAYLOR</h1>
   <p class="hero-subtitle">SCRIBE &nbsp;·&nbsp; ARTIFICER &nbsp;·&nbsp; WANDERER</p>
-  <p class="hero-quest">Each day is a quest.</p>
+  <p class="hero-quest">Live each day like a quest.</p>
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
     <a href="#writing" class="btn">TALES &amp; LORE</a>

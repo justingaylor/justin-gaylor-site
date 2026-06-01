@@ -3,7 +3,7 @@
 # 'pinned: true' puts it at the top regardless of date.
 
 - name: GRIMOIRE
-  description: GRIMOIRE (Generic Rule Implementation Model for Omniversal Interactive Roleplaying Engines) provides a declarative YAML-based specification format for encoding game systems — covering models, flows, tables, compendiums, prompts, and sources — and a Python loader that parses and validates those definitions into typed Python objects.
+  description: GRIMOIRE (Generic Rule Implementation Model for Omniversal Interactive Roleplaying Engines) provides a declarative YAML-based specification format for encoding Tabletop RPG system rules.
   tags: ["Tabletop Role-Playing", "Standard", "Open Source"]
   url: https://github.com/wyrdbound/grimoire
   date: 2025-09-21
