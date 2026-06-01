@@ -495,6 +495,338 @@ html.theme-cyan .post-thoughts-label { font-family: 'Share Tech Mono', monospace
 html.theme-cyan .stat-name { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; letter-spacing: 0.03em; }
 html.theme-cyan .stat-val  { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }
 
+/* ── Theme: Medieval parchment ── */
+html.theme-medieval {
+  --bg: #f2e8cb; --bg-solid: #f2e8cb;
+  --bg-panel: #e8dab8; --bg-panel2: #ddd0a2;
+  --green: #2e6b20; --green-hi: #1a4f14;
+  --green-dim: #6a8840; --green-faint: #d4e8c0;
+  --green-glow: rgba(46,107,32,0.07);
+  --text: #1a0c00; --text-dim: #5a3820;
+  --border: #bfa068; --border-mid: #8a6030;
+}
+html.theme-medieval body { font-family: 'IM Fell English', Georgia, serif; }
+html.theme-medieval nav {
+  background: rgba(242,232,203,0.97);
+  border-bottom-color: var(--border);
+}
+html.theme-medieval .nav-hamburger span { background: var(--text-dim); }
+html.theme-medieval .nav-logo,
+html.theme-medieval .nav-links a,
+html.theme-medieval .section-label,
+html.theme-medieval .section-sub,
+html.theme-medieval .hero-sys,
+html.theme-medieval .hero-subtitle,
+html.theme-medieval .hero-after,
+html.theme-medieval .btn,
+html.theme-medieval .card-tag,
+html.theme-medieval .card-link,
+html.theme-medieval .blog-date,
+html.theme-medieval .stat-name,
+html.theme-medieval .stat-val,
+html.theme-medieval .project-name,
+html.theme-medieval .project-link,
+html.theme-medieval .back-link,
+html.theme-medieval .post-kicker,
+html.theme-medieval .post-meta,
+html.theme-medieval .post-thoughts-label,
+html.theme-medieval .contact-label,
+html.theme-medieval .contact-icon,
+html.theme-medieval .post-body h2,
+html.theme-medieval .post-body h3,
+html.theme-medieval footer { font-family: 'Cinzel', Georgia, serif; }
+html.theme-medieval .hero-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: 700; letter-spacing: 0.06em; line-height: 0.92;
+}
+html.theme-medieval .hero-quest { font-style: italic; letter-spacing: 0.01em; }
+html.theme-medieval .section-label { font-size: 1.8rem; letter-spacing: 0.1em; font-weight: 700; }
+html.theme-medieval .card-title { font-family: 'Cinzel', serif; font-size: 1.15rem; letter-spacing: 0.04em; }
+html.theme-medieval .post-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.06em;
+}
+/* Ink on parchment is silent — no glows */
+html.theme-medieval .hero-name,
+html.theme-medieval .section-label,
+html.theme-medieval .nav-logo,
+html.theme-medieval .hero-quest,
+html.theme-medieval .post-title { text-shadow: none; }
+html.theme-medieval .nav-links a:hover { text-shadow: none; }
+html.theme-medieval .btn:hover { box-shadow: none; text-shadow: none; }
+/* Subtle vertical parchment grain */
+html.theme-medieval body::before {
+  background: repeating-linear-gradient(
+    90deg, rgba(100,60,10,0.02) 0px, rgba(100,60,10,0.02) 1px,
+    transparent 1px, transparent 12px
+  );
+}
+/* Brown edge vignette — aged parchment */
+html.theme-medieval body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 55%, rgba(80,40,0,0.28) 100%);
+}
+html.theme-medieval #wrap { animation: none; }
+html.theme-medieval .char-sheet,
+html.theme-medieval .writing-card,
+html.theme-medieval .project-item,
+html.theme-medieval .contact-link { border-width: 2px; }
+html.theme-medieval .theme-dot.active { outline-color: rgba(0,0,0,0.3); }
+html.theme-medieval .btn::before { content: '⚔'; }
+html.theme-medieval .project-name::before { content: '⚜ '; }
+html.theme-medieval .char-sheet::before { content: '⚜ CHARACTER ⚜'; font-family: 'Cinzel', serif; letter-spacing: 0.12em; }
+html.theme-medieval .stat-name { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.08em; }
+html.theme-medieval .stat-val  { font-family: 'Cinzel', serif; font-size: 0.9rem; }
+@media (max-width: 620px) {
+  html.theme-medieval .nav-links { background: rgba(242,232,203,0.99); }
+}
+
+/* ── Theme: Pirate worn parchment ── */
+html.theme-pirate {
+  --bg: #06080e; --bg-solid: #06080e;
+  --bg-panel: #0a1018; --bg-panel2: #0e1620;
+  --green: #4a9880; --green-hi: #65b5a0;
+  --green-dim: #2d6858; --green-faint: #0b1010;
+  --green-glow: rgba(74,152,128,0.12);
+  --text: #9e9878; --text-dim: #4a7a6a;
+  --border: #101a22; --border-mid: #1e3840;
+}
+html.theme-pirate body { font-family: 'IM Fell English', Georgia, serif; }
+html.theme-pirate .nav-logo,
+html.theme-pirate .nav-links a,
+html.theme-pirate .section-label,
+html.theme-pirate .section-sub,
+html.theme-pirate .hero-sys,
+html.theme-pirate .hero-subtitle,
+html.theme-pirate .hero-after,
+html.theme-pirate .btn,
+html.theme-pirate .card-tag,
+html.theme-pirate .card-link,
+html.theme-pirate .blog-date,
+html.theme-pirate .stat-name,
+html.theme-pirate .stat-val,
+html.theme-pirate .project-name,
+html.theme-pirate .project-link,
+html.theme-pirate .back-link,
+html.theme-pirate .post-kicker,
+html.theme-pirate .post-meta,
+html.theme-pirate .post-thoughts-label,
+html.theme-pirate .contact-label,
+html.theme-pirate .contact-icon,
+html.theme-pirate .post-body h2,
+html.theme-pirate .post-body h3,
+html.theme-pirate footer { font-family: 'Pirata One', cursive; }
+/* Hero name stays treasure gold — everything else is sea-worn verdigris */
+html.theme-pirate .hero-name {
+  font-family: 'Pirata One', cursive;
+  font-size: clamp(3.5rem, 11vw, 9rem);
+  font-weight: 400; letter-spacing: 0.03em; line-height: 0.90;
+  color: #9e9878; text-shadow: none;
+}
+html.theme-pirate .hero-quest {
+  font-family: 'IM Fell English', serif; font-style: italic;
+  color: #9e9878; text-shadow: none;
+}
+html.theme-pirate .section-label { font-family: 'Pirata One', cursive; font-size: 2.2rem; letter-spacing: 0.04em; }
+html.theme-pirate .card-title { font-family: 'Pirata One', cursive; font-size: 1.3rem; }
+html.theme-pirate .post-title {
+  font-family: 'Pirata One', cursive;
+  font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: 0.03em;
+}
+/* Sea-green verdigris glows for chrome elements */
+html.theme-pirate .section-label,
+html.theme-pirate .nav-logo { text-shadow: 0 0 14px rgba(74,152,128,0.30); }
+html.theme-pirate .post-title { text-shadow: 0 0 12px rgba(74,152,128,0.22); }
+html.theme-pirate .nav-links a:hover { text-shadow: 0 0 8px rgba(74,152,128,0.5); }
+html.theme-pirate .btn:hover {
+  box-shadow: 0 0 16px rgba(74,152,128,0.18);
+  text-shadow: 0 0 8px rgba(74,152,128,0.5);
+}
+/* Override hardcoded green rgba hover backgrounds from base CSS */
+html.theme-pirate .writing-card:hover { background: rgba(74,152,128,0.03); }
+html.theme-pirate .project-item:hover { background: rgba(74,152,128,0.03); }
+/* Subtle nautical chart crosshatch — old navigation grid */
+html.theme-pirate body::before {
+  background:
+    repeating-linear-gradient(45deg, rgba(20,50,70,0.06) 0px, rgba(20,50,70,0.06) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(-45deg, rgba(20,50,70,0.06) 0px, rgba(20,50,70,0.06) 1px, transparent 1px, transparent 40px);
+}
+/* Heavy vignette — lantern in a dark ship's hold */
+html.theme-pirate body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 40%, rgba(0,0,0,0.88) 100%);
+}
+html.theme-pirate #wrap { animation: none; }
+html.theme-pirate .char-sheet,
+html.theme-pirate .writing-card,
+html.theme-pirate .project-item,
+html.theme-pirate .contact-link { border-width: 2px; }
+html.theme-pirate .btn::before { content: '⚓'; }
+html.theme-pirate .project-name::before { content: '☠ '; }
+html.theme-pirate .char-sheet::before { content: '☠ CHARACTER ☠'; font-family: 'Pirata One', cursive; letter-spacing: 0.1em; }
+html.theme-pirate .stat-name { font-family: 'Pirata One', cursive; font-size: 0.78rem; letter-spacing: 0.04em; }
+html.theme-pirate .stat-val  { font-family: 'Pirata One', cursive; font-size: 1rem; }
+
+/* ── Theme: Typewriter ── */
+html.theme-typewriter {
+  --bg: #faf6ea; --bg-solid: #faf6ea;
+  --bg-panel: #f2ece0; --bg-panel2: #e8e0d0;
+  --green: #1a1208; --green-hi: #0d0a06;
+  --green-dim: #5a4838; --green-faint: #ede5d0;
+  --green-glow: rgba(26,18,8,0.05);
+  --text: #2a1a0a; --text-dim: #6a5040;
+  --border: #d0c0a8; --border-mid: #a88e70;
+}
+html.theme-typewriter body { font-family: 'Special Elite', 'Courier New', monospace; line-height: 1.9; }
+html.theme-typewriter nav {
+  background: rgba(250,246,234,0.97);
+  border-bottom-color: var(--border);
+}
+html.theme-typewriter .nav-hamburger span { background: var(--text-dim); }
+html.theme-typewriter .nav-logo,
+html.theme-typewriter .nav-links a,
+html.theme-typewriter .section-label,
+html.theme-typewriter .section-sub,
+html.theme-typewriter .hero-sys,
+html.theme-typewriter .hero-subtitle,
+html.theme-typewriter .hero-after,
+html.theme-typewriter .btn,
+html.theme-typewriter .card-tag,
+html.theme-typewriter .card-link,
+html.theme-typewriter .blog-date,
+html.theme-typewriter .stat-name,
+html.theme-typewriter .stat-val,
+html.theme-typewriter .project-name,
+html.theme-typewriter .project-link,
+html.theme-typewriter .back-link,
+html.theme-typewriter .post-kicker,
+html.theme-typewriter .post-meta,
+html.theme-typewriter .post-thoughts-label,
+html.theme-typewriter .contact-label,
+html.theme-typewriter .contact-icon,
+html.theme-typewriter .post-body h2,
+html.theme-typewriter .post-body h3,
+html.theme-typewriter footer { font-family: 'Special Elite', 'Courier New', monospace; }
+html.theme-typewriter .hero-name {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 400; letter-spacing: 0.04em; line-height: 0.96;
+}
+html.theme-typewriter .hero-quest { font-family: 'Special Elite', monospace; font-style: normal; letter-spacing: 0.02em; }
+html.theme-typewriter .section-label { font-size: 2rem; letter-spacing: 0.06em; }
+html.theme-typewriter .card-title { font-family: 'Special Elite', monospace; font-size: 1.2rem; letter-spacing: 0.02em; }
+html.theme-typewriter .post-title {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(1.8rem, 5vw, 2.9rem); letter-spacing: 0.04em;
+}
+/* Ink on paper makes no light */
+html.theme-typewriter .hero-name,
+html.theme-typewriter .section-label,
+html.theme-typewriter .nav-logo,
+html.theme-typewriter .hero-quest,
+html.theme-typewriter .post-title { text-shadow: none; }
+html.theme-typewriter .nav-links a:hover { text-shadow: none; }
+html.theme-typewriter .btn:hover { box-shadow: none; text-shadow: none; }
+/* Ruled paper lines — standard typewriter sheet */
+html.theme-typewriter body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(150,120,80,0.07) 0px, rgba(150,120,80,0.07) 1px,
+    transparent 1px, transparent 28px
+  );
+}
+/* Gentle sepia aging at the paper edges */
+html.theme-typewriter body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 58%, rgba(60,30,0,0.18) 100%);
+}
+html.theme-typewriter #wrap { animation: none; }
+html.theme-typewriter .char-sheet,
+html.theme-typewriter .writing-card,
+html.theme-typewriter .project-item,
+html.theme-typewriter .contact-link { border-width: 2px; }
+html.theme-typewriter .theme-dot.active { outline-color: rgba(0,0,0,0.3); }
+html.theme-typewriter .btn::before { content: '↳'; }
+html.theme-typewriter .project-name::before { content: '§ '; }
+html.theme-typewriter .char-sheet::before { content: '-- CHARACTER --'; font-family: 'Special Elite', monospace; letter-spacing: 0.08em; }
+html.theme-typewriter .stat-name { font-family: 'Special Elite', monospace; font-size: 0.7rem; letter-spacing: 0.04em; }
+html.theme-typewriter .stat-val  { font-family: 'Special Elite', monospace; font-size: 0.88rem; }
+@media (max-width: 620px) {
+  html.theme-typewriter .nav-links { background: rgba(250,246,234,0.99); }
+}
+
+/* ── Theme: Typewriter dark ── */
+html.theme-typewriter-dark {
+  --bg: #0e0c0a; --bg-solid: #0e0c0a;
+  --bg-panel: #181410; --bg-panel2: #201c16;
+  --green: #ddd0b0; --green-hi: #f0e8c8;
+  --green-dim: #7a7058; --green-faint: #181410;
+  --green-glow: rgba(220,208,176,0.06);
+  --text: #b8aa88; --text-dim: #7a7058;
+  --border: #282018; --border-mid: #4a4030;
+}
+html.theme-typewriter-dark body { font-family: 'Special Elite', 'Courier New', monospace; line-height: 1.9; }
+html.theme-typewriter-dark .nav-logo,
+html.theme-typewriter-dark .nav-links a,
+html.theme-typewriter-dark .section-label,
+html.theme-typewriter-dark .section-sub,
+html.theme-typewriter-dark .hero-sys,
+html.theme-typewriter-dark .hero-subtitle,
+html.theme-typewriter-dark .hero-after,
+html.theme-typewriter-dark .btn,
+html.theme-typewriter-dark .card-tag,
+html.theme-typewriter-dark .card-link,
+html.theme-typewriter-dark .blog-date,
+html.theme-typewriter-dark .stat-name,
+html.theme-typewriter-dark .stat-val,
+html.theme-typewriter-dark .project-name,
+html.theme-typewriter-dark .project-link,
+html.theme-typewriter-dark .back-link,
+html.theme-typewriter-dark .post-kicker,
+html.theme-typewriter-dark .post-meta,
+html.theme-typewriter-dark .post-thoughts-label,
+html.theme-typewriter-dark .contact-label,
+html.theme-typewriter-dark .contact-icon,
+html.theme-typewriter-dark .post-body h2,
+html.theme-typewriter-dark .post-body h3,
+html.theme-typewriter-dark footer { font-family: 'Special Elite', 'Courier New', monospace; }
+html.theme-typewriter-dark .hero-name {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 400; letter-spacing: 0.04em; line-height: 0.96;
+}
+html.theme-typewriter-dark .hero-quest { font-family: 'Special Elite', monospace; font-style: normal; letter-spacing: 0.02em; }
+html.theme-typewriter-dark .section-label { font-size: 2rem; letter-spacing: 0.06em; }
+html.theme-typewriter-dark .card-title { font-family: 'Special Elite', monospace; font-size: 1.2rem; letter-spacing: 0.02em; }
+html.theme-typewriter-dark .post-title {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(1.8rem, 5vw, 2.9rem); letter-spacing: 0.04em;
+}
+html.theme-typewriter-dark .hero-name,
+html.theme-typewriter-dark .section-label,
+html.theme-typewriter-dark .nav-logo,
+html.theme-typewriter-dark .hero-quest,
+html.theme-typewriter-dark .post-title { text-shadow: none; }
+html.theme-typewriter-dark .nav-links a:hover { text-shadow: none; }
+html.theme-typewriter-dark .btn:hover { box-shadow: none; text-shadow: none; }
+/* Faint ruled lines, barely visible on dark paper */
+html.theme-typewriter-dark body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(200,180,140,0.04) 0px, rgba(200,180,140,0.04) 1px,
+    transparent 1px, transparent 28px
+  );
+}
+html.theme-typewriter-dark body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 55%, rgba(0,0,0,0.75) 100%);
+}
+html.theme-typewriter-dark #wrap { animation: none; }
+html.theme-typewriter-dark .char-sheet,
+html.theme-typewriter-dark .writing-card,
+html.theme-typewriter-dark .project-item,
+html.theme-typewriter-dark .contact-link { border-width: 2px; }
+html.theme-typewriter-dark .btn::before { content: '↳'; }
+html.theme-typewriter-dark .project-name::before { content: '§ '; }
+html.theme-typewriter-dark .char-sheet::before { content: '-- CHARACTER --'; font-family: 'Special Elite', monospace; letter-spacing: 0.08em; }
+html.theme-typewriter-dark .stat-name { font-family: 'Special Elite', monospace; font-size: 0.7rem; letter-spacing: 0.04em; }
+html.theme-typewriter-dark .stat-val  { font-family: 'Special Elite', monospace; font-size: 0.88rem; }
+
 /* ── Theme picker ── */
 .theme-picker { display: flex; gap: 0.5rem; align-items: center; margin-left: 1rem; }
 .theme-dot {
@@ -504,15 +836,19 @@ html.theme-cyan .stat-val  { font-family: 'Share Tech Mono', monospace; font-siz
 }
 .theme-dot:hover { transform: scale(1.4); }
 .theme-dot.active { transform: scale(1.3); outline: 1px solid rgba(255,255,255,0.4); outline-offset: 2px; }
-.theme-dot[data-theme="theme-green"] { background: #00e060; }
-.theme-dot[data-theme="theme-amber"] { background: #ffb000; }
-.theme-dot[data-theme="theme-cyan"]  { background: #2dd4d4; }
+.theme-dot[data-theme="theme-green"]    { background: #00e060; }
+.theme-dot[data-theme="theme-amber"]    { background: #ffb000; }
+.theme-dot[data-theme="theme-cyan"]     { background: #2dd4d4; }
+.theme-dot[data-theme="theme-medieval"]    { background: #3a7525; }
+.theme-dot[data-theme="theme-pirate"]      { background: #4a9880; }
+.theme-dot[data-theme="theme-typewriter"]       { background: #d4c090; }
+.theme-dot[data-theme="theme-typewriter-dark"]  { background: #b8aa88; }
 """
 
 SHARED_HEAD = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Cinzel:wght@400;700&family=Pirata+One&family=Special+Elite&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t&&t!=='theme-green')document.documentElement.classList.add(t);})();</script>
 """
 
@@ -530,7 +866,7 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.06 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 document.getElementById('yr').textContent = new Date().getFullYear();
-const THEMES = ['theme-green', 'theme-amber', 'theme-cyan'];
+const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark'];
 function applyTheme(t) {
   document.documentElement.classList.remove(...THEMES);
   if (t !== 'theme-green') document.documentElement.classList.add(t);
@@ -628,9 +964,13 @@ def nav_html(root_prefix="") -> str:
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
   </ul>
   <div class="theme-picker" aria-label="Theme">
-    <button class="theme-dot" data-theme="theme-green" title="Green phosphor"></button>
-    <button class="theme-dot" data-theme="theme-amber" title="Amber phosphor"></button>
-    <button class="theme-dot" data-theme="theme-cyan"  title="Cyan grimdark"></button>
+    <button class="theme-dot" data-theme="theme-green"    title="Green phosphor"></button>
+    <button class="theme-dot" data-theme="theme-amber"    title="Amber phosphor"></button>
+    <button class="theme-dot" data-theme="theme-cyan"     title="Cyan grimdark"></button>
+    <button class="theme-dot" data-theme="theme-medieval" title="Medieval parchment"></button>
+    <button class="theme-dot" data-theme="theme-pirate"      title="Pirate parchment"></button>
+    <button class="theme-dot" data-theme="theme-typewriter"      title="Typewriter"></button>
+    <button class="theme-dot" data-theme="theme-typewriter-dark" title="Typewriter (dark)"></button>
   </div>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
