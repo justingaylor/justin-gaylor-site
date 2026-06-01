@@ -12,7 +12,7 @@
 - name: wyrdbound-dice
   description: A Python library for flexible tabletop RPG dice rolling with support for advanced mechanics and custom expressions.
   tags: ["Tabletop Role-Playing", "Python", "Open Source"]
-  url: https://github.com/wyrdbound/wydbound-dice
+  url: https://github.com/wyrdbound/wyrdbound-dice
   date: 2025-07-28
   pinned: true
 
@@ -31,7 +31,7 @@
 - name: grimoire-model
   description: Dict-like model system with schema validation, derived fields, and inheritance designed for integration with the Wyrdbound TTRPG Engine.
   tags: ["Tabletop Role-Playing", "Python", "Open Source"]
-  url: https://github.com/wyrdbound/grimoire-context
+  url: https://github.com/wyrdbound/grimoire-model
   date: 2025-09-12
 
 - name: wyrdflow
