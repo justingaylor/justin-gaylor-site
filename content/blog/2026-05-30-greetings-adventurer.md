@@ -12,8 +12,7 @@ and keeping my writings mostly private or shared selectively under a pseudonym. 
 
 ## What to expect
 
-Blog posts about whatever's on my mind — usually a mix of writing craft, software,
-and the places where those two things unexpectedly overlap. Short fiction in the Stories
+Blog posts about whatever's on my mind — usually a mix of writing craft, software, and my myriad other interests. Short fiction in the Stories
 section, added as I finish pieces. Project notes when I build something worth talking about.
 
 No newsletter. No social login. There's an RSS feed if you want to follow along.

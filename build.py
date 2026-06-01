@@ -957,9 +957,9 @@ def nav_html(root_prefix="") -> str:
   <a class="nav-logo" href="{root_prefix}index.html"><span>✦</span>JUSTIN GAYLOR</a>
   <ul class="nav-links" id="nav-links">
     <li><a href="{root_prefix}index.html#about">GREETINGS</a></li>
-    <li><a href="{root_prefix}index.html#writing">TALES</a></li>
-    <li><a href="{root_prefix}index.html#blog">CHRONICLE</a></li>
-    <li><a href="{root_prefix}index.html#projects">CRAFTS</a></li>
+    <li><a href="{root_prefix}index.html#writing">WRITING</a></li>
+    <li><a href="{root_prefix}index.html#blog">BLOG</a></li>
+    <li><a href="{root_prefix}index.html#projects">PROJECTS</a></li>
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
   </ul>
   <div class="theme-picker" aria-label="Theme">
@@ -1124,9 +1124,9 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
   <p class="hero-quest">Live each day like a quest.</p>
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
-    <a href="#writing" class="btn">TALES &amp; LORE</a>
-    <a href="#projects" class="btn">THE WORKSHOP</a>
-    <a href="#contact" class="btn">SEND RAVEN</a>
+    <a href="#writing" class="btn">WRITING</a>
+    <a href="#projects" class="btn">PROJECTS</a>
+    <a href="#contact" class="btn">CONTACT</a>
   </div>
   <p class="hero-after">✦ ─────────────────────────────── ✦</p>
 </section>
@@ -1148,7 +1148,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 
 <div class="section-wrap" id="writing">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>TALES &amp; LORE</h2>
+    <h2 class="section-label"><span class="glyph">✦</span>TALES & LORE</h2>
     <p class="section-sub">SHORT FICTION · ESSAYS · WRITINGS</p>
   </div>
   <div class="writing-grid">{story_cards}</div>
@@ -1158,7 +1158,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 
 <div class="section-wrap" id="blog">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>THE CHRONICLE</h2>
+    <h2 class="section-label"><span class="glyph">✦</span>CHRONICLES</h2>
     <p class="section-sub">DISPATCHES FROM THE FIELD</p>
   </div>
   <div class="blog-list">{blog_entries}</div>
@@ -1215,7 +1215,7 @@ def build_post_page(post: dict, section: str) -> str:
     if post.get("type"):
         kicker = f"{post['type'].upper()} · {fmt_date(post['date'])}"
 
-    back_label = "BACK TO THE CHRONICLE" if section == "blog" else "BACK TO TALES &amp; LORE"
+    back_label = "BACK TO THE CHRONICLE" if section == "blog" else "BACK TO WRITING"
     back_href  = f"../index.html#blog" if section == "blog" else f"../index.html#writing"
 
     thoughts = post['meta'].get('thoughts', '')
