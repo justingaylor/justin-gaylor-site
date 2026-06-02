@@ -1,0 +1,67 @@
+/* ── Theme: Cyan grimdark ── */
+html.theme-cyan {
+  --bg: #060f14; --bg-solid: #060f14;
+  --bg-panel: #0a1a20; --bg-panel2: #0d2028;
+  --green: #2dd4d4; --green-hi: #4affff;
+  --green-dim: #1a6b7a; --green-faint: #0a1f25;
+  --green-glow: rgba(45,212,212,0.08);
+  --text: #4da8b8; --text-dim: #2d7a8a;
+  --border: #0f3a47; --border-mid: #1a5a6a;
+}
+/* Orbitron for display, Share Tech Mono for everything else */
+html.theme-cyan body { font-family: 'Share Tech Mono', monospace; line-height: 1.65; }
+html.theme-cyan .hero-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.2rem, 6.5vw, 5.2rem);
+  font-weight: 700; letter-spacing: 0.1em; line-height: 1.05;
+}
+html.theme-cyan .section-label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem; letter-spacing: 0.14em; font-weight: 700;
+}
+html.theme-cyan .nav-logo { font-family: 'Orbitron', sans-serif; font-size: 0.9rem; letter-spacing: 0.18em; }
+html.theme-cyan .card-title { font-family: 'Orbitron', sans-serif; font-size: 1rem; letter-spacing: 0.06em; }
+html.theme-cyan .post-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.5rem, 4vw, 2.4rem); letter-spacing: 0.08em; }
+html.theme-cyan .nav-links a,
+html.theme-cyan .hero-sys,
+html.theme-cyan .hero-subtitle,
+html.theme-cyan .hero-after,
+html.theme-cyan .btn,
+html.theme-cyan .section-sub,
+html.theme-cyan .card-tag,
+html.theme-cyan .card-link,
+html.theme-cyan .blog-date,
+html.theme-cyan .stat-name,
+html.theme-cyan .stat-val,
+html.theme-cyan .project-name,
+html.theme-cyan .project-link,
+html.theme-cyan .back-link,
+html.theme-cyan .post-kicker,
+html.theme-cyan .post-meta,
+html.theme-cyan .post-thoughts-label,
+html.theme-cyan .contact-label,
+html.theme-cyan .contact-icon,
+html.theme-cyan footer { font-family: 'Share Tech Mono', monospace; }
+html.theme-cyan .hero-quest { font-family: 'Share Tech Mono', monospace; font-style: normal; letter-spacing: 0.08em; }
+html.theme-cyan .hero-subtitle { letter-spacing: 0.3em; }
+html.theme-cyan .btn { letter-spacing: 0.18em; }
+/* Tinted blue scan lines instead of dark */
+html.theme-cyan body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(0,50,80,0.18) 0px, rgba(0,50,80,0.18) 1px,
+    transparent 1px, transparent 3px
+  );
+}
+/* Sharper vignette for grimdark feel */
+html.theme-cyan body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 40%, rgba(0,0,0,0.88) 100%);
+}
+/* Tighter border styling — angular, clinical */
+html.theme-cyan .writing-card,
+html.theme-cyan .project-item,
+html.theme-cyan .char-sheet,
+html.theme-cyan .contact-link { border-style: solid; }
+html.theme-cyan .char-sheet::before { font-family: 'Share Tech Mono', monospace; }
+html.theme-cyan .post-thoughts-label { font-family: 'Share Tech Mono', monospace; }
+html.theme-cyan .stat-name { font-family: 'Share Tech Mono', monospace; font-size: 0.68rem; letter-spacing: 0.03em; }
+html.theme-cyan .stat-val  { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }

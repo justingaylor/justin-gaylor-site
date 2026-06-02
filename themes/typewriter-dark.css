@@ -1,0 +1,74 @@
+/* ── Theme: Typewriter dark ── */
+html.theme-typewriter-dark {
+  --bg: #0e0c0a; --bg-solid: #0e0c0a;
+  --bg-panel: #181410; --bg-panel2: #201c16;
+  --green: #ddd0b0; --green-hi: #f0e8c8;
+  --green-dim: #7a7058; --green-faint: #181410;
+  --green-glow: rgba(220,208,176,0.06);
+  --text: #b8aa88; --text-dim: #7a7058;
+  --border: #282018; --border-mid: #4a4030;
+}
+html.theme-typewriter-dark body { font-family: 'Special Elite', 'Courier New', monospace; line-height: 1.9; }
+html.theme-typewriter-dark .nav-logo,
+html.theme-typewriter-dark .nav-links a,
+html.theme-typewriter-dark .section-label,
+html.theme-typewriter-dark .section-sub,
+html.theme-typewriter-dark .hero-sys,
+html.theme-typewriter-dark .hero-subtitle,
+html.theme-typewriter-dark .hero-after,
+html.theme-typewriter-dark .btn,
+html.theme-typewriter-dark .card-tag,
+html.theme-typewriter-dark .card-link,
+html.theme-typewriter-dark .blog-date,
+html.theme-typewriter-dark .stat-name,
+html.theme-typewriter-dark .stat-val,
+html.theme-typewriter-dark .project-name,
+html.theme-typewriter-dark .project-link,
+html.theme-typewriter-dark .back-link,
+html.theme-typewriter-dark .post-kicker,
+html.theme-typewriter-dark .post-meta,
+html.theme-typewriter-dark .post-thoughts-label,
+html.theme-typewriter-dark .contact-label,
+html.theme-typewriter-dark .contact-icon,
+html.theme-typewriter-dark .post-body h2,
+html.theme-typewriter-dark .post-body h3,
+html.theme-typewriter-dark footer { font-family: 'Special Elite', 'Courier New', monospace; }
+html.theme-typewriter-dark .hero-name {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 400; letter-spacing: 0.04em; line-height: 0.96;
+}
+html.theme-typewriter-dark .hero-quest { font-family: 'Special Elite', monospace; font-style: normal; letter-spacing: 0.02em; }
+html.theme-typewriter-dark .section-label { font-size: 2rem; letter-spacing: 0.06em; }
+html.theme-typewriter-dark .card-title { font-family: 'Special Elite', monospace; font-size: 1.2rem; letter-spacing: 0.02em; }
+html.theme-typewriter-dark .post-title {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(1.8rem, 5vw, 2.9rem); letter-spacing: 0.04em;
+}
+html.theme-typewriter-dark .hero-name,
+html.theme-typewriter-dark .section-label,
+html.theme-typewriter-dark .nav-logo,
+html.theme-typewriter-dark .hero-quest,
+html.theme-typewriter-dark .post-title { text-shadow: none; }
+html.theme-typewriter-dark .nav-links a:hover { text-shadow: none; }
+html.theme-typewriter-dark .btn:hover { box-shadow: none; text-shadow: none; }
+/* Faint ruled lines, barely visible on dark paper */
+html.theme-typewriter-dark body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(200,180,140,0.04) 0px, rgba(200,180,140,0.04) 1px,
+    transparent 1px, transparent 28px
+  );
+}
+html.theme-typewriter-dark body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 55%, rgba(0,0,0,0.75) 100%);
+}
+html.theme-typewriter-dark #wrap { animation: none; }
+html.theme-typewriter-dark .char-sheet,
+html.theme-typewriter-dark .writing-card,
+html.theme-typewriter-dark .project-item,
+html.theme-typewriter-dark .contact-link { border-width: 2px; }
+html.theme-typewriter-dark .btn::before { content: '↳'; }
+html.theme-typewriter-dark .project-name::before { content: '§ '; }
+html.theme-typewriter-dark .char-sheet::before { content: '-- CHARACTER --'; font-family: 'Special Elite', monospace; letter-spacing: 0.08em; }
+html.theme-typewriter-dark .stat-name { font-family: 'Special Elite', monospace; font-size: 0.7rem; letter-spacing: 0.04em; }
+html.theme-typewriter-dark .stat-val  { font-family: 'Special Elite', monospace; font-size: 0.88rem; }

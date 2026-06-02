@@ -1,0 +1,85 @@
+/* ── Theme: Typewriter ── */
+html.theme-typewriter {
+  --bg: #faf6ea; --bg-solid: #faf6ea;
+  --bg-panel: #f2ece0; --bg-panel2: #e8e0d0;
+  --green: #1a1208; --green-hi: #0d0a06;
+  --green-dim: #5a4838; --green-faint: #ede5d0;
+  --green-glow: rgba(26,18,8,0.05);
+  --text: #2a1a0a; --text-dim: #6a5040;
+  --border: #d0c0a8; --border-mid: #a88e70;
+}
+html.theme-typewriter body { font-family: 'Special Elite', 'Courier New', monospace; line-height: 1.9; }
+html.theme-typewriter nav {
+  background: rgba(250,246,234,0.97);
+  border-bottom-color: var(--border);
+}
+html.theme-typewriter .nav-hamburger span { background: var(--text-dim); }
+html.theme-typewriter .nav-logo,
+html.theme-typewriter .nav-links a,
+html.theme-typewriter .section-label,
+html.theme-typewriter .section-sub,
+html.theme-typewriter .hero-sys,
+html.theme-typewriter .hero-subtitle,
+html.theme-typewriter .hero-after,
+html.theme-typewriter .btn,
+html.theme-typewriter .card-tag,
+html.theme-typewriter .card-link,
+html.theme-typewriter .blog-date,
+html.theme-typewriter .stat-name,
+html.theme-typewriter .stat-val,
+html.theme-typewriter .project-name,
+html.theme-typewriter .project-link,
+html.theme-typewriter .back-link,
+html.theme-typewriter .post-kicker,
+html.theme-typewriter .post-meta,
+html.theme-typewriter .post-thoughts-label,
+html.theme-typewriter .contact-label,
+html.theme-typewriter .contact-icon,
+html.theme-typewriter .post-body h2,
+html.theme-typewriter .post-body h3,
+html.theme-typewriter footer { font-family: 'Special Elite', 'Courier New', monospace; }
+html.theme-typewriter .hero-name {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 400; letter-spacing: 0.04em; line-height: 0.96;
+}
+html.theme-typewriter .hero-quest { font-family: 'Special Elite', monospace; font-style: normal; letter-spacing: 0.02em; }
+html.theme-typewriter .section-label { font-size: 2rem; letter-spacing: 0.06em; }
+html.theme-typewriter .card-title { font-family: 'Special Elite', monospace; font-size: 1.2rem; letter-spacing: 0.02em; }
+html.theme-typewriter .post-title {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(1.8rem, 5vw, 2.9rem); letter-spacing: 0.04em;
+}
+/* Ink on paper makes no light */
+html.theme-typewriter .hero-name,
+html.theme-typewriter .section-label,
+html.theme-typewriter .nav-logo,
+html.theme-typewriter .hero-quest,
+html.theme-typewriter .post-title { text-shadow: none; }
+html.theme-typewriter .nav-links a:hover { text-shadow: none; }
+html.theme-typewriter .btn:hover { box-shadow: none; text-shadow: none; }
+/* Ruled paper lines — standard typewriter sheet */
+html.theme-typewriter body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(150,120,80,0.07) 0px, rgba(150,120,80,0.07) 1px,
+    transparent 1px, transparent 28px
+  );
+}
+/* Gentle sepia aging at the paper edges */
+html.theme-typewriter body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 58%, rgba(60,30,0,0.18) 100%);
+}
+html.theme-typewriter #wrap { animation: none; }
+html.theme-typewriter .char-sheet,
+html.theme-typewriter .writing-card,
+html.theme-typewriter .project-item,
+html.theme-typewriter .contact-link { border-width: 2px; }
+html.theme-typewriter .theme-dot.active { outline-color: rgba(0,0,0,0.3); }
+html.theme-typewriter .btn::before { content: '↳'; }
+html.theme-typewriter .project-name::before { content: '§ '; }
+html.theme-typewriter .char-sheet::before { content: '-- CHARACTER --'; font-family: 'Special Elite', monospace; letter-spacing: 0.08em; }
+html.theme-typewriter .stat-name { font-family: 'Special Elite', monospace; font-size: 0.7rem; letter-spacing: 0.04em; }
+html.theme-typewriter .stat-val  { font-family: 'Special Elite', monospace; font-size: 0.88rem; }
+@media (max-width: 620px) {
+  html.theme-typewriter .nav-links { background: rgba(250,246,234,0.99); }
+}

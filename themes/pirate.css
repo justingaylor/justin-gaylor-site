@@ -1,0 +1,84 @@
+/* ── Theme: Pirate worn parchment ── */
+html.theme-pirate {
+  --bg: #06080e; --bg-solid: #06080e;
+  --bg-panel: #0a1018; --bg-panel2: #0e1620;
+  --green: #4a9880; --green-hi: #65b5a0;
+  --green-dim: #2d6858; --green-faint: #0b1010;
+  --green-glow: rgba(74,152,128,0.12);
+  --text: #9e9878; --text-dim: #4a7a6a;
+  --border: #101a22; --border-mid: #1e3840;
+}
+html.theme-pirate body { font-family: 'IM Fell English', Georgia, serif; }
+html.theme-pirate .nav-logo,
+html.theme-pirate .nav-links a,
+html.theme-pirate .section-label,
+html.theme-pirate .section-sub,
+html.theme-pirate .hero-sys,
+html.theme-pirate .hero-subtitle,
+html.theme-pirate .hero-after,
+html.theme-pirate .btn,
+html.theme-pirate .card-tag,
+html.theme-pirate .card-link,
+html.theme-pirate .blog-date,
+html.theme-pirate .stat-name,
+html.theme-pirate .stat-val,
+html.theme-pirate .project-name,
+html.theme-pirate .project-link,
+html.theme-pirate .back-link,
+html.theme-pirate .post-kicker,
+html.theme-pirate .post-meta,
+html.theme-pirate .post-thoughts-label,
+html.theme-pirate .contact-label,
+html.theme-pirate .contact-icon,
+html.theme-pirate .post-body h2,
+html.theme-pirate .post-body h3,
+html.theme-pirate footer { font-family: 'Pirata One', cursive; }
+/* Hero name stays treasure gold — everything else is sea-worn verdigris */
+html.theme-pirate .hero-name {
+  font-family: 'Pirata One', cursive;
+  font-size: clamp(3.5rem, 11vw, 9rem);
+  font-weight: 400; letter-spacing: 0.03em; line-height: 0.90;
+  color: #9e9878; text-shadow: none;
+}
+html.theme-pirate .hero-quest {
+  font-family: 'IM Fell English', serif; font-style: italic;
+  color: #9e9878; text-shadow: none;
+}
+html.theme-pirate .section-label { font-family: 'Pirata One', cursive; font-size: 2.2rem; letter-spacing: 0.04em; }
+html.theme-pirate .card-title { font-family: 'Pirata One', cursive; font-size: 1.3rem; }
+html.theme-pirate .post-title {
+  font-family: 'Pirata One', cursive;
+  font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: 0.03em;
+}
+/* Sea-green verdigris glows for chrome elements */
+html.theme-pirate .section-label,
+html.theme-pirate .nav-logo { text-shadow: 0 0 14px rgba(74,152,128,0.30); }
+html.theme-pirate .post-title { text-shadow: 0 0 12px rgba(74,152,128,0.22); }
+html.theme-pirate .nav-links a:hover { text-shadow: 0 0 8px rgba(74,152,128,0.5); }
+html.theme-pirate .btn:hover {
+  box-shadow: 0 0 16px rgba(74,152,128,0.18);
+  text-shadow: 0 0 8px rgba(74,152,128,0.5);
+}
+/* Override hardcoded green rgba hover backgrounds from base CSS */
+html.theme-pirate .writing-card:hover { background: rgba(74,152,128,0.03); }
+html.theme-pirate .project-item:hover { background: rgba(74,152,128,0.03); }
+/* Subtle nautical chart crosshatch — old navigation grid */
+html.theme-pirate body::before {
+  background:
+    repeating-linear-gradient(45deg, rgba(20,50,70,0.06) 0px, rgba(20,50,70,0.06) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(-45deg, rgba(20,50,70,0.06) 0px, rgba(20,50,70,0.06) 1px, transparent 1px, transparent 40px);
+}
+/* Heavy vignette — lantern in a dark ship's hold */
+html.theme-pirate body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 40%, rgba(0,0,0,0.88) 100%);
+}
+html.theme-pirate #wrap { animation: none; }
+html.theme-pirate .char-sheet,
+html.theme-pirate .writing-card,
+html.theme-pirate .project-item,
+html.theme-pirate .contact-link { border-width: 2px; }
+html.theme-pirate .btn::before { content: '⚓'; }
+html.theme-pirate .project-name::before { content: '☠ '; }
+html.theme-pirate .char-sheet::before { content: '☠ CHARACTER ☠'; font-family: 'Pirata One', cursive; letter-spacing: 0.1em; }
+html.theme-pirate .stat-name { font-family: 'Pirata One', cursive; font-size: 0.78rem; letter-spacing: 0.04em; }
+html.theme-pirate .stat-val  { font-family: 'Pirata One', cursive; font-size: 1rem; }

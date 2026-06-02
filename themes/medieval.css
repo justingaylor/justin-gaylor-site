@@ -1,0 +1,85 @@
+/* ── Theme: Medieval parchment ── */
+html.theme-medieval {
+  --bg: #f2e8cb; --bg-solid: #f2e8cb;
+  --bg-panel: #e8dab8; --bg-panel2: #ddd0a2;
+  --green: #2e6b20; --green-hi: #1a4f14;
+  --green-dim: #6a8840; --green-faint: #d4e8c0;
+  --green-glow: rgba(46,107,32,0.07);
+  --text: #1a0c00; --text-dim: #5a3820;
+  --border: #bfa068; --border-mid: #8a6030;
+}
+html.theme-medieval body { font-family: 'IM Fell English', Georgia, serif; }
+html.theme-medieval nav {
+  background: rgba(242,232,203,0.97);
+  border-bottom-color: var(--border);
+}
+html.theme-medieval .nav-hamburger span { background: var(--text-dim); }
+html.theme-medieval .nav-logo,
+html.theme-medieval .nav-links a,
+html.theme-medieval .section-label,
+html.theme-medieval .section-sub,
+html.theme-medieval .hero-sys,
+html.theme-medieval .hero-subtitle,
+html.theme-medieval .hero-after,
+html.theme-medieval .btn,
+html.theme-medieval .card-tag,
+html.theme-medieval .card-link,
+html.theme-medieval .blog-date,
+html.theme-medieval .stat-name,
+html.theme-medieval .stat-val,
+html.theme-medieval .project-name,
+html.theme-medieval .project-link,
+html.theme-medieval .back-link,
+html.theme-medieval .post-kicker,
+html.theme-medieval .post-meta,
+html.theme-medieval .post-thoughts-label,
+html.theme-medieval .contact-label,
+html.theme-medieval .contact-icon,
+html.theme-medieval .post-body h2,
+html.theme-medieval .post-body h3,
+html.theme-medieval footer { font-family: 'Cinzel', Georgia, serif; }
+html.theme-medieval .hero-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: 700; letter-spacing: 0.06em; line-height: 0.92;
+}
+html.theme-medieval .hero-quest { font-style: italic; letter-spacing: 0.01em; }
+html.theme-medieval .section-label { font-size: 1.8rem; letter-spacing: 0.1em; font-weight: 700; }
+html.theme-medieval .card-title { font-family: 'Cinzel', serif; font-size: 1.15rem; letter-spacing: 0.04em; }
+html.theme-medieval .post-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.06em;
+}
+/* Ink on parchment is silent — no glows */
+html.theme-medieval .hero-name,
+html.theme-medieval .section-label,
+html.theme-medieval .nav-logo,
+html.theme-medieval .hero-quest,
+html.theme-medieval .post-title { text-shadow: none; }
+html.theme-medieval .nav-links a:hover { text-shadow: none; }
+html.theme-medieval .btn:hover { box-shadow: none; text-shadow: none; }
+/* Subtle vertical parchment grain */
+html.theme-medieval body::before {
+  background: repeating-linear-gradient(
+    90deg, rgba(100,60,10,0.02) 0px, rgba(100,60,10,0.02) 1px,
+    transparent 1px, transparent 12px
+  );
+}
+/* Brown edge vignette — aged parchment */
+html.theme-medieval body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 55%, rgba(80,40,0,0.28) 100%);
+}
+html.theme-medieval #wrap { animation: none; }
+html.theme-medieval .char-sheet,
+html.theme-medieval .writing-card,
+html.theme-medieval .project-item,
+html.theme-medieval .contact-link { border-width: 2px; }
+html.theme-medieval .theme-dot.active { outline-color: rgba(0,0,0,0.3); }
+html.theme-medieval .btn::before { content: '⚔'; }
+html.theme-medieval .project-name::before { content: '⚜ '; }
+html.theme-medieval .char-sheet::before { content: '⚜ CHARACTER ⚜'; font-family: 'Cinzel', serif; letter-spacing: 0.12em; }
+html.theme-medieval .stat-name { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.08em; }
+html.theme-medieval .stat-val  { font-family: 'Cinzel', serif; font-size: 0.9rem; }
+@media (max-width: 620px) {
+  html.theme-medieval .nav-links { background: rgba(242,232,203,0.99); }
+}

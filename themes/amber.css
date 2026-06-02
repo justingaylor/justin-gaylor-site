@@ -1,0 +1,62 @@
+/* ── Theme: Amber phosphor ── */
+html.theme-amber {
+  --bg: #0e0900; --bg-solid: #0e0900;
+  --bg-panel: #160c00; --bg-panel2: #1c1100;
+  --green: #ffb000; --green-hi: #ffd060;
+  --green-dim: #8a5a00; --green-faint: #1c0f00;
+  --green-glow: rgba(200,130,0,0.08);
+  --text: #cc8800; --text-dim: #8a6000;
+  --border: #2e1800; --border-mid: #5c3200;
+}
+/* Typewriter font stack replaces VT323 + IM Fell */
+html.theme-amber body { font-family: 'Courier Prime', 'Courier New', monospace; }
+html.theme-amber .nav-logo,
+html.theme-amber .nav-links a,
+html.theme-amber .section-label,
+html.theme-amber .section-sub,
+html.theme-amber .hero-sys,
+html.theme-amber .hero-subtitle,
+html.theme-amber .hero-after,
+html.theme-amber .btn,
+html.theme-amber .hero-quest,
+html.theme-amber .card-tag,
+html.theme-amber .card-title,
+html.theme-amber .card-link,
+html.theme-amber .blog-date,
+html.theme-amber .stat-name,
+html.theme-amber .stat-val,
+html.theme-amber .project-name,
+html.theme-amber .project-link,
+html.theme-amber .back-link,
+html.theme-amber .post-kicker,
+html.theme-amber .post-meta,
+html.theme-amber .post-thoughts-label,
+html.theme-amber .contact-label,
+html.theme-amber .contact-icon,
+html.theme-amber footer { font-family: 'Courier Prime', 'Courier New', monospace; }
+html.theme-amber .hero-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 700; letter-spacing: 0.04em; line-height: 0.95;
+}
+html.theme-amber .hero-quest { font-style: italic; letter-spacing: 0.02em; }
+html.theme-amber .section-label { font-size: 2rem; letter-spacing: 0.04em; }
+/* No phosphor glow — typewriters don't shine */
+html.theme-amber .hero-name,
+html.theme-amber .section-label,
+html.theme-amber .nav-logo,
+html.theme-amber .post-title { text-shadow: none; }
+html.theme-amber .post-title { font-family: 'Courier Prime', monospace; font-size: clamp(1.8rem, 5vw, 2.8rem); }
+/* No scan lines — paper feel */
+html.theme-amber body::before { background: none; }
+html.theme-amber body::after { background: radial-gradient(ellipse at 50% 38%, transparent 65%, rgba(0,0,0,0.45) 100%); }
+/* Heavier borders, solid print feel */
+html.theme-amber .char-sheet,
+html.theme-amber .writing-card,
+html.theme-amber .project-item,
+html.theme-amber .contact-link { border-width: 2px; }
+html.theme-amber .writing-card::before { display: none; }
+html.theme-amber .btn { letter-spacing: 0.06em; }
+html.theme-amber .char-sheet::before { font-family: 'Courier Prime', monospace; letter-spacing: 0.1em; }
+html.theme-amber .stat-name { font-family: 'Courier Prime', monospace; font-size: 0.68rem; letter-spacing: 0.03em; }
+html.theme-amber .stat-val  { font-family: 'Courier Prime', monospace; font-size: 0.8rem; }
