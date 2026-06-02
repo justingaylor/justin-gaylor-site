@@ -5,7 +5,7 @@ updated: 2026-06-01
 Well met, traveller. I'm Justin – writer, builder, and hopeful dreamer.
 Born in the early 80's, I grew up in small-town Indiana in the United
 States. Works of epic fantasy like _The Hobbit_ and _The Eye of the
-World_ showed me the power of words to conjure entire worlds, and that
+World_ showed me the power of words to conjure entire worlds and
 led to a lifelong interest in world-building and storytelling.
 
 By day I work as a software developer – designing, building, and maintaining
