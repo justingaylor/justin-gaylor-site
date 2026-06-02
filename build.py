@@ -487,6 +487,43 @@ def build_post_page(post: dict, section: str) -> str:
     )
 
 
+# ── RSS ────────────────────────────────────────────────────────────────────────
+
+def build_rss(stories: list, blog: list) -> str:
+    def xml_escape(s: str) -> str:
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    def pub_date(d) -> str:
+        if isinstance(d, (date, datetime)):
+            return datetime(d.year, d.month, d.day).strftime("%a, %d %b %Y 00:00:00 +0000")
+        return ""
+
+    all_posts = (
+        [{"section": "stories", **p} for p in stories] +
+        [{"section": "blog",    **p} for p in blog]
+    )
+    all_posts.sort(key=lambda p: p["date"], reverse=True)
+
+    items = "\n".join(f"""  <item>
+    <title>{xml_escape(p['title'])}</title>
+    <link>{BASE_URL}/{p['section']}/{p['slug']}.html</link>
+    <description>{xml_escape(p.get('summary', ''))}</description>
+    <pubDate>{pub_date(p['date'])}</pubDate>
+    <guid>{BASE_URL}/{p['section']}/{p['slug']}.html</guid>
+  </item>""" for p in all_posts)
+
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{xml_escape(SITE_TITLE)}</title>
+    <link>{BASE_URL}</link>
+    <description>{xml_escape(SITE_TAGLINE)}</description>
+    <language>en-us</language>
+{items}
+  </channel>
+</rss>"""
+
+
 # ── Main build ─────────────────────────────────────────────────────────────────
 
 def build():
@@ -530,6 +567,10 @@ def build():
         out  = DIST_DIR / "blog" / f"{post['slug']}.html"
         out.write_text(html, encoding="utf-8")
         print(f"  ✓  dist/blog/{post['slug']}.html")
+
+    # Build RSS feed
+    (DIST_DIR / "rss.xml").write_text(build_rss(stories, blog), encoding="utf-8")
+    print(f"  ✓  dist/rss.xml")
 
     print(f"\n✦  Done. Open dist/index.html in your browser.\n")
 
