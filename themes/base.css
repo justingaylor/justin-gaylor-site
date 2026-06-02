@@ -281,6 +281,8 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: clamp(98
 .post-thoughts p {
   font-style: italic; font-size: 0.95rem; color: var(--text-dim); line-height: 1.75; margin: 0;
 }
+.post-thoughts a { color: var(--green-dim); text-decoration: underline; text-underline-offset: 3px; }
+.post-thoughts a:hover { color: var(--green); }
 .post-footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 .back-link { font-family: 'VT323', monospace; font-size: 1rem; color: var(--text-dim); text-decoration: none; letter-spacing: 0.12em; transition: color 0.2s; }
 .back-link::before { content: '◄ '; }

@@ -4,7 +4,7 @@ date: 2026-06-02
 type: Short Story
 tags: [fantasy, short-story, folklore, echizo]
 summary: A precocious boy must confront a river yōkai to save his three friends from certain danger.
-thoughts: This is the first story I wrote since becoming serious about my writing way back in 2010, when I was living and working in Yokohama. It was inspired by a combination of the folklore of the kappa, which I've been fascinated by for a long time, and the Tsurumi River, which I lived near and often visited. The story is set in Echizo, a fantasy world I'm building that is inspired by Japan during the Sengoku Period. The artwork for this story was painted by my good friend, Jason Berdan, and the original paintings hang in my office.
+thoughts: This is the first story I wrote since I started being serious about writing way back in 2010. At that time, I was living and working in Yokohama. The story was inspired by a combination of the folklore of the [kappa](https://en.wikipedia.org/wiki/Kappa_(folklore)), which I've been fascinated by for a long time, and the Tsurumi River, which I lived near and often visited to de-stress after work. The story is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period). The artwork for this story was painted by my good friend, Jason Berdan, and the original paintings hang in my office.
 ---
 
 [![Kappa swimming underwater with three surprised children](../img/20210725_KichibeiKappaUnderwaterFinal.jpg)](../img/20210725_KichibeiKappaUnderwaterFinal.jpg)

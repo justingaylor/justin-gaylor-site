@@ -534,7 +534,7 @@ def build_post_page(post: dict, section: str) -> str:
     thoughts_html = f"""
   <aside class="post-thoughts">
     <p class="post-thoughts-label">✦ SCRIBE'S NOTE</p>
-    <p>{thoughts}</p>
+    {render_md(thoughts)}
   </aside>""" if thoughts else ''
 
     body = f"""
