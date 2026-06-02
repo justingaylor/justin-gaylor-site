@@ -1,0 +1,47 @@
+/* ── Theme: Infernal ── */
+html.theme-infernal {
+  --bg: #0c0100; --bg-solid: #0c0100;
+  --bg-panel: #160400; --bg-panel2: #200800;
+  --green: #cc2a0e; --green-hi: #f06030;
+  --green-dim: #701808; --green-faint: #180400;
+  --green-glow: rgba(204,42,14,0.10);
+  --text: #c07858; --text-dim: #7a4830;
+  --border: #260800; --border-mid: #541808;
+}
+/* Crimson scan lines — corrupted terminal */
+html.theme-infernal body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(160,20,0,0.10) 0px, rgba(160,20,0,0.10) 1px,
+    transparent 1px, transparent 4px
+  );
+}
+/* Hellfire vignette — burning at the margins */
+html.theme-infernal body::after {
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(140,20,0,0.40) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 38%, transparent 48%, rgba(0,0,0,0.92) 100%);
+}
+/* Cinzel Decorative for large display — ornate serifs read as demonic, not digital */
+html.theme-infernal .hero-name {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 900; letter-spacing: 0.04em; line-height: 0.92;
+  font-size: clamp(2.8rem, 9vw, 7rem);
+}
+html.theme-infernal .section-label { font-family: 'Cinzel Decorative', serif; font-size: 1.4rem; letter-spacing: 0.06em; font-weight: 700; }
+html.theme-infernal .post-title { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.6rem, 4.5vw, 2.8rem); font-weight: 700; letter-spacing: 0.04em; }
+/* Override hardcoded green glows with crimson */
+html.theme-infernal .nav-logo { text-shadow: 0 0 12px rgba(220,50,20,0.55); }
+html.theme-infernal .section-label { text-shadow: 0 0 14px rgba(204,42,14,0.35); }
+html.theme-infernal .hero-name { text-shadow: 0 0 20px rgba(204,42,14,0.50), 0 0 60px rgba(204,42,14,0.18); }
+html.theme-infernal .hero-quest { text-shadow: 0 0 22px rgba(240,96,48,0.40); }
+html.theme-infernal .post-title { text-shadow: 0 0 18px rgba(204,42,14,0.32); }
+html.theme-infernal .nav-links a:hover { text-shadow: 0 0 8px rgba(220,60,20,0.6); }
+html.theme-infernal .btn:hover {
+  box-shadow: 0 0 16px rgba(204,42,14,0.22);
+  text-shadow: 0 0 8px rgba(220,60,20,0.7);
+}
+html.theme-infernal .writing-card:hover { background: rgba(204,42,14,0.04); }
+html.theme-infernal .project-item:hover  { background: rgba(204,42,14,0.04); }
+html.theme-infernal .btn::before { content: '⛧'; }
+html.theme-infernal .project-name::before { content: '☽ '; }
+html.theme-infernal .char-sheet::before { content: '⛧ CHARACTER ⛧'; }

@@ -1,0 +1,75 @@
+/* ── Theme: Runic ── */
+html.theme-runic {
+  --bg: #0c0b08; --bg-solid: #0c0b08;
+  --bg-panel: #161408; --bg-panel2: #201c0e;
+  --green: #c88818; --green-hi: #e8b038;
+  --green-dim: #6a5018; --green-faint: #181408;
+  --green-glow: rgba(200,136,24,0.08);
+  --text: #c0a870; --text-dim: #6a5030;
+  --border: #201c08; --border-mid: #403818;
+}
+html.theme-runic body { font-family: 'Lora', Georgia, serif; }
+html.theme-runic .nav-logo,
+html.theme-runic .nav-links a,
+html.theme-runic .section-label,
+html.theme-runic .section-sub,
+html.theme-runic .hero-sys,
+html.theme-runic .hero-subtitle,
+html.theme-runic .hero-after,
+html.theme-runic .btn,
+html.theme-runic .card-tag,
+html.theme-runic .card-link,
+html.theme-runic .blog-date,
+html.theme-runic .stat-name,
+html.theme-runic .stat-val,
+html.theme-runic .project-name,
+html.theme-runic .project-link,
+html.theme-runic .back-link,
+html.theme-runic .post-kicker,
+html.theme-runic .post-meta,
+html.theme-runic .post-thoughts-label,
+html.theme-runic .contact-label,
+html.theme-runic .contact-icon,
+html.theme-runic .post-body h2,
+html.theme-runic .post-body h3,
+html.theme-runic footer { font-family: 'Skranji', Georgia, serif; }
+html.theme-runic .hero-name {
+  font-family: 'Skranji', serif;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: 400; letter-spacing: 0.04em; line-height: 0.92;
+}
+html.theme-runic .hero-quest { font-family: 'IM Fell English', serif; font-style: italic; }
+html.theme-runic .section-label { font-size: 2rem; letter-spacing: 0.08em; }
+html.theme-runic .card-title { font-family: 'Skranji', serif; font-size: 1.15rem; }
+html.theme-runic .post-title { font-family: 'Skranji', serif; font-size: clamp(1.8rem, 5vw, 3rem); }
+/* Stone grid — ancient flagstones */
+html.theme-runic body::before {
+  background:
+    repeating-linear-gradient(90deg, rgba(80,60,20,0.04) 0px, rgba(80,60,20,0.04) 1px, transparent 1px, transparent 10px),
+    repeating-linear-gradient(0deg, rgba(80,60,20,0.03) 0px, rgba(80,60,20,0.03) 1px, transparent 1px, transparent 10px);
+}
+/* Heavy stone darkness */
+html.theme-runic body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 50%, rgba(4,3,1,0.88) 100%);
+}
+/* Carved gold — no glow on stone */
+html.theme-runic .hero-name,
+html.theme-runic .section-label,
+html.theme-runic .nav-logo,
+html.theme-runic .hero-quest,
+html.theme-runic .post-title { text-shadow: none; }
+html.theme-runic .nav-links a:hover { text-shadow: none; }
+html.theme-runic .btn:hover { box-shadow: none; text-shadow: none; }
+html.theme-runic .writing-card:hover { background: rgba(200,136,24,0.04); }
+html.theme-runic .project-item:hover  { background: rgba(200,136,24,0.04); }
+html.theme-runic #wrap { animation: none; }
+html.theme-runic .char-sheet,
+html.theme-runic .writing-card,
+html.theme-runic .project-item,
+html.theme-runic .contact-link { border-width: 2px; }
+html.theme-runic .theme-dot.active { outline-color: rgba(200,136,24,0.5); }
+html.theme-runic .btn::before { content: 'ᚱ'; }
+html.theme-runic .project-name::before { content: 'ᛟ '; }
+html.theme-runic .char-sheet::before { content: 'ᚨ CHARACTER ᚨ'; font-family: 'Skranji', serif; letter-spacing: 0.08em; }
+html.theme-runic .stat-name { font-family: 'Skranji', serif; font-size: 0.68rem; letter-spacing: 0.04em; }
+html.theme-runic .stat-val  { font-family: 'Skranji', serif; font-size: 0.9rem; }

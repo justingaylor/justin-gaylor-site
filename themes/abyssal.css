@@ -1,0 +1,86 @@
+/* ── Theme: Abyssal ── */
+html.theme-abyssal {
+  --bg: #02060a; --bg-solid: #02060a;
+  --bg-panel: #040c12; --bg-panel2: #071018;
+  --green: #3a7878; --green-hi: #5a9494;
+  --green-dim: #1a4040; --green-faint: #040e12;
+  --green-glow: rgba(58,120,120,0.06);
+  --text: #507070; --text-dim: #284040;
+  --border: #080e14; --border-mid: #102828;
+}
+/* Spectral for body — Gothic/horror literature quality */
+html.theme-abyssal body { font-family: 'Spectral', Georgia, serif; line-height: 1.85; }
+/* Cormorant Garamond for display — hairline serifs look ancient and wrong */
+html.theme-abyssal .nav-logo,
+html.theme-abyssal .nav-links a,
+html.theme-abyssal .section-label,
+html.theme-abyssal .section-sub,
+html.theme-abyssal .hero-sys,
+html.theme-abyssal .hero-subtitle,
+html.theme-abyssal .hero-after,
+html.theme-abyssal .btn,
+html.theme-abyssal .card-tag,
+html.theme-abyssal .card-link,
+html.theme-abyssal .blog-date,
+html.theme-abyssal .stat-name,
+html.theme-abyssal .stat-val,
+html.theme-abyssal .project-name,
+html.theme-abyssal .project-link,
+html.theme-abyssal .back-link,
+html.theme-abyssal .post-kicker,
+html.theme-abyssal .post-meta,
+html.theme-abyssal .post-thoughts-label,
+html.theme-abyssal .contact-label,
+html.theme-abyssal .contact-icon,
+html.theme-abyssal .post-body h2,
+html.theme-abyssal .post-body h3,
+html.theme-abyssal footer { font-family: 'Cormorant Garamond', Georgia, serif; }
+html.theme-abyssal .hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 11vw, 9rem);
+  font-weight: 700; letter-spacing: 0.06em; line-height: 0.9;
+  text-shadow: 0 0 60px rgba(58,120,120,0.18), 0 0 120px rgba(58,120,120,0.07);
+}
+html.theme-abyssal .hero-quest {
+  font-family: 'Spectral', serif; font-style: italic;
+  color: var(--green-hi); text-shadow: 0 0 22px rgba(90,148,148,0.15);
+}
+html.theme-abyssal .section-label {
+  font-size: 2rem; letter-spacing: 0.1em; font-weight: 600;
+  text-shadow: 0 0 16px rgba(58,120,120,0.12);
+}
+html.theme-abyssal .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.03em; }
+html.theme-abyssal .post-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5.5vw, 3.5rem); font-weight: 700; letter-spacing: 0.04em;
+  text-shadow: 0 0 18px rgba(58,120,120,0.12);
+}
+html.theme-abyssal .nav-links a:hover { text-shadow: 0 0 8px rgba(58,120,120,0.35); }
+html.theme-abyssal .btn:hover {
+  box-shadow: 0 0 16px rgba(58,120,120,0.12);
+  text-shadow: 0 0 8px rgba(58,120,120,0.35);
+}
+html.theme-abyssal .writing-card:hover { background: rgba(58,120,120,0.03); }
+html.theme-abyssal .project-item:hover  { background: rgba(58,120,120,0.03); }
+/* Barely-there pressure banding — colour drained by depth */
+html.theme-abyssal body::before {
+  background: repeating-linear-gradient(
+    0deg, rgba(0,30,40,0.14) 0px, rgba(0,30,40,0.14) 1px,
+    transparent 1px, transparent 8px
+  );
+}
+/* Total crushing darkness — almost no centre light survives */
+html.theme-abyssal body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 18%, rgba(0,2,6,0.96) 100%);
+}
+html.theme-abyssal #wrap { animation: none; }
+html.theme-abyssal .char-sheet,
+html.theme-abyssal .writing-card,
+html.theme-abyssal .project-item,
+html.theme-abyssal .contact-link { border-width: 1px; }
+html.theme-abyssal .theme-dot.active { outline-color: rgba(58,120,120,0.4); }
+html.theme-abyssal .btn::before { content: '◈'; }
+html.theme-abyssal .project-name::before { content: '≋ '; }
+html.theme-abyssal .char-sheet::before { content: '◈ CHARACTER ◈'; font-family: 'Cormorant Garamond', serif; letter-spacing: 0.12em; font-weight: 600; }
+html.theme-abyssal .stat-name { font-family: 'Cormorant Garamond', serif; font-size: 0.72rem; letter-spacing: 0.08em; font-weight: 600; }
+html.theme-abyssal .stat-val  { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }

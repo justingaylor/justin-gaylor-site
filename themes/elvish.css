@@ -1,0 +1,92 @@
+/* ── Theme: Elvish moonlight ── */
+html.theme-elvish {
+  --bg: #04060e; --bg-solid: #04060e;
+  --bg-panel: #08101e; --bg-panel2: #0c1828;
+  --green: #8ab0d4; --green-hi: #b4d0ec;
+  --green-dim: #3a5878; --green-faint: #080e1c;
+  --green-glow: rgba(138,176,212,0.08);
+  --text: #a0b8d0; --text-dim: #485870;
+  --border: #101c2e; --border-mid: #1e3858;
+}
+html.theme-elvish body { font-family: 'IM Fell English', Georgia, serif; line-height: 1.85; }
+html.theme-elvish nav {
+  background: rgba(4,6,14,0.96);
+  border-bottom-color: var(--border-mid);
+}
+html.theme-elvish .nav-hamburger span { background: var(--text-dim); }
+html.theme-elvish .nav-logo,
+html.theme-elvish .nav-links a,
+html.theme-elvish .section-label,
+html.theme-elvish .section-sub,
+html.theme-elvish .hero-sys,
+html.theme-elvish .hero-subtitle,
+html.theme-elvish .hero-after,
+html.theme-elvish .btn,
+html.theme-elvish .card-tag,
+html.theme-elvish .card-link,
+html.theme-elvish .blog-date,
+html.theme-elvish .stat-name,
+html.theme-elvish .stat-val,
+html.theme-elvish .project-name,
+html.theme-elvish .project-link,
+html.theme-elvish .back-link,
+html.theme-elvish .post-kicker,
+html.theme-elvish .post-meta,
+html.theme-elvish .post-thoughts-label,
+html.theme-elvish .contact-label,
+html.theme-elvish .contact-icon,
+html.theme-elvish .post-body h2,
+html.theme-elvish .post-body h3,
+html.theme-elvish footer { font-family: 'Cinzel', Georgia, serif; }
+html.theme-elvish .hero-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: 700; letter-spacing: 0.08em; line-height: 0.92;
+  text-shadow: 0 0 40px rgba(138,176,212,0.35), 0 0 90px rgba(138,176,212,0.12);
+}
+html.theme-elvish .hero-quest {
+  font-family: 'IM Fell English', serif; font-style: italic;
+  color: var(--green-hi); text-shadow: 0 0 22px rgba(180,208,236,0.3);
+}
+html.theme-elvish .section-label {
+  font-size: 1.8rem; letter-spacing: 0.12em; font-weight: 700;
+  text-shadow: 0 0 16px rgba(138,176,212,0.2);
+}
+html.theme-elvish .card-title { font-family: 'Cinzel', serif; font-size: 1.15rem; letter-spacing: 0.04em; }
+html.theme-elvish .post-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.06em;
+  text-shadow: 0 0 18px rgba(138,176,212,0.22);
+}
+html.theme-elvish .nav-links a:hover { text-shadow: 0 0 8px rgba(138,176,212,0.5); }
+html.theme-elvish .btn:hover {
+  box-shadow: 0 0 16px rgba(138,176,212,0.18);
+  text-shadow: 0 0 8px rgba(138,176,212,0.5);
+}
+html.theme-elvish .writing-card:hover { background: rgba(138,176,212,0.04); }
+html.theme-elvish .project-item:hover  { background: rgba(138,176,212,0.04); }
+/* Soft star-mist — moonlight diffused through leaves */
+html.theme-elvish body::before {
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(138,176,212,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 75%, rgba(138,176,212,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(138,176,212,0.02) 0%, transparent 70%);
+}
+/* Moonlit vignette — deep night at the forest edge */
+html.theme-elvish body::after {
+  background: radial-gradient(ellipse at 50% 38%, transparent 42%, rgba(0,2,8,0.82) 100%);
+}
+html.theme-elvish #wrap { animation: none; }
+html.theme-elvish .char-sheet,
+html.theme-elvish .writing-card,
+html.theme-elvish .project-item,
+html.theme-elvish .contact-link { border-width: 1px; }
+html.theme-elvish .theme-dot.active { outline-color: rgba(138,176,212,0.5); }
+html.theme-elvish .btn::before { content: '✧'; }
+html.theme-elvish .project-name::before { content: '✦ '; }
+html.theme-elvish .char-sheet::before { content: '✦ TRAVELER ✦'; font-family: 'Cinzel', serif; letter-spacing: 0.14em; }
+html.theme-elvish .stat-name { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.08em; }
+html.theme-elvish .stat-val  { font-family: 'Cinzel', serif; font-size: 0.9rem; }
+@media (max-width: 620px) {
+  html.theme-elvish .nav-links { background: rgba(4,6,14,0.99); }
+}

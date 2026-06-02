@@ -64,6 +64,10 @@ _THEME_FILES = [
     "pirate.css",
     "typewriter.css",
     "typewriter-dark.css",
+    "elvish.css",
+    "infernal.css",
+    "abyssal.css",
+    "runic.css",
     "picker.css",
 ]
 
@@ -78,7 +82,7 @@ def load_css() -> str:
 SHARED_HEAD = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Cinzel:wght@400;700&family=Pirata+One&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Cinzel:wght@400;700&family=Pirata+One&family=Special+Elite&family=Skranji&family=Lora:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <script>(function(){document.documentElement.classList.add(localStorage.getItem('site-theme')||'theme-typewriter');})();</script>
 """
 
@@ -96,7 +100,7 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.06 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 document.getElementById('yr').textContent = new Date().getFullYear();
-const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark'];
+const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark', 'theme-elvish', 'theme-infernal', 'theme-abyssal', 'theme-runic'];
 function applyTheme(t) {
   document.documentElement.classList.remove(...THEMES);
   document.documentElement.classList.add(t);
@@ -201,6 +205,10 @@ def nav_html(root_prefix="") -> str:
     <button class="theme-dot" data-theme="theme-pirate"      title="Pirate parchment"></button>
     <button class="theme-dot" data-theme="theme-typewriter"      title="Typewriter"></button>
     <button class="theme-dot" data-theme="theme-typewriter-dark" title="Typewriter (dark)"></button>
+    <button class="theme-dot" data-theme="theme-elvish"          title="Elvish moonlight"></button>
+    <button class="theme-dot" data-theme="theme-infernal"        title="Infernal"></button>
+    <button class="theme-dot" data-theme="theme-abyssal"         title="Abyssal"></button>
+    <button class="theme-dot" data-theme="theme-runic"           title="Runic"></button>
   </div>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>

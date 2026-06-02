@@ -14,3 +14,7 @@
 .theme-dot[data-theme="theme-pirate"]      { background: #4a9880; }
 .theme-dot[data-theme="theme-typewriter"]       { background: #d4c090; }
 .theme-dot[data-theme="theme-typewriter-dark"]  { background: #b8aa88; }
+.theme-dot[data-theme="theme-elvish"]           { background: #8ab0d4; }
+.theme-dot[data-theme="theme-infernal"]         { background: #cc2a0e; }
+.theme-dot[data-theme="theme-abyssal"]          { background: #3a7878; }
+.theme-dot[data-theme="theme-runic"]            { background: #c88818; }
