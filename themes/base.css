@@ -72,8 +72,8 @@ nav {
 .nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--green-dim); }
 
 /* ── Layout ── */
-.section-wrap { max-width: 980px; margin: 0 auto; padding: 5rem 5vw; }
-hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; margin: 0 auto; }
+.section-wrap { max-width: clamp(980px, 72vw, 1400px); margin: 0 auto; padding: 5rem 5vw; }
+hr.rule { border: none; border-top: 1px solid var(--border); max-width: clamp(980px, 72vw, 1400px); margin: 0 auto; }
 .section-header { margin-bottom: 2.5rem; }
 .section-label {
   font-family: 'VT323', monospace; font-size: 2.3rem;
@@ -252,7 +252,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 .contact-label { font-family: 'VT323', monospace; font-size: 1.05rem; color: var(--text); letter-spacing: 0.12em; }
 
 /* ── Post / prose pages ── */
-.post-wrap { max-width: 680px; margin: 0 auto; padding: 7rem 5vw 5rem; }
+.post-wrap { max-width: clamp(680px, 55vw, 960px); margin: 0 auto; padding: 7rem 5vw 5rem; }
 .post-header { margin-bottom: 2.5rem; }
 .post-kicker { font-family: 'VT323', monospace; font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.2em; margin-bottom: 0.5rem; }
 .post-title { font-family: 'IM Fell English', serif; font-size: clamp(2rem, 6vw, 3.2rem); color: var(--green); line-height: 1.12; margin-bottom: 0.75rem; text-shadow: 0 0 18px rgba(0,220,80,0.2); }
