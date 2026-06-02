@@ -1,12 +1,12 @@
 /* ── Theme: Runic ── */
 html.theme-runic {
-  --bg: #0c0b08; --bg-solid: #0c0b08;
-  --bg-panel: #161408; --bg-panel2: #201c0e;
-  --green: #c88818; --green-hi: #e8b038;
-  --green-dim: #6a5018; --green-faint: #181408;
-  --green-glow: rgba(200,136,24,0.08);
-  --text: #c0a870; --text-dim: #6a5030;
-  --border: #201c08; --border-mid: #403818;
+  --bg: #0c0d12; --bg-solid: #0c0d12;
+  --bg-panel: #141720; --bg-panel2: #1c2030;
+  --green: #7888a8; --green-hi: #98a8c0;
+  --green-dim: #404858; --green-faint: #10121a;
+  --green-glow: rgba(120,136,168,0.07);
+  --text: #8090a8; --text-dim: #404858;
+  --border: #181a24; --border-mid: #2c3348;
 }
 html.theme-runic body { font-family: 'Lora', Georgia, serif; }
 html.theme-runic .nav-logo,
@@ -60,14 +60,14 @@ html.theme-runic .hero-quest,
 html.theme-runic .post-title { text-shadow: none; }
 html.theme-runic .nav-links a:hover { text-shadow: none; }
 html.theme-runic .btn:hover { box-shadow: none; text-shadow: none; }
-html.theme-runic .writing-card:hover { background: rgba(200,136,24,0.04); }
-html.theme-runic .project-item:hover  { background: rgba(200,136,24,0.04); }
+html.theme-runic .writing-card:hover { background: rgba(120,136,168,0.05); }
+html.theme-runic .project-item:hover  { background: rgba(120,136,168,0.05); }
 html.theme-runic #wrap { animation: none; }
 html.theme-runic .char-sheet,
 html.theme-runic .writing-card,
 html.theme-runic .project-item,
 html.theme-runic .contact-link { border-width: 2px; }
-html.theme-runic .theme-dot.active { outline-color: rgba(200,136,24,0.5); }
+html.theme-runic .theme-dot.active { outline-color: rgba(120,136,168,0.5); }
 html.theme-runic .btn::before { content: 'ᚱ'; }
 html.theme-runic .project-name::before { content: 'ᛟ '; }
 html.theme-runic .char-sheet::before { content: 'ᚨ CHARACTER ᚨ'; font-family: 'Skranji', serif; letter-spacing: 0.08em; }
