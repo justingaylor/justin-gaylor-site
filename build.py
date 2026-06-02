@@ -50,6 +50,7 @@ CHAR_STATS = [
 
 CONTENT_DIR = Path("content")
 DIST_DIR    = Path("dist")
+PAGE_SIZE   = 6
 
 THEMES_DIR  = Path("themes")
 
@@ -295,17 +296,12 @@ def load_about() -> str:
 
 # ── Page builders ──────────────────────────────────────────────────────────────
 
-def build_index(stories: list, blog: list, projects: list, about_html: str):
-    # About section
-    char_stats_html = "\n".join(
-        f'<div class="stat-row"><span class="stat-name">{k}</span>'
-        f'<span class="stat-val">{v}</span></div>'
-        for k, v in CHAR_STATS
-    )
+# ── Content renderers (reused by index and listing pages) ─────────────────────
 
-    # Stories section
-    if stories:
-        story_cards = "\n".join(f"""
+def render_story_cards(stories: list) -> str:
+    if not stories:
+        return '<p style="color:var(--text-dim);font-style:italic;">No tales yet. Check back soon.</p>'
+    return "\n".join(f"""
         <div class="writing-card reveal">
           <p class="card-tag">{s['type'].upper()}</p>
           <h3 class="card-title">{s['title']}</h3>
@@ -313,12 +309,12 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
           <p class="card-readtime">{s['wc']:,} words &nbsp;·&nbsp; {s['rt']}</p>
           <a href="stories/{s['slug']}.html" class="card-link">READ THE SCROLL</a>
         </div>""" for s in stories)
-    else:
-        story_cards = '<p style="color:var(--text-dim);font-style:italic;">No tales yet. Check back soon.</p>'
 
-    # Blog section
-    if blog:
-        blog_entries = "\n".join(f"""
+
+def render_blog_entries(blog: list) -> str:
+    if not blog:
+        return '<p style="color:var(--text-dim);font-style:italic;">No dispatches yet.</p>'
+    return "\n".join(f"""
         <a href="blog/{b['slug']}.html" class="blog-entry reveal">
           <div class="blog-date-col">
             <span class="blog-date">{fmt_date(b['date'])}</span>
@@ -329,15 +325,15 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
             <p class="blog-summary">{b['summary']}</p>
           </div>
         </a>""" for b in blog)
-    else:
-        blog_entries = '<p style="color:var(--text-dim);font-style:italic;">No dispatches yet.</p>'
 
-    # Projects section
-    if projects:
-        def proj_html(p):
-            tags = "".join(f'<span class="tag">{t}</span>' for t in p.get("tags", []))
-            url  = p.get("url", "#")
-            return f"""
+
+def render_project_items(projects: list) -> str:
+    if not projects:
+        return '<p style="color:var(--text-dim);font-style:italic;">Projects coming soon.</p>'
+    def proj_html(p):
+        tags = "".join(f'<span class="tag">{t}</span>' for t in p.get("tags", []))
+        url  = p.get("url", "#")
+        return f"""
         <div class="project-item reveal">
           <div>
             <p class="project-name">{p['name']}</p>
@@ -348,9 +344,23 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
             <a href="{url}" target="_blank" class="project-link">GITHUB</a>
           </div>
         </div>"""
-        project_items = "\n".join(proj_html(p) for p in projects)
-    else:
-        project_items = '<p style="color:var(--text-dim);font-style:italic;">Projects coming soon.</p>'
+    return "\n".join(proj_html(p) for p in projects)
+
+
+def _more_link(href: str, label: str, total: int) -> str:
+    if total <= PAGE_SIZE:
+        return ''
+    return f'<div class="section-more"><a href="{href}" class="btn">{label}</a></div>'
+
+
+# ── Page builders ──────────────────────────────────────────────────────────────
+
+def build_index(stories: list, blog: list, projects: list, about_html: str):
+    char_stats_html = "\n".join(
+        f'<div class="stat-row"><span class="stat-name">{k}</span>'
+        f'<span class="stat-val">{v}</span></div>'
+        for k, v in CHAR_STATS
+    )
 
     body = f"""
 <section id="hero">
@@ -387,30 +397,33 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 
 <div class="section-wrap" id="writing">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>TALES & LORE</h2>
+    <h2 class="section-label"><a href="writing.html"><span class="glyph">✦</span>TALES & LORE</a></h2>
     <p class="section-sub">SHORT FICTION · ESSAYS · WRITINGS</p>
   </div>
-  <div class="writing-grid">{story_cards}</div>
+  <div class="writing-grid">{render_story_cards(stories[:PAGE_SIZE])}</div>
+  {_more_link("writing.html", "ALL TALES", len(stories))}
 </div>
 
 <hr class="rule">
 
 <div class="section-wrap" id="blog">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>CHRONICLES</h2>
+    <h2 class="section-label"><a href="blog.html"><span class="glyph">✦</span>CHRONICLES</a></h2>
     <p class="section-sub">DISPATCHES FROM THE FIELD</p>
   </div>
-  <div class="blog-list">{blog_entries}</div>
+  <div class="blog-list">{render_blog_entries(blog[:PAGE_SIZE])}</div>
+  {_more_link("blog.html", "ALL ENTRIES", len(blog))}
 </div>
 
 <hr class="rule">
 
 <div class="section-wrap" id="projects">
   <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>THE WORKSHOP</h2>
+    <h2 class="section-label"><a href="projects.html"><span class="glyph">✦</span>THE WORKSHOP</a></h2>
     <p class="section-sub">SOFTWARE · OPEN SOURCE · CREATIONS</p>
   </div>
-  <div class="project-list">{project_items}</div>
+  <div class="project-list">{render_project_items(projects[:PAGE_SIZE])}</div>
+  {_more_link("projects.html", "ALL PROJECTS", len(projects))}
 </div>
 
 <hr class="rule">
@@ -524,6 +537,42 @@ def build_rss(stories: list, blog: list) -> str:
 </rss>"""
 
 
+def build_writing_page(stories: list) -> str:
+    body = f"""
+<div class="section-wrap" style="padding-top:7rem;">
+  <div class="section-header">
+    <h2 class="section-label"><span class="glyph">✦</span>TALES & LORE</h2>
+    <p class="section-sub">SHORT FICTION · ESSAYS · WRITINGS</p>
+  </div>
+  <div class="writing-grid">{render_story_cards(stories)}</div>
+</div>"""
+    return page_shell(title=f"Writing — {SITE_TITLE}", body=body)
+
+
+def build_blog_listing_page(blog: list) -> str:
+    body = f"""
+<div class="section-wrap" style="padding-top:7rem;">
+  <div class="section-header">
+    <h2 class="section-label"><span class="glyph">✦</span>CHRONICLES</h2>
+    <p class="section-sub">DISPATCHES FROM THE FIELD</p>
+  </div>
+  <div class="blog-list">{render_blog_entries(blog)}</div>
+</div>"""
+    return page_shell(title=f"Blog — {SITE_TITLE}", body=body)
+
+
+def build_projects_page(projects: list) -> str:
+    body = f"""
+<div class="section-wrap" style="padding-top:7rem;">
+  <div class="section-header">
+    <h2 class="section-label"><span class="glyph">✦</span>THE WORKSHOP</h2>
+    <p class="section-sub">SOFTWARE · OPEN SOURCE · CREATIONS</p>
+  </div>
+  <div class="project-list">{render_project_items(projects)}</div>
+</div>"""
+    return page_shell(title=f"Projects — {SITE_TITLE}", body=body)
+
+
 # ── Main build ─────────────────────────────────────────────────────────────────
 
 def build():
@@ -567,6 +616,14 @@ def build():
         out  = DIST_DIR / "blog" / f"{post['slug']}.html"
         out.write_text(html, encoding="utf-8")
         print(f"  ✓  dist/blog/{post['slug']}.html")
+
+    # Build listing pages
+    (DIST_DIR / "writing.html").write_text(build_writing_page(stories), encoding="utf-8")
+    print(f"  ✓  dist/writing.html")
+    (DIST_DIR / "blog.html").write_text(build_blog_listing_page(blog), encoding="utf-8")
+    print(f"  ✓  dist/blog.html")
+    (DIST_DIR / "projects.html").write_text(build_projects_page(projects), encoding="utf-8")
+    print(f"  ✓  dist/projects.html")
 
     # Build RSS feed
     (DIST_DIR / "rss.xml").write_text(build_rss(stories, blog), encoding="utf-8")
