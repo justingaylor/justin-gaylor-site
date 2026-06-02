@@ -34,6 +34,12 @@
   url: https://github.com/wyrdbound/grimoire-model
   date: 2025-09-12
 
+- name: grimoire-logging
+  description: Flexible logging utilities with dependency injection support for use in GRIMOIRE.
+  tags: ["Tabletop Role-Playing", "Python", "Open Source"]
+  url: https://github.com/wyrdbound/grimoire-logging
+  date: 2025-09-11
+
 - name: wyrdflow
   description: Python library designed for ML engineers and AI developers who need to build complex, maintainable agentic AI workflows. Built on top of LangChain, LangGraph, and LangSmith, Wyrdflow provides a class-based node system with built-in validation, retry logic, observability, and production-grade reliability.
   tags: ["Tabletop Role-Playing", "Python", "Open Source"]

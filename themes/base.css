@@ -259,6 +259,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 .post-meta { font-family: 'VT323', monospace; font-size: 0.88rem; color: var(--text-dim); letter-spacing: 0.12em; }
 .post-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
 .post-body { font-size: 1.05rem; line-height: 1.85; color: var(--text); }
+.post-body img { max-width: 100%; height: auto; display: block; }
 .post-body p  { margin-bottom: 1.4rem; }
 .post-body h2 { font-family: 'VT323', monospace; font-size: 1.6rem; color: var(--green); letter-spacing: 0.06em; margin: 2.2rem 0 0.8rem; }
 .post-body h3 { font-family: 'VT323', monospace; font-size: 1.25rem; color: var(--green-dim); letter-spacing: 0.06em; margin: 1.8rem 0 0.6rem; }
@@ -284,6 +285,18 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: 980px; m
 .back-link { font-family: 'VT323', monospace; font-size: 1rem; color: var(--text-dim); text-decoration: none; letter-spacing: 0.12em; transition: color 0.2s; }
 .back-link::before { content: '◄ '; }
 .back-link:hover { color: var(--green); }
+
+/* ── Tag filter ── */
+.tag-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+.tag-filter-btn {
+  font-family: 'VT323', monospace; font-size: 0.82rem; letter-spacing: 0.14em;
+  padding: 0.2rem 0.75rem; border: 1px solid var(--border); color: var(--text-dim);
+  background: transparent; cursor: pointer; transition: all 0.2s;
+}
+.tag-filter-btn:hover { border-color: var(--border-mid); color: var(--green); }
+.tag-filter-btn.active { border-color: var(--green); color: var(--green); background: var(--green-glow); }
+.tag-empty { font-style: italic; font-size: 0.9rem; color: var(--text-dim); margin-top: 1.5rem; }
+.writing-card .tags, .blog-entry .tags { justify-content: flex-start; margin-top: 0.6rem; }
 
 /* ── Footer ── */
 footer { border-top: 1px solid var(--border); padding: 2rem 5vw; text-align: center; font-family: 'VT323', monospace; font-size: 0.9rem; color: var(--text-dim); letter-spacing: 0.15em; }

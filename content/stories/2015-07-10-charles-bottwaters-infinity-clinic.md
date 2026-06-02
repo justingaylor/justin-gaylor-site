@@ -2,8 +2,9 @@
 title: Charles Bottwater's Infinity Clinic
 date: 2015-07-10
 type: Short Story
+tags: [sci-fi, short-story, near-future, awakening]
 summary: In the near future, a man with terminal cancer turns to a controversial doctor for a chance at life after death.
-thoughts: I wrote this one back when I was living in Shiogama, Japan the first time. Reading it now, I can see I was still finding my voice and early in my efforts to hone my craft. There's a lot of head-hopping, especially between Wayne and Betty. But the shape of the story is there, and that part I'm most proud of.
+thoughts: I wrote this one back when I was living in Japan the first time. It's in the same world as an "Awakening" science fiction novel project in my "maybe someday" bucket. Reading this story now, I can see some rough points – there's a bit of head-hopping, especially between Wayne and Betty. But the shape of the story is there, and that's the part I'm most proud of.
 ---
 
 Pride comes before the fall; Wayne Dinsmore knew that all too well. The diagnosis had been sudden, although he guessed this sort of thing was always sudden. How many routine health exams with full bills of health had he had in 53 years? The doctors told him that the tumor must have started to grow shortly after his last health exam, 8 years ago. The routine check-ups would have found it, they said, if he had continued going.

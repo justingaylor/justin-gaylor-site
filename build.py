@@ -136,6 +136,28 @@ function tick() {
 tick();
 """
 
+TAG_FILTER_JS = """
+(function() {
+  const btns  = document.querySelectorAll('.tag-filter-btn');
+  const items = document.querySelectorAll('[data-tags]');
+  const empty = document.getElementById('tag-empty');
+  if (!btns.length) return;
+  btns.forEach(btn => btn.addEventListener('click', () => {
+    const tag = btn.dataset.tag;
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    items.forEach(item => {
+      if (tag === '*') {
+        item.hidden = false;
+      } else {
+        item.hidden = !(item.dataset.tags || '').split(',').includes(tag);
+      }
+    });
+    if (empty) empty.hidden = Array.from(items).some(i => !i.hidden);
+  }));
+})();
+"""
+
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 def parse_file(path: Path) -> tuple[dict, str]:
@@ -298,24 +320,60 @@ def load_about() -> str:
 
 # ── Content renderers (reused by index and listing pages) ─────────────────────
 
-def render_story_cards(stories: list) -> str:
+def _tags_str(tags: list) -> str:
+    return ",".join(tags)
+
+def _tags_html(tags: list) -> str:
+    return "".join(f'<span class="tag">{t}</span>' for t in tags)
+
+def _collect_tags(items: list, key: str = 'meta') -> list[str]:
+    tags: set[str] = set()
+    for item in items:
+        src = item.get('meta', {}) if key == 'meta' else item
+        tags.update(src.get('tags', []) or [])
+    return sorted(tags)
+
+def render_tag_filter(tags: list) -> str:
+    if not tags:
+        return ''
+    btns = "\n  ".join(
+        f'<button class="tag-filter-btn" data-tag="{t}">{t.upper()}</button>'
+        for t in tags
+    )
+    return f"""<div class="tag-filter">
+  <button class="tag-filter-btn active" data-tag="*">ALL</button>
+  {btns}
+</div>"""
+
+
+def render_story_cards(stories: list, show_tags: bool = False) -> str:
     if not stories:
         return '<p style="color:var(--text-dim);font-style:italic;">No tales yet. Check back soon.</p>'
-    return "\n".join(f"""
-        <div class="writing-card reveal">
+    def card(s):
+        tags = s['meta'].get('tags', []) or []
+        tag_attr = f' data-tags="{_tags_str(tags)}"' if tags else ''
+        tag_block = f'<div class="tags">{_tags_html(tags)}</div>' if show_tags and tags else ''
+        return f"""
+        <div class="writing-card reveal"{tag_attr}>
           <p class="card-tag">{s['type'].upper()}</p>
           <h3 class="card-title">{s['title']}</h3>
           <p class="card-excerpt">{s['summary']}</p>
           <p class="card-readtime">{s['wc']:,} words &nbsp;·&nbsp; {s['rt']}</p>
+          {tag_block}
           <a href="stories/{s['slug']}.html" class="card-link">READ THE SCROLL</a>
-        </div>""" for s in stories)
+        </div>"""
+    return "\n".join(card(s) for s in stories)
 
 
-def render_blog_entries(blog: list) -> str:
+def render_blog_entries(blog: list, show_tags: bool = False) -> str:
     if not blog:
         return '<p style="color:var(--text-dim);font-style:italic;">No dispatches yet.</p>'
-    return "\n".join(f"""
-        <a href="blog/{b['slug']}.html" class="blog-entry reveal">
+    def entry(b):
+        tags = b['meta'].get('tags', []) or []
+        tag_attr = f' data-tags="{_tags_str(tags)}"' if tags else ''
+        tag_block = f'<div class="tags" style="margin-top:0.5rem;">{_tags_html(tags)}</div>' if show_tags and tags else ''
+        return f"""
+        <a href="blog/{b['slug']}.html" class="blog-entry reveal"{tag_attr}>
           <div class="blog-date-col">
             <span class="blog-date">{fmt_date(b['date'])}</span>
             <span class="blog-readtime">{b['rt']}</span>
@@ -323,24 +381,26 @@ def render_blog_entries(blog: list) -> str:
           <div>
             <p class="blog-title">{b['title']}</p>
             <p class="blog-summary">{b['summary']}</p>
+            {tag_block}
           </div>
-        </a>""" for b in blog)
+        </a>"""
+    return "\n".join(entry(b) for b in blog)
 
 
 def render_project_items(projects: list) -> str:
     if not projects:
         return '<p style="color:var(--text-dim);font-style:italic;">Projects coming soon.</p>'
     def proj_html(p):
-        tags = "".join(f'<span class="tag">{t}</span>' for t in p.get("tags", []))
+        tags = p.get("tags", []) or []
         url  = p.get("url", "#")
         return f"""
-        <div class="project-item reveal">
+        <div class="project-item reveal" data-tags="{_tags_str(tags)}">
           <div>
             <p class="project-name">{p['name']}</p>
             <p class="project-desc">{p.get('description', '')}</p>
           </div>
           <div class="project-meta">
-            <div class="tags">{tags}</div>
+            <div class="tags">{_tags_html(tags)}</div>
             <a href="{url}" target="_blank" class="project-link">GITHUB</a>
           </div>
         </div>"""
@@ -520,7 +580,7 @@ def build_rss(stories: list, blog: list) -> str:
     items = "\n".join(f"""  <item>
     <title>{xml_escape(p['title'])}</title>
     <link>{BASE_URL}/{p['section']}/{p['slug']}.html</link>
-    <description>{xml_escape(p.get('summary', ''))}</description>
+    <description>{xml_escape(p.get('summary') or '')}</description>
     <pubDate>{pub_date(p['date'])}</pubDate>
     <guid>{BASE_URL}/{p['section']}/{p['slug']}.html</guid>
   </item>""" for p in all_posts)
@@ -538,39 +598,48 @@ def build_rss(stories: list, blog: list) -> str:
 
 
 def build_writing_page(stories: list) -> str:
+    tags = _collect_tags(stories)
     body = f"""
 <div class="section-wrap" style="padding-top:7rem;">
   <div class="section-header">
     <h2 class="section-label"><span class="glyph">✦</span>TALES & LORE</h2>
     <p class="section-sub">SHORT FICTION · ESSAYS · WRITINGS</p>
   </div>
-  <div class="writing-grid">{render_story_cards(stories)}</div>
+  {render_tag_filter(tags)}
+  <div class="writing-grid">{render_story_cards(stories, show_tags=True)}</div>
+  <p id="tag-empty" class="tag-empty" hidden>No tales match that tag.</p>
 </div>"""
-    return page_shell(title=f"Writing — {SITE_TITLE}", body=body)
+    return page_shell(title=f"Writing — {SITE_TITLE}", body=body, extra_js=TAG_FILTER_JS)
 
 
 def build_blog_listing_page(blog: list) -> str:
+    tags = _collect_tags(blog)
     body = f"""
 <div class="section-wrap" style="padding-top:7rem;">
   <div class="section-header">
     <h2 class="section-label"><span class="glyph">✦</span>CHRONICLES</h2>
     <p class="section-sub">DISPATCHES FROM THE FIELD</p>
   </div>
-  <div class="blog-list">{render_blog_entries(blog)}</div>
+  {render_tag_filter(tags)}
+  <div class="blog-list">{render_blog_entries(blog, show_tags=True)}</div>
+  <p id="tag-empty" class="tag-empty" hidden>No entries match that tag.</p>
 </div>"""
-    return page_shell(title=f"Blog — {SITE_TITLE}", body=body)
+    return page_shell(title=f"Blog — {SITE_TITLE}", body=body, extra_js=TAG_FILTER_JS)
 
 
 def build_projects_page(projects: list) -> str:
+    tags = _collect_tags(projects, key='direct')
     body = f"""
 <div class="section-wrap" style="padding-top:7rem;">
   <div class="section-header">
     <h2 class="section-label"><span class="glyph">✦</span>THE WORKSHOP</h2>
     <p class="section-sub">SOFTWARE · OPEN SOURCE · CREATIONS</p>
   </div>
+  {render_tag_filter(tags)}
   <div class="project-list">{render_project_items(projects)}</div>
+  <p id="tag-empty" class="tag-empty" hidden>No projects match that tag.</p>
 </div>"""
-    return page_shell(title=f"Projects — {SITE_TITLE}", body=body)
+    return page_shell(title=f"Projects — {SITE_TITLE}", body=body, extra_js=TAG_FILTER_JS)
 
 
 # ── Main build ─────────────────────────────────────────────────────────────────
@@ -596,6 +665,20 @@ def build():
     # Custom domain for GitHub Pages
     (DIST_DIR / "CNAME").write_text("gaylor.quest\n", encoding="utf-8")
     print(f"  ✓  dist/CNAME")
+
+    # Copy static assets
+    img_src = CONTENT_DIR / "img"
+    if img_src.exists():
+        img_dst = DIST_DIR / "img"
+        if img_dst.exists():
+            shutil.rmtree(img_dst)
+        shutil.copytree(img_src, img_dst)
+        print(f"  ✓  dist/img/ ({len(list(img_dst.iterdir()))} files)")
+
+    # Report loaded themes
+    _non_themes = {'base.css', 'picker.css'}
+    _themes = [f.replace('.css', '') for f in _THEME_FILES if f not in _non_themes]
+    print(f"  ✓  themes/ ({len(_THEME_FILES)} files: {len(_themes)} themes: {', '.join(_themes)})")
 
     # Build index
     (DIST_DIR / "index.html").write_text(
