@@ -304,6 +304,10 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: clamp(98
 footer { border-top: 1px solid var(--border); padding: 2rem 5vw; text-align: center; font-family: 'VT323', monospace; font-size: 0.9rem; color: var(--text-dim); letter-spacing: 0.15em; }
 footer .rune-line { margin-bottom: 0.5rem; color: var(--border-mid); }
 
+/* ── Utilities ── */
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
 /* ── Scroll reveal ── */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }

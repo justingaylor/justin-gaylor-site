@@ -2,9 +2,9 @@
 title: Kichibei and the Kappa
 date: 2026-06-02
 type: Short Story
-tags: [fantasy, short-story, folklore, echizo]
-summary: A precocious boy must confront a river yōkai to save his three friends from certain danger.
-thoughts: This is the first story I wrote since I started being serious about writing way back in 2010. At that time, I was living and working in Yokohama. The story was inspired by a combination of the folklore of the [kappa](https://en.wikipedia.org/wiki/Kappa_(folklore)), which I've been fascinated by for a long time, and the Tsurumi River, which I lived near and often visited to de-stress after work. The story is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period). The artwork for this story was painted by my good friend, Jason Berdan, and the original paintings hang in my office.
+tags: [fantasy, short-story, echizo, sketches-of-echizo]
+summary: A precocious boy must confront a river _yōkai_ to save his three friends from certain death.
+thoughts: This is the first story I wrote after beginning to take writing seriously back in 2010. At that time, I was living and working in Yokohama. The story was inspired by a combination of the folklore of the [kappa](https://en.wikipedia.org/wiki/Kappa_(folklore)), which I've been fascinated by for a long time, and the Tsurumi River, which I lived near and often visited to de-stress after work. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).<br><br> The artwork for this story was painted by my good friend, Jason Berdan, and the original paintings hang in my home.
 ---
 
 [![Kappa swimming underwater with three surprised children](../img/20210725_KichibeiKappaUnderwaterFinal.jpg)](../img/20210725_KichibeiKappaUnderwaterFinal.jpg)
@@ -38,13 +38,13 @@ Swimming ten spans down, it passed a school of trout darting from its path. Once
 
 Upon reaching the base of the large rock on which the children played, the _kappa_ set about the first step of its plan. Driving green, clawed hands deep into the oily muck, it began to dig away the earth supporting the massive rock. Dirt spread throughout the already murky water of the river, the current carrying it downstream. The _kappa_’s scaly hands lifted a rock, a crayfish darting out from beneath it and swimming beneath another. The river demon tossed the rock aside and continued its work weakening the base of the large stone while the children – oblivious of their peril – continued to play above.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 It was Yūsuke's turn to be _oni_ again and he wasn't happy. Kichibei must be cheating because every time Yūsuke ended up behind him, he shouted Yūsuke's name and Yūsuke had to be _oni_. He was certain that Kichibei was cheating. Kichibei was just trying to make him look dumb. Next time Kichibei called out Yūsuke's name he was going to get it.
 
 Yūsuke cast Matsu and Yuki a sheepish look, but the two girls laughed, Matsu's eyes shining and Yuki's chubby cheeks glowing. He put on a sour face as he regarded Kichibei and plopped himself down in the middle of the big rock jutting out over the Tsurumi River. Pouting as he peered down into the dark water, he thought he spotted the shell of a large turtle moving far below the surface, but it disappeared beneath the rock. He covered his eyes, the memory of a giant turtle swimming beneath him faded as quickly as it had come, and heard only the sounds of the other children circling him, singing the tune of Kagome, Kagome.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 Kichibei could not help but laugh as he sang the song, circling around Yūsuke with the others. He had guessed correctly that Yūsuke was behind him for the third time in a row. Yūsuke must think he was cheating, but Kichibei had discovered a trick – whenever Yūsuke was behind him, Yūsuke's body blocked the sunlight shining on Kichibei's back. Matsu and Yuki were too small for their shadows to reach his back, so if it became cold, it was certain to be Yūsuke standing behind him. He and the girls finished the first part of the song, Kichibei chuckling at his own cleverness.
 

@@ -1,10 +1,10 @@
 ---
 title: Dazik's Wings
-date: 2015-06-10
+date: 2026-05-28
 type: Flash Fiction
-tags: [sci-fi, flash-fiction, alien-worlds]
+tags: [sci-fi, flash-fiction]
 summary: On a distant planet in a distant galaxy, a zreccan of the lowest caste finds himself facing impossible odds.
-thoughts: The zreccan were roughly inspired by a documentary I watched years prior to writing this which described Troodon, a small dinosaur similar in shape to the Velociraptor, but dubbed the "Einstein" of dinosaurs. The documentary theorized that, had the Chicxulub asteroid not hit Earth, killing all non-avian dinosaurs and ending the Cretaceous period, Troodon might have evolved to be the dominant species on the planet with intelligence on par with modern humans. I wondered what that civilization would look like, and Dazik's story is a small glimpse into it. Like many stories I write, the details of the world and its inhabitants emerged as I wrote it, as if I'm discovering the world rather than creating it. This is one of the things I love about writing fiction.
+thoughts: I originally wrote this story back in 2015. The zreccan were roughly inspired by a documentary I watched years prior to writing this which described Troodon, a small dinosaur similar in shape to the Velociraptor, but dubbed the "Einstein" of dinosaurs. The documentary theorized that, had the Chicxulub asteroid not hit Earth, killing all non-avian dinosaurs and ending the Cretaceous period, Troodon might have evolved to be the dominant species on the planet with intelligence on par with modern humans. I wondered what that civilization would look like, and Dazik's story is a small glimpse into it. Like many stories I write, the details of the world and its inhabitants emerged as I wrote it, as if I'm discovering the world rather than creating it. This is one of the things I love about writing fiction.
 ---
 
 Dazik dug his sharp claws into the dirt as his strong legs propelled him forward, past jagged rocks and rose bushes, black as the ash they sprouted from. Dust and ash trailed behind him, cut into three streams by two vestigial wings that hung limply from his leathery back. In each sharp-taloned hand, he clutched the handles of a heavy chest, entrusted to him for delivery.

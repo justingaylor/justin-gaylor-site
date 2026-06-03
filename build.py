@@ -179,6 +179,16 @@ def render_md(text: str) -> str:
     return md_lib.markdown(text, extensions=["fenced_code", "tables"])
 
 
+def render_inline_md(text: str) -> str:
+    """Render Markdown inline, stripping the outer <p> wrapper."""
+    if not text:
+        return ""
+    html = render_md(text).strip()
+    if html.startswith("<p>") and html.endswith("</p>"):
+        html = html[3:-4]
+    return html
+
+
 def word_stats(body: str) -> tuple[int, str]:
     """Return (word_count, read_time_str) for a markdown body."""
     text = re.sub(r'```.*?```', ' ', body, flags=re.DOTALL)
@@ -357,7 +367,7 @@ def render_story_cards(stories: list, show_tags: bool = False) -> str:
         <div class="writing-card reveal"{tag_attr}>
           <p class="card-tag">{s['type'].upper()}</p>
           <h3 class="card-title">{s['title']}</h3>
-          <p class="card-excerpt">{s['summary']}</p>
+          <p class="card-excerpt">{render_inline_md(s['summary'])}</p>
           <p class="card-readtime">{s['wc']:,} words &nbsp;·&nbsp; {s['rt']}</p>
           {tag_block}
           <a href="stories/{s['slug']}.html" class="card-link">READ THE SCROLL</a>
@@ -380,7 +390,7 @@ def render_blog_entries(blog: list, show_tags: bool = False) -> str:
           </div>
           <div>
             <p class="blog-title">{b['title']}</p>
-            <p class="blog-summary">{b['summary']}</p>
+            <p class="blog-summary">{render_inline_md(b['summary'])}</p>
             {tag_block}
           </div>
         </a>"""
@@ -580,7 +590,7 @@ def build_rss(stories: list, blog: list) -> str:
     items = "\n".join(f"""  <item>
     <title>{xml_escape(p['title'])}</title>
     <link>{BASE_URL}/{p['section']}/{p['slug']}.html</link>
-    <description>{xml_escape(p.get('summary') or '')}</description>
+    <description>{xml_escape(render_md(p.get('summary') or ''))}</description>
     <pubDate>{pub_date(p['date'])}</pubDate>
     <guid>{BASE_URL}/{p['section']}/{p['slug']}.html</guid>
   </item>""" for p in all_posts)

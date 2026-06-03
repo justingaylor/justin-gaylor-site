@@ -1,8 +1,8 @@
 ---
 title: Charles Bottwater's Infinity Clinic
-date: 2015-07-10
+date: 2026-05-29
 type: Short Story
-tags: [sci-fi, short-story, near-future, awakening]
+tags: [sci-fi, short-story, awakening]
 summary: In the near future, a man with terminal cancer turns to a controversial doctor for a chance at life after death.
 thoughts: I wrote this one back when I was living in Japan the first time. It's in the same world as an "Awakening" science fiction novel project in my "maybe someday" bucket. Reading this story now, I can see some rough points – there's a bit of head-hopping, especially between Wayne and Betty. But the shape of the story is there, and that's the part I'm most proud of.
 ---
@@ -49,7 +49,7 @@ Dr. Bottwater looked took out his pocket watch and, looking at the time, exclaim
 
 Clasping Bottwater's thin hand in his own even thinner hand, Wayne shook the man's hand, then turned and hurried out the office, already wondering what Betty was going to tell him since he was already fifteen minutes late.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 Two questions floated through Betty's mind as she approached the register at Glenna's Hair Salon.
 
@@ -91,7 +91,7 @@ Betty's irritated voice woke him from his reverie. "Oh, Betty, I'm sorry. Like I
 
 Wayne let the silence stand, having learned when pushing the point with Betty was only going to make things worse. He gazed at window again and noticed his own reflection. He was wasting away, just as the doctors had told him he would.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 Wayne lay on the operating table in the Infinity Clinic. He knew that he wasn't undergoing any operation, the procedure was in fact completely non-intrusive, but he still felt nervous. What would Betty think? Would she still love him, regardless?
 
@@ -121,7 +121,7 @@ Wayne sat up. "That's it?" Wasn't this whole brain imaging thing supposed to tak
 
 Dr. Bottwater was already walking away, data cables draped over his shoulder while fluorescent light from the hand-held terminal reflected off his pale face and he gleefully pressed buttons and muttered to himself.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 Betty Dinsmore leaned over the hospital bed containing her frail husband's body. "Betty. Throat's dry. Can I have a glass of water?" Her husband looked up at her from the hospital bed. Betty stood up and filled a plastic cup of water from the water fountain and held it in front of his lips with a caring that belied her usual treatment of Wayne. Wayne drank a bit too greedily and coughed. "Thank you, dear."
 
@@ -163,7 +163,7 @@ She felt mortified and embarrassed and relieved, all at the same time. Betty had
 
 "Don't worry, Betty. You'll be taken care of after I go. I've made sure of that." As he smoothed her hair, he felt life slowly leaving his body and all was dark.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 Upon arriving home, Betty discovered a letter in the mailbox with nothing but her name on it. No address, no postage. No return address either. Her name was the only thing written on it.
 
@@ -209,7 +209,7 @@ Suddenly through the beige curtain walked a ghost, her husband, a handsome smile
 
 Betty hug him closer again. She wasn't sure if this was her husband or not. But she was just happy to have something of him to hold onto.
 
-<center>~ * ~ *  ~</center>
+<p class="text-center">~ * ~ *  ~</p>
 
 Charles Bottwater sat at his desk, typing up his final summary for the case of Wayne Dinsmore. Things had turned out swimmingly. The reinstantiation went off flawlessly, acclimation issues had been minimal, and the wife hadn't rejected him outright.
 
