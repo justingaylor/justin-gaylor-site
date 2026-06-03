@@ -7,8 +7,6 @@ summary: The son of a shrine's head priest sneaks into the Forbidden Hall to cat
 thoughts: This story explores the relationship between people and kami, the importance of respect and gratitude in that relationship, and the idea of kami as beings shaped and empowered by the feelings of the people who worship them. The original intent of the story was to help shape my understanding of kami as they exist in the world of Echizo, but I also wanted to write a story that could stand on its own. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I've created that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).
 ---
 
-[![A young boy pulls our a cushion to sit on and share a meal with a giant deer kami covered in swirling colors](../img/20220503_FeastWithAKami1_Final.jpg)](../img/20220503_FeastWithAKami1_Final.jpg)
-
 The early morning chill birthed a thick fog over Ryōsanji Shrine, the hills below rising through moist clouds like the undulating back of a serpent. The silence was broken only by the chirping of birds, the ever-present sound of a nearby waterfall, and the chanting of Shojumaru's father and two other priests as they stood before the Forbidden Hall.
 
 Standing before a large, pine chest garbed in pure, white robes and chanting solemnly, Shoju's father and the other priests were an imposing sight. As Shoju watched them, a fourth priest opened the chest, revealing an assortment of fresh produce and fish, all offerings carefully selected from the lands surrounding the shrine. Apparently, Shakunanjō, the guardian _kami_ of Ryōsanji, deserved only the best for his morning meal.
@@ -39,125 +37,127 @@ The walls of the inner sanctum were lined with candles, each on its own metal pl
 
 Or, rather, something leapt from the chest, and Shoju gasped in surprise. The thing which emerged from the black chest resembled a deer of brilliant, swirling colors, however it was so large it almost filled the room. Its legs were each the width of a tree, and its antlers reached the vaulted ceiling high above. As Shoju watched, the massive deer slowly shrunk in size until it was the size of a normal deer, though still larger than any Shoju had seen before. He stared wide-eyed.
 
-Why don’t you come up, Little One? The deer shook its antlered head as it circled the room, until it stood up on two legs like a person, its shape changing into something more person-like, but still quite deer-like. Its two front hooves shimmered with colors, transforming into something like the tentacles of the octopus his parents had made him taste once. The deer looked down through the wooden slits in the floor directly at Shoju, and he knew it could see him. For the first time, he felt afraid.
+_Why don’t you come up, Little One?_ The deer shook its antlered head as it circled the room, until it stood up on two legs like a person, its shape changing into something more person-like, but still quite deer-like. Its two front hooves shimmered with colors, transforming into something like the tentacles of the octopus his parents had made him taste once. The deer looked down through the wooden slits in the floor directly at Shoju, and he knew it could see him. For the first time, he felt afraid.
 
-Do not be afraid. The voice sounded inside his head. You can see and hear me. That makes things easier. I shall make some room for you.
+_Do not be afraid. The voice sounded inside his head. You can see and hear me. That makes things easier. I shall make some room for you._
 
 A glowing energy surrounded the creature that, for some reason, made Shoju remember the joy of playing in the woods with his brother, Takurō. The swirl of power floated down from the creature and interacted with the floor, the fibers of the wooden slats splintering apart and opening a hole large enough for Shoju to pass through. The energy receded from the opening and the kami stepped back, falling onto all four legs like a deer again. Deciding that Shakunanjō was not angry he’d snuck into the hall, Shoju stood up and pulled himself through the hole into the enshrining hall, laughing with wonder.
 
-Many years ago, there were cushions in the cabinet over there, beneath my bones. The kami shook its antlered head again, seeming to indicate the direction of the large, blackwood chest. Beneath it, Shoju saw a small handle to which he ran over and seized, sliding open the door. He reached inside and grabbed a zabuton with both hands, pulling hard before it came free. Shoju tumbled backward and almost knocked into the white, pine chest the priests had brought inside. The zabuton brought with it a thin layer of dust that had gathered on its surface, causing Shoju to sneeze once more.
+_Many years ago, there were cushions in the cabinet over there, beneath my bones._ The kami shook its antlered head again, seeming to indicate the direction of the large, blackwood chest. Beneath it, Shoju saw a small handle to which he ran over and seized, sliding open the door. He reached inside and grabbed a _zabuton_ with both hands, pulling hard before it came free. Shoju tumbled backward and almost knocked into the white, pine chest the priests had brought inside. The cushion brought with it a thin layer of dust that had gathered on its surface, causing Shoju to sneeze once more.
 
-“A-are you Shakunanjō?” Shoju blurted out his question before tossing the zabuton on the ground. The kami did not answer for a moment and Shoju used the opportunity to get another zabuton, struggling to lift it again before tossing it down next to the other cushion and the pine chest. The colors inside the kami swirled about and Shoju somehow knew that meant it was pleased. The being settled upon one of the cushions.
+“A-are you Shakunanjō?” Shoju blurted out his question before tossing the _zabuton_ on the ground. The kami did not answer for a moment and Shoju used the opportunity to get another cushion, struggling to lift it again before tossing it down next to the other cushion and the pine chest. The colors inside the kami swirled about and Shoju somehow knew that meant it was pleased. The being settled upon one of the cushions.
 
-Shakunanjō is the name the priests call me. The other kami call me Furiō. But a name is just a name, Little One. I am a deer, although I've become something else since your ancestors placed my bones here. I can talk now, and even change the weather. It was me, though, whom you came to see, yes? Shoju thought the deer of swirling colors smiled at him, and that made him feel reassured for some reason. You can call me Shaku if you want. And what are you called?
+_Shakunanjō is the name the priests call me. The other kami call me Furiō. But a name is just a name, Little One. I am a deer, although I've become something else since your ancestors placed my bones here. I can talk now, for one, and even change the weather. It was me, though, whom you came to see, yes?_ Shoju thought the deer of swirling colors smiled at him, and that made him feel reassured for some reason. _You can call me Shaku if you want. And what are you called?_
 
 "I am Shojumaru. Pleased to meet you, Shaku-sama." He added the suffix as his mother had always instructed him when addressing kami and bowed respectfully to it. The large stag flashed an array of brilliant colors that Shoju could not name before returning to its former, more subdued swirl of golds, greens, and browns.
 
-"Pleased to meet you too, Shojumaru. Shall we see what bounty the priests brought this morning? I hope there are apples or persimmons today! Nothing wakes up an old deer like morning fruit. I never much ate them while I was running about the forest, but I’ve grown to enjoy them.'' The deer, still resting on its zabuton, reached out from its body with tentacles of the same, luminous energy that had opened the slits earlier and the tentacles appeared to pass through the lid of the pine chest and dig around.
+_Pleased to meet you too, Shojumaru. Shall we see what bounty the priests brought this morning? I hope there are apples or persimmons today! Nothing wakes up an old deer like morning fruit. I never much ate them while I was running about the forest, but I’ve grown to enjoy them._ The deer, still resting on its _zabuton_, reached out from its body with tentacles of the same, luminous energy that had opened the slits earlier and the tentacles appeared to pass through the lid of the pine chest and dig around.
 
-Ah, a red snapper, six plump berries, fresh rice...and a persimmon! Would you like to share some of this fine feast with me, Shoju?' The kami's tentacles of energy retracted back inside its body and it turned toward the boy.
+[![A young boy pulls our a cushion to sit on and share a meal with a giant deer kami covered in swirling colors](../img/20220503_FeastWithAKami1_Final.jpg)](../img/20220503_FeastWithAKami1_Final.jpg)
+
+_Ah, a red snapper, six plump berries, fresh rice...and a persimmon! Would you like to share some of this fine feast with me, Shoju?_ The kami's tentacles of energy retracted back inside its body and it turned toward the boy.
 
 Shoju's stomach growled, revealing that he had skipped breakfast to be here. "Sure!” was his enthusiastic answer.
 
-Wonderful! The priests long ago used to eat with me, but I cannot remember the last time I shared a meal with anyone. Shakunanjo's tail shook, echoing its own excitement. Of course, you'll need to open the chest I guess, unless you know how to feed through your ki?
+_Wonderful! The priests long ago used to eat with me, but I cannot remember the last time I shared a meal with anyone._ Shakunanjo's tail shook, echoing its own excitement. _Of course, you'll need to open the chest I guess, unless you know how to feed through your ki?_
 
 Shoju shook his head, unsure what the kami was talking about, but certain he hadn't been shown how to do anything like that. Standing, he walked over to the pine chest and pushed open the lid, revealing a variety of foods, including the items that Shaku had mentioned. “I’ll tell my father you like persimmons." Shoju smiled. "Why can't you open the chest like you did that wooden grate over there?"
 
 Shaku's energy tentacles reached out again and lifted items from the offering chest–a cabbage, a sweet potato, a few shiitake, some assorted berries–and divided them between the two of them, setting the foods on the ground in front of Shoju and himself. The sweet potato Shaku broke in half among them. Shoju reached out and grabbed a berry, almost popping it into his mouth before his mother's phantom voice echoed in his memory, scolding him for not showing his gratitude for the food first. The boy set down his berry and placed his hands together, bowing to the kami before him.
 
-Shaku watched Shoju, an amused look on its face. Your mother teaches you well, Shojumaru. We are part of a cycle, you and I. You offer respect and gratitude. I offer plentiful harvests, safety, and good fortune. Your prayers sustain me. My blessings sustain you. Balance between these two is Shintō, the Way of Kami. Respect for blessing, blessing for respect.
+Shaku watched Shoju, an amused look on its face. _Your mother teaches you well, Shojumaru. We are part of a cycle, you and I. You offer respect and gratitude. I offer plentiful harvests, safety, and good fortune. Your prayers sustain me. My blessings sustain you. Balance between these two is Shintō, our way. Respect for blessing, blessing for respect._
 
 Shoju nodded that he understood. Having given his thanks, he began eating the berries. Between bites, he asked a question that came to mind. “What happens if people don't respect you?"
 
-The respect and gratitude I’ve received from your kind has given me the duty to provide for you and your people. There are no emotions more powerful than gratitude. When it is felt genuinely, gratitude can make a simple deer like me into a powerful kami. The kami's glimmering tentacles of energy reached out and caressed the food on the floor in front of it. As it did so, Shoju saw the kami shimmer and glow, energy moving from the food, up through its tentacle, and into its body, swirling around with the other colors, becoming part of Shaku.
+_The respect and gratitude I’ve received from your kind has given me the duty to provide for you and your people. There are few emotions more powerful than gratitude. When it is felt genuinely, gratitude can make a simple deer like me into a powerful kami._ The kami's glimmering tentacles of energy reached out and caressed the food on the floor in front of it. As it did so, Shoju saw the kami shimmer and glow, energy moving from the food, up through its tentacle, and into its body, swirling around with the other colors, becoming part of Shaku.
 
-That is why it is important for you to pray to kami from the depths of your heart. Ritual without gratitude is almost as bad as no ritual at all. It is like dangling grasses in front of a deer, then not allowing the deer to eat them. Shoju nodded as he listened.
+_That is why it is important for you to pray to kami from the depths of your heart. Ritual without gratitude is almost as bad as no ritual at all. It is like dangling grasses in front of a deer, then not allowing the deer to eat them._ Shoju nodded as he listened.
 
 “Thank you, Shaku-sama. The food you provide us is delicious!" As Shoju spoke, he felt something flow from his chest–his gratitude–and saw the kami shimmer briefly as it entered Shaku’s energy.
 
-I think you understand, Shojumaru. Without respect and gratitude, we kami would lose our power. I would return to being what I was before, the spirit of a wild animal, but nothing more. Certainly not a kami with the power to control the happenings of the natural world. Then, nature would return to its indifference to humanity and your people would find life quite difficult indeed.
+_I think you understand, Shojumaru. Without respect and gratitude, we kami would lose our power. I would return to being what I was before, the spirit of a wild animal, but nothing more. Certainly not a kami with the power to control the happenings of the natural world. Then, nature would return to its indifference to humanity and your people would find life quite difficult indeed._
 
 "Then I’ll make sure we feed you the best food three times a day!" Shoju watched the kami shimmer as it laughed at his words.
 
-One meal is enough, Shojumaru, if the feelings are heartfelt. This meal, for example, one of the priests–your father–does not believe he is giving this food to a kami anymore. He saw me once as a boy, only briefly, but he seems to have forgotten I am here.
+_One meal is enough, Shojumaru, if the feelings are heartfelt. This meal, for example, one of the priests – your father – does not believe he is giving this food to a kami anymore. He saw me once as a boy, only briefly, but he seems to have forgotten I am here._
 
 "Father? But he's the head priest! Of course he knows you are here!"
 
-He seems to have forgotten. The offerings he gives do not taste as good as they once did.
+_He seems to have forgotten. The offerings he gives do not taste as good as they once did._
 
 "I could never forget!" Shoju chimed, munching on a shiitake, the odd taste of the raw mushroom causing his face to wrinkle up. Noticing Shoju’s expression, Shaku took one of its tentacles, which had been busily consuming energy from one of the offerings, and opened a cabinet next to Shoju, producing a dusty, wooden bowl from the bottom shelf. A second tendril flashed pale green and dust flew off the bowl as if blown by a strong wind. Placing the bowl in front of Shoju, a third flow of energy thrust through the wooden boards of the floor of the enshrinement hall, a hole opening in the boards as the fibers in the wood sprang to life. The first tentacle turned deep blue, and water poured from it into the bowl. Two of the tentacles moved into the vegetables and sliced them and the meat of the red snapper, tossing each ingredient into the wooden bowl. Shoju watched as the kami worked, wide-eyed and mesmerized. One tendril stirred the contents of the bowl, glimmering reds and oranges, and Shoju saw steam begin to rise from it. From the hole in the floor, the tentacle that had split it earlier emerged, crushing a small, white rock into the bowl and stirring. After a few minutes, the bowl's contents appeared to soften.
 
-"I know a little about human cooking. The priests I used to eat with ate their food this way." The Kami's energy arms laid a small pair of chopsticks in front of Shoju, resting them on the bowl.
+_I know a little about human cooking. The priests I used to eat with ate their food this way._ The Kami's energy arms laid a small pair of chopsticks in front of Shoju, resting them on the bowl.
 
 "Thank you!" Shoju said as he put his hands together before picking up the chopsticks. He struggled with trying to balance the chopsticks in his hands, looking over at Shaku self-consciously. The kami did not appear to notice, already busy consuming the fruits of the land and sea spread out before it. Shoju stabbed a piece of sweet potato with a single chopstick, popping the steaming tuber into his mouth and burning his tongue. He spit it out back into the bowl with a splash before trying to eat a shiitake instead. "This is delicious!"
 
-Good. The elements come together well in a bowl of soup, though I prefer mine as nature makes it. The kami's energy swirled about, plucking more fruits, nuts, and other morsels out of the pine chest. It split everything evenly between them, until Shoju told the kami he needed no more. As the feasting pair both continued eating, Shaku sat back and spoke again.
+_Good. The elements come together well in a bowl of soup, though I prefer mine as nature makes it._ The kami's energy swirled about, plucking more fruits, nuts, and other morsels out of the pine chest. It split everything evenly between them, until Shoju told the kami he needed no more. As the feasting pair both continued eating, Shaku sat back and spoke again.
 
-Shojumaru, you said the head priest is your father?
+_Shojumaru, you said the head priest is your father?_
 
 Shoju nodded.
 
-Do you know why he would have lost his faith?
+_Do you know why he would have lost his faith?_
 
 "Faith?" Shoju asked, spearing another piece of sweet potato, this time blowing on it before placing it into his mouth. "What is faith?"
 
-Faith means believing in something, even when you cannot see it. Your father’s offerings do not taste as good as they once did, not since last summer. They are bland now. Do you know why?
+_Faith means believing in something, even when you cannot see it. Your father’s offerings do not taste as good as they once did, not since last summer. They are bland now. Do you know why?_
 
 Shoju thought for a moment. A year ago was such a long time. He could barely remember what happened last week. “Takurō left for his trip last summer. Maybe Father is sad because of that."
 
-Your older brother, Takurō?
+_Your older brother, Takurō?_
 
 "Yes, he left and my parents said he won’t come back."
 
-Wait one moment, Shoju. I will return shortly. The kami shimmered, its light dimming, before it disappeared completely. Shoju continued eating his soup, now cool enough that he didn't have to blow on the potatoes.
+_One moment, Shoju. I will return shortly._ The kami shimmered, its light dimming, before it disappeared completely. Shoju continued eating his soup, now cool enough that he didn't have to blow on the potatoes.
 
 He was just beginning to wonder where Shaku had gone when the kami reappeared, circling the room slowly while throwing its antlered head to and fro. Shoju felt that Shaku must be thinking about something.
 
-As the giant stag settled onto its zabuton one more, it regarded Shoju with the kind of look his father gave him when he was especially serious. I went to see your brother, Shojumaru. He told me he wants to return home.
+As the giant stag settled onto its _zabuton_ one more, it regarded Shoju with the kind of look his father gave him when he was especially serious. _I went to see your brother, Shojumaru. He told me he wants to return home._
 
 "That's silly! If Takurō wants to come home he should! I want to play with him again." Shoju looked at the kami who did not reply. After a moment, Shaku spoke again.
 
-Your brother wants to return home, but he needs you and your father's help.
+_Your brother wants to return home, but he needs you and your father's help._
 
 "Of course we'll help him!" Shojumaru set his bowl down and looked at the kami. “How can we help him?"
 
-Tell your father that Takurō waits for him in Toku Gorge, at the base of the apse of hinoki trees where Takano-sama stands watch.
+_Tell your father that Takurō waits for him in Toku Gorge, at the base of the apse of hinoki trees where Takano-sama stands watch._
 
 "Takurō is down in a gorge? That’s silly! I'll go get him!"
 
-No, Shojumaru! Do not go by yourself! The kami’s voice in Shoju’s mind was suddenly so forceful that he was surprised and nodded quickly. The forest can be a dangerous place for a lone fawn.
+_No, Shojumaru! Do not go by yourself!_ The kami’s voice boomed in Shoju’s mind, so forceful that he was surprised and nodded quickly. _The forest can be a dangerous place for a lone fawn._
 
 Shoju frowned worriedly for a moment. If he told his father that he had snuck in the Forbidden Hall and spoke with Shakunanjo, he would surely be punished. His father was strict and often yelled for no apparent reason. Shoju did not particularly like to talk with him. But Takurō was out in the gorge and needed help. Shoju briefly considered asking his mother to talk to his father instead, but he somehow knew this was something he had to do himself.
 
-"Okay," Shoju said reluctantly. "I'll tell him and we will find Takurō together." He had just made a promise to the kami, and it felt more important than any other promise he had made.
+"Okay," Shoju said reluctantly. "I'll tell him and we will find Takurō together." He had just made a promise to the _kami_, and it felt more important than any other promise he had made.
 
-Good. Takurō will be pleased to know that.
+_Good. Takurō will be pleased to know that._
 
 The two set about finishing up with their meals, Shoju asking whatever questions came to mind. Shaku seemed to avoid answering them, though, which annoyed Shoju a bit.
 
 “Shaku-sama, where do you go when you’re not here?" Shoju, still a child and having finished his meal first, had begun to feel restless.
 
-I go to the Spirit Realm. The priests call it the Otherworld, but I prefer ‘Spirit Realm’, since it is not really a different world.
+_I go to the Spirit Realm. The priests call it the Otherworld, but I prefer ‘Spirit Realm’, since it is not really a different world._
 
 “What is it like there?"
 
-It is difficult to describe. It would be easier to show you.
+_It is difficult to describe. It would be easier to show you._
 
 "Can you take me there?” asked Shoju, excited at the prospect of exploring somewhere as interesting as a ‘Spirit Realm’.
 
-Not today, my young friend. The kami, finishing its meal, rose from its cushion, and began to slowly expand. After a few moments, it shimmered again with brilliant, earthy tones. Come here again, when you are older and have hair between your legs. Then I will teach you more about kami and the Spirit Realm.
+_Not today, my young friend._ The _kami_, finishing its meal, rose from its cushion, and began to slowly expand. After a few moments, it shimmered again with brilliant, earthy tones. _Come here again, when you are older and have hair between your legs. Then I will teach you more about kami and the Spirit Realm._
 
 Shoju frowned. His elders were always telling him to wait until he was older to do things. He was disappointed that Shakunanjo was the same. And hair between his legs? He hoped that never happened! The few times he’d bathed with his father, he’d seen it, and Shoju wanted none of that. But if that was the price to know more about Shakunanjō and the Spirit Realm, then he might need to change his opinion. Shoju decided to ask his uncle how to grow hair down there. Perhaps it was related to eating carrots, though he hoped not.
 
-Well, Shojumaru, it is time for me to return home. I am glad you came here and we could enjoy our feast together. Please thank your father and the other priests for the bounty. Shaku ambled over to the wooden grate through which Shoju had entered the enshrinement hall, its energy tentacles again interacting with the wood, twisting and warping it until an opening large enough for Shoju to pass through appeared.
+_Well, Shojumaru, it is time for me to return home. I am glad you came here and we could enjoy our feast together. Please let your father and the other priests know I enjoyed the bounty._ Shaku ambled over to the wooden grate through which Shoju had entered the enshrinement hall, its energy tentacles again interacting with the wood, twisting and warping it until an opening large enough for Shoju to pass through appeared.
 
-"Thank you, Shaku-sama," Shoju said, bowing in respect. "I will come again. Next time, I'll bring Takurō too.'' The kami smiled and its body shimmered, this time the colors reminding Shoju of the late autumn trees, just before all the leaves fell. The kami didn't seem exactly happy, but it seemed content to Shoju.
+"Thank you, Shaku-sama," Shoju said, bowing in respect. "I will come again. Next time, I'll bring Takurō too.'' The kami smiled and its body shimmered, this time the colors reminding Shoju of the late autumn trees, just before all the leaves fell. The _kami_ didn't seem exactly happy, but it seemed content to Shoju.
 
-Perhaps you shall, Shojumaru. I will await you both. Shoju guessed it was time for him to leave, so he bowed once more and climbed into the hole. Perhaps, Shoju, for your next life you'll be born as a rabbit, since you enjoy sneaking under the ground.
+_Perhaps you shall, Shojumaru. I will await you both._ Shoju guessed it was time for him to leave, so he bowed once more and climbed into the hole. _Perhaps, Shoju, for your next life you'll be born as a rabbit, since you enjoy sneaking under the ground._
 
 His head still peeking up out of the hole, Shoju laughed. "Please not a rabbit! I hate carrots!''
 
-As Shoju started to duck back into the hole, the kami spoke one last time through the gate as it resealed. Remember this, Shoju. Though your father may never regain his faith, do not lose yours. Remember the Way of Kami – respect for blessing, blessing for respect.
+As Shoju started to duck back into the hole, the kami spoke one last time through the gate as it resealed. _Remember this, Shoju. Though your father may never regain his faith, do not lose yours. Remember the Way of Kami – respect for blessing, blessing for respect._
 
 "I will remember," Shoju promised and smiled. The kami turned and dove back into the dark chest from which it had emerged.
 
