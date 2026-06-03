@@ -440,7 +440,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
   </p>
   <h1 class="hero-name">JUSTIN<br>GAYLOR</h1>
   <p class="hero-subtitle">SCRIBE &nbsp;·&nbsp; ARTIFICER &nbsp;·&nbsp; WANDERER</p>
-  <p class="hero-quest">Live each day like a quest.</p>
+  <p class="hero-quest">Each day is a quest.</p>
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
     <a href="#writing" class="btn">WRITING</a>
