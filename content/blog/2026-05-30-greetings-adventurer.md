@@ -6,7 +6,7 @@ summary: The site is live. Here's what I'm planning to do with it and why.
 ---
 
 Welcome to the site. It's plain HTML, a build script, and a folder full of Markdown files.
-No database. No CMS. No JavaScript framework. Just text files and a terminal.
+No database. No CMS. No JavaScript framework. Just text files, a terminal, and a small analytics script that doesn't track visitors.
 
 That feels right for what I want to do here. I've been writing fiction on and off for years
 and keeping my writings mostly private or shared selectively under a pseudonym. This is me finally deciding that _done is better than perfect_ and shipping the thing.

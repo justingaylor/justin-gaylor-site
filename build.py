@@ -38,6 +38,8 @@ GITHUB_URL    = "https://github.com/justingaylor"
 BLUESKY_URL   = "https://bsky.app/profile/justingaylor.bsky.social"
 LINKEDIN_URL  = "https://www.linkedin.com/in/justin-gaylor-a9326b2"
 
+GOATCOUNTER_CODE = "justingaylor"  # goatcounter.com subdomain
+
 # Stat block on the About section — change these to whatever you like
 CHAR_STATS = [
     ("CLASS",      "MAGIC USER"),
@@ -258,6 +260,11 @@ def footer_html() -> str:
 
 
 def page_shell(title: str, body: str, extra_js: str = "", root_prefix: str = "") -> str:
+    gc_script = (
+        f'<script data-goatcounter="https://{GOATCOUNTER_CODE}.goatcounter.com/count"'
+        f' async src="//gc.zgo.at/count.js"></script>'
+        if GOATCOUNTER_CODE else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -275,6 +282,7 @@ def page_shell(title: str, body: str, extra_js: str = "", root_prefix: str = "")
 {NAV_JS}
 {extra_js}
 </script>
+{gc_script}
 </body>
 </html>"""
 
