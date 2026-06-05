@@ -33,10 +33,11 @@ SITE_TITLE    = "Justin Gaylor"
 SITE_TAGLINE  = "Scribe · Artificer · Wanderer"
 BASE_URL      = "https://gaylor.quest"
 
-AUTHOR_EMAIL  = "justin.gaylor@proton.me"
-GITHUB_URL    = "https://github.com/justingaylor"
-BLUESKY_URL   = "https://bsky.app/profile/justingaylor.bsky.social"
-LINKEDIN_URL  = "https://www.linkedin.com/in/justin-gaylor-a9326b2"
+AUTHOR_EMAIL   = "justin.gaylor@proton.me"
+GITHUB_URL     = "https://github.com/justingaylor"
+BLUESKY_URL    = "https://bsky.app/profile/justingaylor.bsky.social"
+LINKEDIN_URL   = "https://www.linkedin.com/in/justin-gaylor-a9326b2"
+MASTODON_URL   = "https://mastodon.social/@justingaylor"
 
 GOATCOUNTER_CODE = "justingaylor"  # goatcounter.com subdomain
 
@@ -86,6 +87,7 @@ SHARED_HEAD = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Cinzel:wght@400;700&family=Pirata+One&family=Special+Elite&family=Skranji&family=Lora:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="me" href="https://mastodon.social/@justingaylor">
   <script>(function(){document.documentElement.classList.add(localStorage.getItem('site-theme')||'theme-typewriter');})();</script>
 """
 
@@ -520,6 +522,9 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
     </a>
     <a href="{BLUESKY_URL}" target="_blank" class="contact-link">
       <span class="contact-icon">◈</span><span class="contact-label">BLUESKY</span>
+    </a>
+    <a href="{MASTODON_URL}" target="_blank" rel="me" class="contact-link">
+      <span class="contact-icon">⊕</span><span class="contact-label">MASTODON</span>
     </a>
     <a href="{LINKEDIN_URL}" target="_blank" class="contact-link">
       <span class="contact-icon">◉</span><span class="contact-label">LINKEDIN</span>
