@@ -54,7 +54,9 @@ html.theme-cyan body::before {
 }
 /* Sharper vignette for grimdark feel */
 html.theme-cyan body::after {
-  background: radial-gradient(ellipse at 50% 38%, transparent 40%, rgba(0,0,0,0.88) 100%);
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(45,212,212,0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 38%, transparent 40%, rgba(0,0,0,0.88) 100%);
 }
 /* Tighter border styling — angular, clinical */
 html.theme-cyan .writing-card,

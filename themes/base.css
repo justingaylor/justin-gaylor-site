@@ -35,7 +35,9 @@ body::before {
 body::after {
   content: '';
   position: fixed; inset: 0;
-  background: radial-gradient(ellipse at 50% 38%, transparent 50%, rgba(0,0,0,0.80) 100%);
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(0,180,70,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 38%, transparent 50%, rgba(0,0,0,0.80) 100%);
   pointer-events: none; z-index: 9001;
 }
 @keyframes flicker {
