@@ -5,6 +5,7 @@ type: Short Story
 tags: [fantasy, short-story, echizo, sketches-of-echizo]
 summary: A young princess and her caretaker sail around a bay of pine-covered islands collecting lacquered eggs. But the princess's older brother – and propriety – obstruct her chances of winning the game.
 thoughts: This story explores the relationship between siblings in a royal setting, the role of caretakers, and the challenges of navigating a world with strict social hierarchies. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I've created that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period). <br><br> The original intent of this story was to help develop the character of the imperial princess Fuyumi, as she is a key character in a novel set in the world of Echizo, but I hope it stands alone as an enjoyable tale.
+attribution: Artwork by Jason Berdan. The original painting hangs in my home.
 ---
 
 [![A young princess and her caretaker sail around a bay of pine-covered islands searching for lacquered eggs](../img/20211128_ThePrincessGame1_Final.jpg)](../img/20211128_ThePrincessGame1_Final.jpg)

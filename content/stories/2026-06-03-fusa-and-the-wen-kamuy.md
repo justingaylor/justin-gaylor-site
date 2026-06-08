@@ -5,7 +5,10 @@ type: Short Story
 tags: [fantasy, short-story, echizo, sketches-of-echizo]
 summary: A young girl from the frigid north runs away from her village with her baby brother to try and cure him of his curse. What she finds changes her forever.
 thoughts: This story was inspired by the Ainu folklore of the [wen-kamuy](https://en.wikipedia.org/wiki/Ainu_religion#Kamuy), a type of being that is said to cause misfortune and calamities. I wanted to explore what it means to love a family member who is different from you, and the lengths one might go to in order to protect them. I also wanted to explore the idea of a _karasu tengu_ in the Ainu context. Fusa's brother's name – Goat Urine – is a reference to the traditional Ainu practice of giving newborns disgusting or vulgar names to ward off evil spirits and disease. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I've created that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period). The Oknu people of Echizo are analogues to the Ainu of northen Japan and southeastern Russia. <br><br> The artwork for this story was painted by my good friend, Jason Berdan, and the original painting hangs in my home.
+attribution: Artwork by Jason Berdan. The original painting hangs in my home.
 ---
+
+<p class="text-right"><em>Oknu Territories, Northern Sea Region, 16 BA</em></p>
 
 When the ancient owl, Old Shaktouk, had first emerged from the heavy snowfall to perch upon the bear cub’s head, Fusa had been sure it meant something; now, after following the leashed cub aimlessly for an hour through knee-deep snow, she was no longer so certain.
 

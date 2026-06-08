@@ -4,10 +4,13 @@ date: 2026-06-03
 type: Short Story
 tags: [fantasy, short-story, echizo, sketches-of-echizo]
 summary: A young man with a troublesome companion must confront his fears and venture up a mountain to learn whether he is gifted or simply insane.
-thoughts: This story's concept came to me while living in Santa Barbara. I became interested in how a person who sees things others do not knows whether they are gifted or simply crazy. Yoshi and Ururu – and their humorous dynamic – followed naturally as the story took shape. One interesting aspect of the story is that Yoshi's anxiety wasn't something I planned; I only became aware of it as I wrote. For me, discovering characters as I write about them is one of the most enjoyable parts of writing. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).<br><br> The artwork for this story was painted by my good friend, Jason Berdan, and the original painting hangs in my home.
+thoughts: This story's concept came to me while living in Santa Barbara. I became interested in how a person who sees things others do not knows whether they are gifted or simply crazy. Yoshi and Ururu – and their humorous dynamic – followed naturally as the story took shape. One interesting aspect of the story is that Yoshi's anxiety wasn't something I planned; I only became aware of it as I wrote. For me, discovering characters as I write about them is one of the most enjoyable parts of writing. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).
+attribution: Artwork by Jason Berdan. The original painting hangs in my home.
 ---
 
 [![A snake wraps around a man's leg and a village signpost, preventing him from leaving](../img/20211128_AnUnwelcomeJourney1_Final.jpg)](../img/20211128_AnUnwelcomeJourney1_Final.jpg)
+
+<p class="text-right"><em>Ikawa Province, Eastern Sea Region, 8 BA</em></p>
 
 "We're going, and that’s final!" Yoshi slammed his wooden _sake_ cup on the table. Behind him, he could sense Ururu slithering to her usual place in the corner under the straw where she sulked whenever he breached the topic.
 

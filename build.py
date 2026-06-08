@@ -436,6 +436,27 @@ def render_project_items(projects: list) -> str:
     return "\n".join(proj_html(p) for p in projects)
 
 
+def _inject_attribution(body_html: str, attributions) -> str:
+    """Inject attributions as captions after each corresponding image block."""
+    if not attributions:
+        return body_html
+    if isinstance(attributions, str):
+        attributions = [attributions]
+
+    img_block = re.compile(r'<p[^>]*>\s*<a[^>]*>\s*<img[^>]*/?>.*?</a>\s*</p>', re.DOTALL)
+    matches = list(img_block.finditer(body_html))
+    if not matches:
+        matches = list(re.finditer(r'<img[^>]*/>', body_html))
+
+    # Process in reverse so injecting a caption doesn't shift later match positions
+    pairs = list(zip(matches, attributions))
+    for match, attr in reversed(pairs):
+        caption = f'\n<p class="img-caption">{attr}</p>'
+        body_html = body_html[:match.end()] + caption + body_html[match.end():]
+
+    return body_html
+
+
 def _more_link(href: str, label: str, total: int) -> str:
     if total <= PAGE_SIZE:
         return ''
@@ -544,10 +565,13 @@ def build_post_page(post: dict, section: str) -> str:
 
     thoughts = post['meta'].get('thoughts', '')
     thoughts_html = f"""
-  <aside class="post-thoughts">
-    <p class="post-thoughts-label">✦ SCRIBE'S NOTE</p>
+  <details class="post-thoughts">
+    <summary class="post-thoughts-label">✦ SCRIBE'S NOTE</summary>
     {render_md(thoughts)}
-  </aside>""" if thoughts else ''
+  </details>""" if thoughts else ''
+
+    attribution = post['meta'].get('attribution', '')
+    post_body_html = _inject_attribution(render_md(post['body']), attribution)
 
     body = f"""
 <div class="post-wrap">
@@ -558,7 +582,7 @@ def build_post_page(post: dict, section: str) -> str:
   </div>
   <hr class="post-divider">{thoughts_html}
   <div class="post-body">
-    {render_md(post['body'])}
+    {post_body_html}
   </div>
   <div class="post-footer">
     <a href="{back_href}" class="back-link">{back_label}</a>

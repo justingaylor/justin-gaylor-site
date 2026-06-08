@@ -5,7 +5,10 @@ type: Short Story
 tags: [fantasy, short-story, echizo, sketches-of-echizo]
 summary: The son of a shrine's head priest sneaks into the Forbidden Hall to catch a glimpse of the _kami_ enshrined there, but what he finds is and isn't what he expected.
 thoughts: This story explores the relationship between people and kami, the importance of respect and gratitude in that relationship, and the idea of kami as beings shaped and empowered by the feelings of the people who worship them. The original intent of the story was to help shape my understanding of kami as they exist in the world of Echizo, but I also wanted to write a story that could stand on its own. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I've created that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).
+attribution: Artwork by Jason Berdan. The original painting hangs in my home.
 ---
+
+<p class="text-right"><em>Ikawa Province, Eastern Sea Region, 52 BA</em></p>
 
 The early morning chill birthed a thick fog over Ryōsanji Shrine, the hills below rising through moist clouds like the undulating back of a serpent. The silence was broken only by the chirping of birds, the ever-present sound of a nearby waterfall, and the chanting of Shojumaru's father and two other priests as they stood before the Forbidden Hall.
 

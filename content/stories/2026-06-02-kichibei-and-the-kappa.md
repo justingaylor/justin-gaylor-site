@@ -4,10 +4,15 @@ date: 2026-06-02
 type: Short Story
 tags: [fantasy, short-story, echizo, sketches-of-echizo]
 summary: A precocious boy must confront a river _yōkai_ to save his three friends from certain death.
-thoughts: This is the first story I wrote after beginning to take writing seriously back in 2010. At that time, I was living and working in Yokohama. The story was inspired by a combination of the folklore of the [kappa](https://en.wikipedia.org/wiki/Kappa_(folklore)), which I've been fascinated by for a long time, and the Tsurumi River, which I lived near and often visited to de-stress after work. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).<br><br> The artwork for this story was painted by my good friend, Jason Berdan, and the original paintings hang in my home.
+thoughts: This is the first story I wrote after beginning to take writing seriously back in 2010. At that time, I was living and working in Yokohama. The story was inspired by a combination of the folklore of the [kappa](https://en.wikipedia.org/wiki/Kappa_(folklore)), which I've been fascinated by for a long time, and the Tsurumi River, which I lived near and often visited to de-stress after work. <br><br> Like other stories in the Sketches of Echizo series, this one is set in Echizo, a fantasy world I'm building that is inspired by Japan during the [Sengoku Period](https://en.wikipedia.org/wiki/Sengoku_period).
+attribution:
+  - Artwork by Jason Berdan. The original paintings hang in my home.
+  - Artwork by Jason Berdan.
 ---
 
 [![Kappa swimming underwater with three surprised children](../img/20210725_KichibeiKappaUnderwaterFinal.jpg)](../img/20210725_KichibeiKappaUnderwaterFinal.jpg)
+
+<p class="text-right"><em>Taizen Province, Southern Land Region, 12 BA</em></p>
 
 The summer sun's rays spilled through the forest's thick canopy, splintering into a thousand beads of light over the Tsurumi River. It flowed gently, as it always had, winding its way through the forest on the long journey from the mountains to the northwest until it finally emptied into the sea.
 
