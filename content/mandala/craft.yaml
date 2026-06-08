@@ -1,0 +1,36 @@
+name: "Craft"
+slug: "craft"
+group: "Development"
+quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit."
+quote_author: "Aristotle"
+description: "Craft is about continuously polishing the technical skills involved in writing - prose, literary devices, conflict, story structure, and so on."
+core_belief: "Skills are learnable; craft is hone-able. Consistent work is the entire requirement. Show up until you cannot be ignored."
+activities:
+  - name: "Study other authors' writing"
+    description: "Read widely and study the techniques of authors I admire. Analyze how they use language, structure their stories, and create compelling characters."
+  - name: "Write 1K+ words a day"
+    description: "Commit to a daily writing practice to build consistency and improve skills over time."
+  - name: "Research deeply"
+    description: "Conduct thorough research to inform and enrich my writing, ensuring accuracy and depth."
+  - name: "Practice literary techniques"
+    description: |
+      Deliberate practice of literary techniques expands my writing toolkit and enhances the quality of my work. These techniques include, but are not limited to:
+
+      **Narrative Structure:** In medias res, foreshadowing, Chekhov's Gun, flashback / flash-forward, frame story, unreliable narrator, non-linear / fragmented structure, circular narrative, parallel timelines.
+
+      **Character:** Character arc (positive / negative / flat), foil, direct vs. indirect characterization (show don't tell), free indirect discourse, stream of consciousness, interior monologue.
+
+      **Figurative Language:** Metaphor, simile, extended metaphor (conceit), personification, imagery (sensory — visual / auditory / olfactory / tactile / gustatory), symbolism, motif / leitmotif, allusion (literary / mythological / historical), irony (verbal / situational / dramatic), hyperbole, understatement, oxymoron, paradox, juxtaposition.
+
+      **Sound & Rhythm:** Alliteration, assonance, consonance, onomatopoeia; sentence cadence via polysyndeton, asyndeton, and deliberate fragments.
+
+      **Tension & Pacing:** Micro-tension, cliffhanger, delayed revelation, ticking clock, red herring, MacGuffin, scene-sequel structure.
+
+      **Theme & Meaning:** Subtext, allegory, archetype, pathetic fallacy (environment mirroring emotion), duality / binary opposition.
+  - name: "Finish writing before revising"
+    description: "Editing and writing are different processes that engage separate parts of the brain. Combining them has the unfortunate effect of [inhibiting creativity](https://www.gailgodwin.com/watcher-at-the-gate.php). To avoid this, I will focus on writing first and revising later. This allows me to get my creative ideas out without filtering them through an inner editor."
+  - name: "Write and revise using different modalities"
+    description: "To support the separation of writing and revision, I will do these two processes using different editors/methods to provide a visual cue for which process I am engaging with. Writing is done in a distraction-free, Write-box writing environment. Editing is done using a different tool altogether."
+  - name: "Teach what you learn"
+    description: "Teaching is the best way to learn. It forces you to organize your understanding and push on areas where you do not have clear understanding. It also provides an opportunity to connect with other passionate writers."
+  - name: "TBD"

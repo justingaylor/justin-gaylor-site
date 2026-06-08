@@ -1,0 +1,12 @@
+goal: "Finish my first novel"
+
+# Qualities listed in outer-grid order: TL, TC, TR, ML, MR, BL, BC, BR
+qualities:
+  - humanity
+  - resilience
+  - focus
+  - craft
+  - creativity
+  - reach
+  - community
+  - luck

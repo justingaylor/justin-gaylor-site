@@ -240,6 +240,7 @@ def nav_html(root_prefix="") -> str:
     <li><a href="{root_prefix}index.html#projects">PROJECTS</a></li>
     <li><a href="{root_prefix}index.html#about">ABOUT</a></li>
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
+    <li><a href="{root_prefix}mandala.html">THE QUEST</a></li>
   </ul>
   <div class="theme-picker" aria-label="Theme">
     <button class="theme-dot" data-theme="theme-typewriter"      title="Typewriter"></button>
@@ -335,6 +336,23 @@ def load_tags() -> dict:
     if not path.exists():
         return {}
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+def load_mandala() -> dict:
+    path = CONTENT_DIR / "mandala.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    qualities_raw = data.get("qualities", [])
+    if qualities_raw and isinstance(qualities_raw[0], str):
+        q_dir = CONTENT_DIR / "mandala"
+        qualities = []
+        for slug in qualities_raw:
+            q_path = q_dir / f"{slug}.yaml"
+            if q_path.exists():
+                qualities.append(yaml.safe_load(q_path.read_text(encoding="utf-8")) or {})
+        data["qualities"] = qualities
+    return data
 
 
 def load_about() -> str:
@@ -685,6 +703,173 @@ def build_projects_page(projects: list, tag_descs: dict) -> str:
     return page_shell(title=f"Projects — {SITE_TITLE}", body=body, extra_js=_tag_filter_js(tag_descs))
 
 
+def _mandala_cell(css_class: str, text: str, full_text: str = "") -> str:
+    is_tbd = str(text).strip().upper() == "TBD"
+    cls = f"mandala-cell {css_class}" + (" is-tbd" if is_tbd else "")
+    display = "·" if is_tbd else text
+    title_attr = f' title="{full_text}"' if full_text and full_text != text else ""
+    return f'<div class="{cls}"{title_attr}>{display}</div>'
+
+
+def _build_center_sector(goal: str, qualities: list) -> str:
+    cells = []
+    for i in range(9):
+        if i == 4:
+            cells.append(_mandala_cell("is-goal", goal, goal))
+        else:
+            qi = i if i < 4 else i - 1
+            if qi < len(qualities):
+                q = qualities[qi]
+                slug = q.get("slug", q["name"].lower())
+                cells.append(
+                    f'<a href="mandala/{slug}.html" class="mandala-cell is-quality" data-qi="{qi}">{q["name"]}</a>'
+                )
+            else:
+                cells.append(f'<div class="mandala-cell is-quality" data-qi="{qi}">·</div>')
+    return '<div class="mandala-sector sector-center">' + "".join(cells) + "</div>"
+
+
+def _build_quality_sector(quality: dict, qi: int) -> str:
+    acts = quality.get("activities", [])
+    slug = quality.get("slug", quality["name"].lower())
+    cells = []
+    for i in range(9):
+        if i == 4:
+            cells.append(
+                f'<a href="mandala/{slug}.html" class="mandala-cell is-quality-center">{quality["name"]}</a>'
+            )
+        else:
+            ai = i if i < 4 else i - 1
+            act = acts[ai] if ai < len(acts) else "TBD"
+            text = act.get("name", "TBD") if isinstance(act, dict) else act
+            cells.append(_mandala_cell("is-activity", text, text))
+    return f'<div class="mandala-sector" data-qi="{qi}">' + "".join(cells) + "</div>"
+
+
+def build_mandala_page(data: dict) -> str:
+    goal      = data.get("goal", "")
+    qualities = data.get("qualities", [])
+
+    sectors = []
+    for outer_i in range(9):
+        if outer_i == 4:
+            sectors.append(_build_center_sector(goal, qualities))
+        else:
+            qi = outer_i if outer_i < 4 else outer_i - 1
+            q  = qualities[qi] if qi < len(qualities) else {"name": "?", "activities": []}
+            sectors.append(_build_quality_sector(q, qi))
+
+    grid = '<div class="mandala-grid">' + "".join(sectors) + "</div>"
+
+    mandala_js = """
+document.querySelectorAll('.mandala-cell.is-quality[data-qi]').forEach(cell => {
+  cell.addEventListener('mouseenter', () => {
+    const qi = cell.dataset.qi;
+    document.querySelectorAll(`.mandala-sector[data-qi="${qi}"]`).forEach(s => s.classList.add('highlighted'));
+  });
+  cell.addEventListener('mouseleave', () => {
+    document.querySelectorAll('.mandala-sector[data-qi]').forEach(s => s.classList.remove('highlighted'));
+  });
+});
+"""
+
+    body = f"""
+<div class="section-wrap" style="padding-top:7rem;padding-bottom:1.5rem;">
+  <div class="section-header reveal">
+    <h1 class="section-label"><span class="glyph">✦</span>THE QUEST</h1>
+    <p class="section-sub">A MAP FOR BECOMING</p>
+  </div>
+  <p class="mandala-goal-text reveal">{goal}</p>
+</div>
+<div style="max-width:clamp(480px,72vw,960px);margin:0 auto;padding:0 3vw 5rem;">
+  <div class="mandala-scroll reveal">
+    {grid}
+    <div class="mandala-legend">
+      <span class="mandala-legend-item">
+        <span class="legend-swatch" style="background:var(--bg-panel2);border-color:var(--green-dim);"></span>GOAL
+      </span>
+      <span class="mandala-legend-item">
+        <span class="legend-swatch" style="background:rgba(0,60,30,0.28);"></span>QUALITY
+      </span>
+      <span class="mandala-legend-item">
+        <span class="legend-swatch" style="background:var(--bg-panel);"></span>ACTIVITY
+      </span>
+      <span class="mandala-legend-item">
+        <span class="legend-swatch" style="background:var(--bg-panel);border-style:dashed;"></span>TO BE DETERMINED
+      </span>
+    </div>
+  </div>
+</div>"""
+
+    return page_shell(
+        title=f"The Quest — {SITE_TITLE}",
+        body=body,
+        extra_js=mandala_js,
+        root_prefix="",
+    )
+
+
+def build_mandala_quality_page(quality: dict) -> str:
+    name        = quality["name"]
+    group       = quality.get("group", "")
+    quote       = quality.get("quote", "")
+    quote_auth  = quality.get("quote_author", "")
+    description = quality.get("description", "")
+    core_belief = quality.get("core_belief", "")
+    activities  = quality.get("activities", [])
+
+    quote_html = f"""
+  <blockquote class="mandala-quality-quote">
+    <p>"{quote}"</p>
+    <cite>— {quote_auth}</cite>
+  </blockquote>""" if quote else ""
+
+    def _activity_li(a) -> str:
+        if isinstance(a, dict):
+            name = a.get("name", "TBD")
+            desc = a.get("description", "")
+        else:
+            name = str(a)
+            desc = ""
+        is_tbd = name.strip().upper() == "TBD"
+        cls = "mandala-activity-tbd" if is_tbd else "mandala-activity"
+        display = "To be determined" if is_tbd else name
+        desc_html = f'\n      <div class="mandala-activity-desc">{render_md(desc)}</div>' if desc else ""
+        return f'    <li class="{cls}">{display}{desc_html}</li>'
+
+    activity_items = "\n".join(_activity_li(a) for a in activities)
+
+    body = f"""
+<div class="post-wrap">
+  <div class="post-header">
+    <p class="post-kicker">THE QUEST &nbsp;·&nbsp; {group.upper()}</p>
+    <h1 class="post-title">{name}</h1>
+  </div>
+  <hr class="post-divider">
+  <div class="post-body">
+    {quote_html}
+    <p>{description}</p>
+    <aside class="mandala-core-belief">
+      <p class="mandala-core-belief-label">✦ CORE BELIEF</p>
+      <p>"{core_belief}"</p>
+    </aside>
+    <h2>Activities</h2>
+    <ol class="mandala-activity-list">
+{activity_items}
+    </ol>
+  </div>
+  <div class="post-footer">
+    <a href="../mandala.html" class="back-link">BACK TO THE QUEST</a>
+  </div>
+</div>"""
+
+    return page_shell(
+        title=f"{name} — The Quest — {SITE_TITLE}",
+        body=body,
+        root_prefix="../",
+    )
+
+
 # ── Main build ─────────────────────────────────────────────────────────────────
 
 def build():
@@ -730,6 +915,19 @@ def build():
         build_index(stories, blog, projects, about), encoding="utf-8"
     )
     print(f"  ✓  dist/index.html")
+
+    # Build mandala page and quality subpages
+    mandala = load_mandala()
+    if mandala:
+        (DIST_DIR / "mandala.html").write_text(build_mandala_page(mandala), encoding="utf-8")
+        print(f"  ✓  dist/mandala.html")
+        mandala_dir = DIST_DIR / "mandala"
+        mandala_dir.mkdir(exist_ok=True)
+        for quality in mandala.get("qualities", []):
+            slug = quality.get("slug", quality["name"].lower())
+            out  = mandala_dir / f"{slug}.html"
+            out.write_text(build_mandala_quality_page(quality), encoding="utf-8")
+            print(f"  ✓  dist/mandala/{slug}.html")
 
     # Build story pages
     for post in stories:

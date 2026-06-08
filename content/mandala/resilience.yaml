@@ -1,0 +1,33 @@
+name: "Resilience"
+slug: "resilience"
+group: "Foundational"
+quote: "Fall seven times, stand up eight."
+quote_author: "Japanese proverb"
+description: "Resilience is the mental fortitude to withstand, adapt to, and recover quickly from difficult situations, setbacks, or rejections. Let's be honest - writing is hard. Rejection is inevitable. Criticism is not always delivered kindly. Resilience is what allows us to keep going in the face of these challenges and continue doing the hard work."
+core_belief: "Setbacks are directional data, not verdicts on my worth. The only true failure is giving up."
+activities:
+  - name: "Set a rejection goal"
+    description: |
+      To build resilience, I will set a goal for the number of rejections I want to receive when sending out my work. This may sound counterintuitive, but by creating the expectation of rejection and making that a goal, when it invariably happens to me, I can handle it gracefully and continue pursuing my goals.
+
+      _If you're not getting rejected, you're not putting yourself out there enough._
+  - name: "Cultivate a growth mindset"
+    description: "Although a trusted friend can be a great support, ultimately, I am responsible for my own mindset. By maintaining a positive outlook and reminding myself of the worth of my own writing, I can keep moving forward even under extreme adversity."
+  - name: "Maintain a wins log"
+    description: "A wins log is a place to capture all of my successes, whether they are publication, kind words from a reader, or other achievements. This is another folder along-side my rejections log and darlings graveyard file. It should be easily accessible and regularly updated. When I'm feeling down or facing rejection, I can look back at this log to remind myself of my capabilities and past successes."
+  - name: "Keep a darlings graveyard file"
+    description: "A darlings graveyard is a place to capture all of the ideas, projects, and works that I have abandoned. This is important because it allows me to acknowledge and honor the work I've done, even if it didn't lead to a finished project. It also provides a place to reflect on why I abandoned certain things and what I can learn from those experiences."
+  - name: "Exercise regularly"
+    description: |
+      Regular exercise has been shown to have a positive impact on mental health and resilience. By taking care of my physical health, I can better equip myself to handle the mental challenges that come with writing and the creative process.
+
+      _Without the body, the mind cannot do its work._
+  - name: "Study authors who struggled before breaking through"
+    description: "Many successful authors have struggled before breaking through. By studying their stories and learning about their journies, I can both gain inspiration and learn what it takes to succeed."
+  - name: "Find a trusted person to call when struggling"
+    description: "Writing is lonely work, and when I'm struggling, it can be easy to get stuck in my own head. A trusted friend who reflects positive encouragement back to me can be a lifeline."
+  - name: "Treat criticism as a gift"
+    description: |
+      Criticism, even when delivered unkindly, is an opportunity to learn and grow. By treating criticism as a gift, I can extract the useful information from it and use it to improve my writing and my craft.
+
+      _People criticize because they care. Honor that caring._

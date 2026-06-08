@@ -1,0 +1,27 @@
+name: "Reach"
+slug: "reach"
+group: "Connection"
+quote: "Pay attention. Be astonished. Tell about it."
+quote_author: "Mary Oliver"
+description: "Reach is the quality of making my work findable, visible, and accessible to the readers who need it. It is not self-promotion for its own sake; it is the bridge between the work I made and the people it could serve."
+core_belief: "My work deserves readers. I'm not bothering people by offering them something valuable."
+activities:
+  - name: "Create social media presence"
+    description: "While social media can be a time sink and energy drain, it is also where many of my readers are. To reach them, I need to show up where they are. I will create a social media presence that is authentic to me and provides value to my audience. My aim is not to grow a large following, but to connect with the readers who resonate with my work and build a community around it."
+  - name: "Build a personal website"
+    description: "This site. A personal site is a home base for my online presence where I can share my work and be discovered by my readers."
+  - name: "Publish a newsletter"
+    description: "A newsletter is a great way to build a direct relationship with readers and keep them updated on my work. I will create a newsletter that provides value to my readers and encourages them to engage with my work."
+  - name: "Submit short fiction to magazines"
+    description: "While I prefer long-form ficiton, submitting to zines and such is a great way to get my work in front of readers. It also provides me the change to gather rejections and build resilience, which is a very valuable quality as a writer."
+  - name: "Self-publish own work"
+    description: |
+      I shouldn't wait for traditional publishing to discover me. I should put my work out there myself and make it available to readers who want to read it. This also gives me the opportunity to learn about the publishing process and build a direct relationship with my readers.
+
+      In the words of Steve Martin:
+
+      _Be so good they can't ignore you._
+  - name: "Show up where readers already gather"
+    description: "This means discovering where my readers are likely to be and showing up there in an authentic way. If it is an online community, I should participate in the community and provide value, not just promote my work. If it's an in-person event, I should attend and engage with people there. The goal is to connect with readers where they already are, not to try to pull them to me."
+  - name: "TBD"
+  - name: "TBD"

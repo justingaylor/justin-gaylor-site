@@ -328,6 +328,99 @@ footer .footer-quest { margin-top: 0.5rem; font-style: italic; color: var(--text
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 
+/* ── Mandala chart ── */
+.mandala-goal-text {
+  font-family: 'IM Fell English', serif; font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.5rem); color: var(--green-hi);
+  text-align: center; max-width: 660px; margin: 0 auto 2.5rem;
+  line-height: 1.45; text-shadow: 0 0 18px rgba(0,220,80,0.22);
+}
+.mandala-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mandala-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 4px; background: var(--border-mid);
+  border: 2px solid var(--border-mid);
+  width: 100%; min-width: 480px; aspect-ratio: 1;
+}
+.mandala-sector {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border); transition: background 0.2s;
+}
+.mandala-sector.highlighted { background: var(--border-mid); }
+.mandala-cell {
+  background: var(--bg-panel);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 2px 3px;
+  font-family: inherit;
+  font-size: clamp(0.48rem, 1.1vw, 0.82rem);
+  line-height: 1.2; color: var(--text-dim);
+  overflow: hidden; word-break: break-word; hyphens: auto;
+  transition: background 0.2s, color 0.2s;
+}
+.mandala-cell.is-goal {
+  background: var(--bg-panel2); color: var(--green-hi);
+  font-size: clamp(0.55rem, 1.35vw, 0.96rem); font-style: italic;
+  text-shadow: 0 0 14px rgba(0,220,80,0.5);
+}
+.mandala-cell.is-quality {
+  background: rgba(0,60,30,0.18); color: var(--green); cursor: default;
+}
+.mandala-cell.is-quality-center {
+  background: rgba(0,60,30,0.28); color: var(--green);
+  text-shadow: 0 0 8px rgba(0,220,80,0.2);
+  font-size: clamp(0.52rem, 1.2vw, 0.88rem);
+}
+.mandala-sector.highlighted .mandala-cell { background: rgba(0,40,20,0.35); }
+.mandala-sector.highlighted .mandala-cell.is-quality-center {
+  background: rgba(0,80,40,0.45); color: var(--green-hi);
+  text-shadow: 0 0 10px rgba(0,220,80,0.4);
+}
+.mandala-cell.is-tbd { color: var(--border-mid); font-style: italic; }
+a.mandala-cell { text-decoration: none; }
+a.mandala-cell.is-quality:hover, a.mandala-cell.is-quality-center:hover {
+  opacity: 0.8; text-decoration: underline; text-underline-offset: 2px;
+}
+.mandala-legend {
+  display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;
+  margin-top: 1.25rem; font-family: 'VT323', monospace;
+  font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.1em;
+}
+.mandala-legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.legend-swatch { width: 10px; height: 10px; border: 1px solid var(--border-mid); flex-shrink: 0; }
+
+/* ── Mandala quality subpage ── */
+.mandala-quality-quote {
+  border-left: 3px solid var(--green-dim); padding: 0.75rem 1.4rem;
+  margin: 0 0 2rem; background: var(--bg-panel2);
+}
+.mandala-quality-quote p {
+  font-style: italic; font-size: 1.15rem; color: var(--green-hi);
+  line-height: 1.6; margin-bottom: 0.5rem;
+  text-shadow: 0 0 14px rgba(0,220,80,0.18);
+}
+.mandala-quality-quote cite {
+  font-family: 'VT323', monospace; font-size: 0.82rem;
+  color: var(--text-dim); letter-spacing: 0.15em; font-style: normal;
+}
+.mandala-core-belief {
+  border-left: 4px solid var(--green); background: var(--bg-panel2);
+  padding: 1.1rem 1.5rem; margin: 2rem 0 2.5rem;
+}
+.mandala-core-belief-label {
+  font-family: 'VT323', monospace; font-size: 0.88rem; color: var(--green);
+  letter-spacing: 0.22em; margin-bottom: 0.6rem;
+}
+.mandala-core-belief p:last-child {
+  font-style: italic; font-size: 1.1rem; color: var(--text); line-height: 1.75; margin: 0;
+}
+.mandala-activity-list { padding-left: 1.4rem; margin: 1rem 0; }
+.mandala-activity { font-size: 1rem; color: var(--text); line-height: 1.7; margin-bottom: 0.25rem; }
+.mandala-activity-tbd { font-size: 1rem; color: var(--border-mid); font-style: italic; margin-bottom: 0.25rem; }
+.mandala-activity-desc { font-style: italic; font-size: 0.9rem; color: var(--text-dim); margin: 0.15rem 0 0.75rem; line-height: 1.65; }
+.mandala-activity-desc p { margin-bottom: 0.5rem; }
+.mandala-activity-desc p:last-child { margin-bottom: 0; }
+.mandala-activity-desc strong { font-style: normal; color: var(--text); font-weight: 600; }
+
 /* ── Mobile ── */
 @media (max-width: 620px) {
   nav { padding: 0 1.25rem; }

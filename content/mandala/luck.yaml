@@ -1,0 +1,21 @@
+name: "Luck"
+slug: "luck"
+group: "Emergence"
+quote: "Chance favors the prepared mind."
+quote_author: "Louis Pasteur"
+description: "Luck is the quality of recognizing and seizing opportunities, while understanding that randomness plays a role in any creative career. It is not passively waiting for good fortune; it is actively creating conditions where luck can land and being ready when it does."
+core_belief: "Fortune favors the prepared and the good. I create conditions where luck can land."
+activities:
+  - name: "Pick up garbage"
+    description: "This is a literal activity. I will pick up garbage in my neighborhood at least once a month. This is a way to contribute to the world around me."
+  - name: "Clean my home"
+    description: |
+      A clean and organized home creates a positive environment that can foster creativity and productivity. It also feels good. By cleaning my environment, I'm also cleaning my self.
+
+      _See the world as your self._
+  - name: "TBD"
+  - name: "TBD"
+  - name: "TBD"
+  - name: "TBD"
+  - name: "TBD"
+  - name: "TBD"
