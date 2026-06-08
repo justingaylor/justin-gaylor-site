@@ -412,7 +412,7 @@ def render_project_items(projects: list) -> str:
         return f"""
         <div class="project-item reveal" data-tags="{_tags_str(tags)}">
           <div>
-            <p class="project-name">{p['name']}</p>
+            <p class="project-name"><a href="{url}" target="_blank">{p['name']}</a></p>
             <p class="project-desc">{p.get('description', '')}</p>
           </div>
           <div class="project-meta">
