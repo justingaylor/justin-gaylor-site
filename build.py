@@ -270,11 +270,16 @@ def page_shell(title: str, body: str, extra_js: str = "", root_prefix: str = "")
         f' async src="//gc.zgo.at/count.js"></script>'
         if GOATCOUNTER_CODE else ""
     )
+    favicon_html = (
+        f'  <link rel="icon" type="image/png" href="{root_prefix}favicon.png">\n'
+        f'  <link rel="apple-touch-icon" href="{root_prefix}favicon.png">\n'
+        if (CONTENT_DIR / "favicon.png").exists() else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 {SHARED_HEAD}
-  <title>{title}</title>
+{favicon_html}  <title>{title}</title>
   <style>{load_css()}</style>
 </head>
 <body>
@@ -639,6 +644,15 @@ def build_rss(stories: list, blog: list) -> str:
     <guid>{BASE_URL}/{p['section']}/{p['slug']}.html</guid>
   </item>""" for p in all_posts)
 
+    favicon_xml = (
+        f"  <image>\n"
+        f"    <url>{BASE_URL}/favicon.png</url>\n"
+        f"    <title>{xml_escape(SITE_TITLE)}</title>\n"
+        f"    <link>{BASE_URL}</link>\n"
+        f"  </image>\n"
+        if (CONTENT_DIR / "favicon.png").exists() else ""
+    )
+
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
@@ -646,7 +660,7 @@ def build_rss(stories: list, blog: list) -> str:
     <link>{BASE_URL}</link>
     <description>{xml_escape(SITE_TAGLINE)}</description>
     <language>en-us</language>
-{items}
+{favicon_xml}{items}
   </channel>
 </rss>"""
 
@@ -895,6 +909,14 @@ def build():
     # Custom domain for GitHub Pages
     (DIST_DIR / "CNAME").write_text("gaylor.quest\n", encoding="utf-8")
     print(f"  ✓  dist/CNAME")
+
+    # Copy favicon
+    favicon_src = CONTENT_DIR / "favicon.png"
+    if favicon_src.exists():
+        shutil.copy(favicon_src, DIST_DIR / "favicon.png")
+        print(f"  ✓  dist/favicon.png")
+    else:
+        print(f"  ⚠  no favicon.png found in content/ — add one to show an icon in RSS readers")
 
     # Copy static assets
     img_src = CONTENT_DIR / "img"
