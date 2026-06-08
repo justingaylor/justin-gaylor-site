@@ -64,14 +64,14 @@ _THEME_FILES = [
     "base.css",
     "amber.css",
     "cyan.css",
-    "medieval.css",
-    "pirate.css",
     "typewriter.css",
     "typewriter-dark.css",
-    "elvish.css",
-    "infernal.css",
-    "abyssal.css",
-    "runic.css",
+    #"medieval.css",
+    #"pirate.css",
+    #"elvish.css",
+    #"infernal.css",
+    #"abyssal.css",
+    #"runic.css",
     "picker.css",
 ]
 
@@ -105,7 +105,8 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.06 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 document.getElementById('yr').textContent = new Date().getFullYear();
-const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark', 'theme-elvish', 'theme-infernal', 'theme-abyssal', 'theme-runic'];
+//const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark', 'theme-elvish', 'theme-infernal', 'theme-abyssal', 'theme-runic'];
+const THEMES = ['theme-typewriter', 'theme-typewriter-dark', 'theme-green', 'theme-amber', 'theme-cyan',];
 function applyTheme(t) {
   document.documentElement.classList.remove(...THEMES);
   document.documentElement.classList.add(t);
@@ -235,17 +236,11 @@ def nav_html(root_prefix="") -> str:
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
   </ul>
   <div class="theme-picker" aria-label="Theme">
-    <button class="theme-dot" data-theme="theme-green"    title="Green phosphor"></button>
-    <button class="theme-dot" data-theme="theme-amber"    title="Amber phosphor"></button>
-    <button class="theme-dot" data-theme="theme-cyan"     title="Cyan grimdark"></button>
-    <button class="theme-dot" data-theme="theme-medieval" title="Medieval parchment"></button>
-    <button class="theme-dot" data-theme="theme-pirate"      title="Pirate parchment"></button>
     <button class="theme-dot" data-theme="theme-typewriter"      title="Typewriter"></button>
     <button class="theme-dot" data-theme="theme-typewriter-dark" title="Typewriter (dark)"></button>
-    <button class="theme-dot" data-theme="theme-elvish"          title="Elvish moonlight"></button>
-    <button class="theme-dot" data-theme="theme-infernal"        title="Infernal"></button>
-    <button class="theme-dot" data-theme="theme-abyssal"         title="Abyssal"></button>
-    <button class="theme-dot" data-theme="theme-runic"           title="Runic"></button>
+    <button class="theme-dot" data-theme="theme-green"           title="Green phosphor"></button>
+    <button class="theme-dot" data-theme="theme-amber"           title="Amber phosphor"></button>
+    <button class="theme-dot" data-theme="theme-cyan"            title="Cyan grimdark"></button>
   </div>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>

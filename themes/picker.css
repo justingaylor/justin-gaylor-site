@@ -10,11 +10,13 @@
 .theme-dot[data-theme="theme-green"]    { background: #00e060; }
 .theme-dot[data-theme="theme-amber"]    { background: #ffb000; }
 .theme-dot[data-theme="theme-cyan"]     { background: #2dd4d4; }
-.theme-dot[data-theme="theme-medieval"]    { background: #3a7525; }
-.theme-dot[data-theme="theme-pirate"]      { background: #4a9880; }
 .theme-dot[data-theme="theme-typewriter"]       { background: #d4c090; }
 .theme-dot[data-theme="theme-typewriter-dark"]  { background: #b8aa88; }
+/*
+.theme-dot[data-theme="theme-medieval"]    { background: #3a7525; }
+.theme-dot[data-theme="theme-pirate"]      { background: #4a9880; }
 .theme-dot[data-theme="theme-elvish"]           { background: #8ab0d4; }
 .theme-dot[data-theme="theme-infernal"]         { background: #cc2a0e; }
 .theme-dot[data-theme="theme-abyssal"]          { background: #3a7878; }
 .theme-dot[data-theme="theme-runic"]            { background: #7888a8; }
+*/
