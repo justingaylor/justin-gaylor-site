@@ -301,6 +301,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: clamp(98
 }
 .tag-filter-btn:hover { border-color: var(--border-mid); color: var(--green); }
 .tag-filter-btn.active { border-color: var(--green); color: var(--green); background: var(--green-glow); }
+.tag-desc { font-style: italic; font-size: 0.9rem; color: var(--text-dim); margin: 0.5rem 0 1.25rem; }
 .tag-empty { font-style: italic; font-size: 0.9rem; color: var(--text-dim); margin-top: 1.5rem; }
 .writing-card .tags, .blog-entry .tags { justify-content: flex-start; margin-top: 0.6rem; }
 

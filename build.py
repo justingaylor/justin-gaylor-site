@@ -21,7 +21,7 @@ Output:
   dist/stories/<slug>.html
 """
 
-import os, sys, re, shutil, time
+import os, sys, re, shutil, time, json
 from pathlib import Path
 from datetime import date, datetime
 import yaml
@@ -146,6 +146,7 @@ TAG_FILTER_JS = """
   const btns  = document.querySelectorAll('.tag-filter-btn');
   const items = document.querySelectorAll('[data-tags]');
   const empty = document.getElementById('tag-empty');
+  const desc  = document.getElementById('tag-desc');
   if (!btns.length) return;
   btns.forEach(btn => btn.addEventListener('click', () => {
     const tag = btn.dataset.tag;
@@ -159,6 +160,11 @@ TAG_FILTER_JS = """
       }
     });
     if (empty) empty.hidden = Array.from(items).some(i => !i.hidden);
+    if (desc) {
+      const text = (typeof TAG_DESCS !== 'undefined' && TAG_DESCS[tag]) || '';
+      desc.textContent = text;
+      desc.hidden = !text || tag === '*';
+    }
   }));
 })();
 """
@@ -322,6 +328,13 @@ def load_projects() -> list[dict]:
     unpinned = [p for p in data if not p.get("pinned")]
     unpinned.sort(key=lambda x: x.get("date", date.today()), reverse=True)
     return pinned + unpinned
+
+
+def load_tags() -> dict:
+    path = CONTENT_DIR / "tags.yaml"
+    if not path.exists():
+        return {}
+    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
 
 
 def load_about() -> str:
@@ -596,7 +609,11 @@ def build_rss(stories: list, blog: list) -> str:
 </rss>"""
 
 
-def build_writing_page(stories: list) -> str:
+def _tag_filter_js(tag_descs: dict) -> str:
+    return f"const TAG_DESCS = {json.dumps(tag_descs)};\n{TAG_FILTER_JS}"
+
+
+def build_writing_page(stories: list, tag_descs: dict) -> str:
     tags = _collect_tags(stories)
     body = f"""
 <div class="section-wrap" style="padding-top:7rem;">
@@ -605,13 +622,14 @@ def build_writing_page(stories: list) -> str:
     <p class="section-sub">SHORT FICTION · ESSAYS · WRITINGS</p>
   </div>
   {render_tag_filter(tags)}
+  <p id="tag-desc" class="tag-desc" hidden></p>
   <div class="writing-grid">{render_story_cards(stories, show_tags=True)}</div>
   <p id="tag-empty" class="tag-empty" hidden>No tales match that tag.</p>
 </div>"""
-    return page_shell(title=f"Writing — {SITE_TITLE}", body=body, extra_js=TAG_FILTER_JS)
+    return page_shell(title=f"Writing — {SITE_TITLE}", body=body, extra_js=_tag_filter_js(tag_descs))
 
 
-def build_blog_listing_page(blog: list) -> str:
+def build_blog_listing_page(blog: list, tag_descs: dict) -> str:
     tags = _collect_tags(blog)
     body = f"""
 <div class="section-wrap" style="padding-top:7rem;">
@@ -620,13 +638,14 @@ def build_blog_listing_page(blog: list) -> str:
     <p class="section-sub">DISPATCHES FROM THE FIELD</p>
   </div>
   {render_tag_filter(tags)}
+  <p id="tag-desc" class="tag-desc" hidden></p>
   <div class="blog-list">{render_blog_entries(blog, show_tags=True)}</div>
   <p id="tag-empty" class="tag-empty" hidden>No entries match that tag.</p>
 </div>"""
-    return page_shell(title=f"Blog — {SITE_TITLE}", body=body, extra_js=TAG_FILTER_JS)
+    return page_shell(title=f"Blog — {SITE_TITLE}", body=body, extra_js=_tag_filter_js(tag_descs))
 
 
-def build_projects_page(projects: list) -> str:
+def build_projects_page(projects: list, tag_descs: dict) -> str:
     tags = _collect_tags(projects, key='direct')
     body = f"""
 <div class="section-wrap" style="padding-top:7rem;">
@@ -635,10 +654,11 @@ def build_projects_page(projects: list) -> str:
     <p class="section-sub">SOFTWARE · OPEN SOURCE · CREATIONS</p>
   </div>
   {render_tag_filter(tags)}
+  <p id="tag-desc" class="tag-desc" hidden></p>
   <div class="project-list">{render_project_items(projects)}</div>
   <p id="tag-empty" class="tag-empty" hidden>No projects match that tag.</p>
 </div>"""
-    return page_shell(title=f"Projects — {SITE_TITLE}", body=body, extra_js=TAG_FILTER_JS)
+    return page_shell(title=f"Projects — {SITE_TITLE}", body=body, extra_js=_tag_filter_js(tag_descs))
 
 
 # ── Main build ─────────────────────────────────────────────────────────────────
@@ -652,14 +672,16 @@ def build():
     (DIST_DIR / "stories").mkdir(exist_ok=True)
 
     # Load content
-    stories  = load_posts("stories")
-    blog     = load_posts("blog")
-    projects = load_projects()
-    about    = load_about()
+    stories   = load_posts("stories")
+    blog      = load_posts("blog")
+    projects  = load_projects()
+    about     = load_about()
+    tag_descs = load_tags()
 
     print(f"  ► {len(stories)} stories")
     print(f"  ► {len(blog)} blog posts")
     print(f"  ► {len(projects)} projects")
+    print(f"  ► {len(tag_descs)} tag descriptions")
 
     # Custom domain for GitHub Pages
     (DIST_DIR / "CNAME").write_text("gaylor.quest\n", encoding="utf-8")
@@ -700,11 +722,11 @@ def build():
         print(f"  ✓  dist/blog/{post['slug']}.html")
 
     # Build listing pages
-    (DIST_DIR / "writing.html").write_text(build_writing_page(stories), encoding="utf-8")
+    (DIST_DIR / "writing.html").write_text(build_writing_page(stories, tag_descs), encoding="utf-8")
     print(f"  ✓  dist/writing.html")
-    (DIST_DIR / "blog.html").write_text(build_blog_listing_page(blog), encoding="utf-8")
+    (DIST_DIR / "blog.html").write_text(build_blog_listing_page(blog, tag_descs), encoding="utf-8")
     print(f"  ✓  dist/blog.html")
-    (DIST_DIR / "projects.html").write_text(build_projects_page(projects), encoding="utf-8")
+    (DIST_DIR / "projects.html").write_text(build_projects_page(projects, tag_descs), encoding="utf-8")
     print(f"  ✓  dist/projects.html")
 
     # Build RSS feed
