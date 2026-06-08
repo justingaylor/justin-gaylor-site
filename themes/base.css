@@ -305,6 +305,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: clamp(98
 /* ── Footer ── */
 footer { border-top: 1px solid var(--border); padding: 2rem 5vw; text-align: center; font-family: 'VT323', monospace; font-size: 0.9rem; color: var(--text-dim); letter-spacing: 0.15em; }
 footer .rune-line { margin-bottom: 0.5rem; color: var(--border-mid); }
+footer .footer-quest { margin-top: 0.5rem; font-style: italic; color: var(--text-dim); opacity: 0.7; }
 
 /* ── Utilities ── */
 .text-right { text-align: right; }
