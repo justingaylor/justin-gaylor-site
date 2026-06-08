@@ -30,7 +30,7 @@ import markdown as md_lib
 # ── Configuration ──────────────────────────────────────────────────────────────
 
 SITE_TITLE    = "Justin Gaylor"
-SITE_TAGLINE  = "Scribe · Artificer · Wanderer"
+SITE_TAGLINE  = "Writer · Programmer · Dreamer"
 BASE_URL      = "https://gaylor.quest"
 
 AUTHOR_EMAIL   = "justin.gaylor@proton.me"
@@ -64,14 +64,14 @@ _THEME_FILES = [
     "base.css",
     "amber.css",
     "cyan.css",
-    "medieval.css",
-    "pirate.css",
     "typewriter.css",
     "typewriter-dark.css",
-    "elvish.css",
-    "infernal.css",
-    "abyssal.css",
-    "runic.css",
+    #"medieval.css",
+    #"pirate.css",
+    #"elvish.css",
+    #"infernal.css",
+    #"abyssal.css",
+    #"runic.css",
     "picker.css",
 ]
 
@@ -105,7 +105,8 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.06 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 document.getElementById('yr').textContent = new Date().getFullYear();
-const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark', 'theme-elvish', 'theme-infernal', 'theme-abyssal', 'theme-runic'];
+//const THEMES = ['theme-green', 'theme-amber', 'theme-cyan', 'theme-medieval', 'theme-pirate', 'theme-typewriter', 'theme-typewriter-dark', 'theme-elvish', 'theme-infernal', 'theme-abyssal', 'theme-runic'];
+const THEMES = ['theme-typewriter', 'theme-typewriter-dark', 'theme-green', 'theme-amber', 'theme-cyan',];
 function applyTheme(t) {
   document.documentElement.classList.remove(...THEMES);
   document.documentElement.classList.add(t);
@@ -228,24 +229,18 @@ def nav_html(root_prefix="") -> str:
 <nav>
   <a class="nav-logo" href="{root_prefix}index.html"><span>✦</span>JUSTIN GAYLOR</a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="{root_prefix}index.html#about">GREETINGS</a></li>
     <li><a href="{root_prefix}index.html#writing">WRITING</a></li>
     <li><a href="{root_prefix}index.html#blog">BLOG</a></li>
     <li><a href="{root_prefix}index.html#projects">PROJECTS</a></li>
+    <li><a href="{root_prefix}index.html#about">ABOUT</a></li>
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
   </ul>
   <div class="theme-picker" aria-label="Theme">
-    <button class="theme-dot" data-theme="theme-green"    title="Green phosphor"></button>
-    <button class="theme-dot" data-theme="theme-amber"    title="Amber phosphor"></button>
-    <button class="theme-dot" data-theme="theme-cyan"     title="Cyan grimdark"></button>
-    <button class="theme-dot" data-theme="theme-medieval" title="Medieval parchment"></button>
-    <button class="theme-dot" data-theme="theme-pirate"      title="Pirate parchment"></button>
     <button class="theme-dot" data-theme="theme-typewriter"      title="Typewriter"></button>
     <button class="theme-dot" data-theme="theme-typewriter-dark" title="Typewriter (dark)"></button>
-    <button class="theme-dot" data-theme="theme-elvish"          title="Elvish moonlight"></button>
-    <button class="theme-dot" data-theme="theme-infernal"        title="Infernal"></button>
-    <button class="theme-dot" data-theme="theme-abyssal"         title="Abyssal"></button>
-    <button class="theme-dot" data-theme="theme-runic"           title="Runic"></button>
+    <button class="theme-dot" data-theme="theme-green"           title="Green phosphor"></button>
+    <button class="theme-dot" data-theme="theme-amber"           title="Amber phosphor"></button>
+    <button class="theme-dot" data-theme="theme-cyan"            title="Cyan grimdark"></button>
   </div>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -258,6 +253,7 @@ def footer_html() -> str:
 <footer>
   <p class="rune-line">✦ ─────────────────────── ✦</p>
   <p>JUSTIN GAYLOR &nbsp;·&nbsp; <span id="yr"></span> &nbsp;·&nbsp; NO DARK MAGIC. NO TRACKING SPELLS.</p>
+  <p class="footer-quest">Live each day like a quest.</p>
 </footer>"""
 
 
@@ -436,49 +432,22 @@ def _more_link(href: str, label: str, total: int) -> str:
 # ── Page builders ──────────────────────────────────────────────────────────────
 
 def build_index(stories: list, blog: list, projects: list, about_html: str):
-    char_stats_html = "\n".join(
-        f'<div class="stat-row"><span class="stat-name">{k}</span>'
-        f'<span class="stat-val">{v}</span></div>'
-        for k, v in CHAR_STATS
-    )
-
     body = f"""
 <section id="hero">
-  <p class="hero-sys">
-    REALM OS v2.4 · SCRIBE TERMINAL ACTIVE<br>
-    LOADING ADVENTURER PROFILE... <span style="color:var(--green)">DONE</span>
-  </p>
   <h1 class="hero-name">JUSTIN<br>GAYLOR</h1>
-  <p class="hero-subtitle">SCRIBE &nbsp;·&nbsp; ARTIFICER &nbsp;·&nbsp; WANDERER</p>
-  <p class="hero-quest">Each day is a quest.</p>
+  <p class="hero-subtitle">WRITER &nbsp;·&nbsp; PROGRAMMER &nbsp;·&nbsp; DREAMER</p>
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
-    <a href="#writing" class="btn">WRITING</a>
-    <a href="#projects" class="btn">PROJECTS</a>
+    <a href="#writing" class="btn">READ MY WRITING</a>
     <a href="#contact" class="btn">CONTACT</a>
   </div>
-  <p class="hero-after">✦ ─────────────────────────────── ✦</p>
 </section>
-
-<hr class="rule">
-
-<div class="section-wrap" id="about">
-  <div class="section-header reveal">
-    <h2 class="section-label"><span class="glyph">✦</span>GREETINGS</h2>
-    <p class="section-sub">WHO WALKS THESE PAGES</p>
-  </div>
-  <div class="about-layout">
-    <div class="about-body reveal">{about_html}</div>
-    <div class="char-sheet reveal">{char_stats_html}</div>
-  </div>
-</div>
 
 <hr class="rule">
 
 <div class="section-wrap" id="writing">
   <div class="section-header reveal">
     <h2 class="section-label"><a href="writing.html"><span class="glyph">✦</span>TALES & LORE</a></h2>
-    <p class="section-sub">SHORT FICTION · ESSAYS · WRITINGS</p>
   </div>
   <div class="writing-grid">{render_story_cards(stories[:PAGE_SIZE])}</div>
   {_more_link("writing.html", "ALL TALES", len(stories))}
@@ -489,7 +458,6 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 <div class="section-wrap" id="blog">
   <div class="section-header reveal">
     <h2 class="section-label"><a href="blog.html"><span class="glyph">✦</span>CHRONICLES</a></h2>
-    <p class="section-sub">DISPATCHES FROM THE FIELD</p>
   </div>
   <div class="blog-list">{render_blog_entries(blog[:PAGE_SIZE])}</div>
   {_more_link("blog.html", "ALL ENTRIES", len(blog))}
@@ -500,10 +468,18 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
 <div class="section-wrap" id="projects">
   <div class="section-header reveal">
     <h2 class="section-label"><a href="projects.html"><span class="glyph">✦</span>THE WORKSHOP</a></h2>
-    <p class="section-sub">SOFTWARE · OPEN SOURCE · CREATIONS</p>
   </div>
   <div class="project-list">{render_project_items(projects[:PAGE_SIZE])}</div>
   {_more_link("projects.html", "ALL PROJECTS", len(projects))}
+</div>
+
+<hr class="rule">
+
+<div class="section-wrap" id="about">
+  <div class="section-header reveal">
+    <h2 class="section-label"><span class="glyph">✦</span>ABOUT</h2>
+  </div>
+  <div class="about-body reveal">{about_html}</div>
 </div>
 
 <hr class="rule">
