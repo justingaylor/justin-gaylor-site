@@ -30,7 +30,7 @@ import markdown as md_lib
 # ── Configuration ──────────────────────────────────────────────────────────────
 
 SITE_TITLE    = "Justin Gaylor"
-SITE_TAGLINE  = "Scribe · Artificer · Wanderer"
+SITE_TAGLINE  = "Writer · Programmer · Dreamer"
 BASE_URL      = "https://gaylor.quest"
 
 AUTHOR_EMAIL   = "justin.gaylor@proton.me"
@@ -435,7 +435,7 @@ def build_index(stories: list, blog: list, projects: list, about_html: str):
     body = f"""
 <section id="hero">
   <h1 class="hero-name">JUSTIN<br>GAYLOR</h1>
-  <p class="hero-subtitle">WRITER &nbsp;·&nbsp; BUILDER &nbsp;·&nbsp; WANDERER</p>
+  <p class="hero-subtitle">WRITER &nbsp;·&nbsp; PROGRAMMER &nbsp;·&nbsp; DREAMER</p>
   <p class="hero-tagline"><span id="typed"></span><span class="cursor-blink"></span></p>
   <div class="hero-ctas">
     <a href="#writing" class="btn">READ MY WRITING</a>
