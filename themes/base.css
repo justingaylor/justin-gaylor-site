@@ -275,6 +275,9 @@ hr.rule { border: none; border-top: 1px solid var(--border); max-width: clamp(98
 .post-body pre { background: var(--bg-panel); border: 1px solid var(--border); padding: 1.25rem; margin: 1.5rem 0; overflow-x: auto; }
 .post-body pre code { background: none; border: none; padding: 0; font-size: 0.92rem; }
 .post-body blockquote { border-left: 3px solid var(--green-dim); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-dim); font-style: italic; }
+.post-body ul, .post-body ol { padding-left: 1.6rem; margin: 0 0 1.4rem; }
+.post-body li { margin-bottom: 0.5rem; }
+.post-body li:last-child { margin-bottom: 0; }
 .post-thoughts {
   border-left: 3px solid var(--green-dim); background: var(--bg-panel2);
   padding: 1.1rem 1.4rem; margin: 2rem 0 2.5rem;

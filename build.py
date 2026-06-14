@@ -966,7 +966,7 @@ def build_writing_log_page(entries: list[dict], mandala_data: dict) -> str:
         tags_html = f'<div class="log-tags">{activity_tags}{project_tag}</div>' if (activity_tags or project_tag) else ""
         data_tags = f' data-tags="{",".join(quality_slugs)}"' if quality_slugs else ""
 
-        return f'<div class="log-entry reveal"{data_tags}><p class="log-desc">{desc}</p>{tags_html}</div>'
+        return f'<div class="log-entry reveal"{data_tags}><p class="log-desc">{render_inline_md(desc)}</p>{tags_html}</div>'
 
     def _day_key(e) -> tuple:
         d = e.get("date")

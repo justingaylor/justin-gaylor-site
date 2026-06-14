@@ -100,3 +100,10 @@ entries:
     activities:
       - self-publish
     project: awakening
+
+  # ── Sunday Morning Reflections ──────────────────────────────────────────────────
+  - date: 2026-06-14
+    description: "Wrote [Weekly Quest Reflection #1](blog/weekly-quest-reflection.html)."
+    activities:
+      - weekly-reflection
+      - growth-mindset
