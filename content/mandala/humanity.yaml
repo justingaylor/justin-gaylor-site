@@ -7,23 +7,31 @@ description: "Humanity relates to activities for cultivating my character such t
 core_belief: "My character as a person is inseparable from my work's character. My readers are discerning and can feel whether I am a person worthy of success."
 activities:
   - name: "Do what you say you will"
+    slug: "keep-promises"
     description: "There is no more important integrity than keeping one's word. If I say I'm going to do something, I will do it. If I cannot do it, I will be honest about that and make amends if necessary."
   - name: "Give honest, generous feedback to aspiring authors"
+    slug: "give-feedback"
     description: "Providing constructive feedback to help others grow demonstrates my commitment to the writing community. I will offer my insights honestly and generously, aiming to uplift and guide fellow authors."
   - name: "Be thankful for others' help"
+    slug: "be-thankful"
     description: "When someone offers me help, whether it's feedback, support, or resources, I will express my gratitude sincerely. Acknowledging the kindness of others fosters positive relationships and encourages a supportive community."
   - name: "Apologize and rectify mistakes quickly"
+    slug: "apologize"
     description: "When I make a mistake, I will take responsibility, apologize sincerely, and do what it takes to make amends. Long-term, this builds trust and shows I am a person who values relationships over self-interest."
   - name: "Listen deeply"
+    slug: "listen"
     description: "When others speak, I give them my full, unhurried attention. This is a form of respect, but it also opens me up to the worlds of other people and this will be reflected in my writing."
   - name: "Be considerate of others' needs"
+    slug: "be-considerate"
     description: "When seeking to connect with others, it is important to first consider their needs and how I can provide value to them. By approaching relationships with a mindset of service and generosity, I can build meaningful connections that are mutually beneficial."
   - name: "Face challenges head-on - no running"
+    slug: "face-challenges"
     description: |
       Nothing is more demoralizing than to run away from a problem. The thing about problems is that eventually they catch up to you, no matter how fast you run. When I face a problem, I can solve it and move on. When I run from it, I have to keep looking over my shoulder and my heart never unclenches. Face the problem. Solve it. Move on.
 
       _Ask not for a lighter burden; ask for broader shoulders._
   - name: "Practice loving-kindness"
+    slug: "loving-kindness"
     description: |
       All people fundamentally want to be happy and avoid suffering. Loving-kindness is simply the practice of extending goodwill and compassion to all beings, including myself.
 

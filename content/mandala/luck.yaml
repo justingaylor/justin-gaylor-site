@@ -7,15 +7,19 @@ description: "Luck is the quality of recognizing and seizing opportunities, whil
 core_belief: "Fortune favors the prepared and the good. I create conditions where luck can land."
 activities:
   - name: "Pick up garbage"
+    slug: "pick-up-garbage"
     description: "This is a literal activity. I will pick up garbage in my neighborhood at least once a month. This is a way to contribute to the world around me."
   - name: "Clean my home"
+    slug: "clean-home"
     description: |
       A clean and organized home creates a positive environment that can foster creativity and productivity. It also feels good. By cleaning my environment, I'm also cleaning my self.
 
       _See the world as your self._
   - name: "Volunteer in my community"
+    slug: "volunteer"
     description: "Volunteering is a great way to celebrate the connection between myself and the world around me. In particular, I should volunteer in ways that connect to writing, such as volunteering at a library or online community."
   - name: "Stray from the beaten path"
+    slug: "stray"
     description: "I will intentionally seek out new experiences and perspectives that are outside of my usual routine. This can lead to unexpected opportunities and insights that can positively influence my writing."
   - name: "TBD"
   - name: "TBD"
