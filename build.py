@@ -914,6 +914,11 @@ def build_writing_log_page(entries: list[dict], mandala_data: dict) -> str:
             return d.strftime("%b %d").upper()
         return str(d).upper()
 
+    def _fmt_log_dow(d) -> str:
+        if isinstance(d, (date, datetime)):
+            return d.strftime("%a").upper()
+        return ""
+
     def _fmt_log_year(d) -> str:
         if isinstance(d, (date, datetime)):
             return d.strftime("%Y")
@@ -974,7 +979,7 @@ def build_writing_log_page(entries: list[dict], mandala_data: dict) -> str:
         inner = "\n".join(_render_entry(e) for e in day_entries)
         return f"""<div class="log-day">
           <div class="log-date-col">
-            <span class="log-date">{_fmt_log_date(d)}</span>
+            <span class="log-date">{_fmt_log_dow(d)} {_fmt_log_date(d)}</span>
             <span class="log-year">{_fmt_log_year(d)}</span>
           </div>
           <div class="log-day-entries">{inner}</div>
