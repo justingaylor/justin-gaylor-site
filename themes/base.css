@@ -14,6 +14,7 @@
   --border-mid:  #174d27;
 }
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg-solid);
@@ -420,6 +421,41 @@ a.mandala-cell.is-quality:hover, a.mandala-cell.is-quality-center:hover {
 .mandala-activity-desc p { margin-bottom: 0.5rem; }
 .mandala-activity-desc p:last-child { margin-bottom: 0; }
 .mandala-activity-desc strong { font-style: normal; color: var(--text); font-weight: 600; }
+
+/* ── Writing Log ─────────────────────────────────────────────────────────── */
+.log-list { display: flex; flex-direction: column; gap: 0; }
+.log-month-label {
+  font-family: 'VT323', monospace; font-size: 0.82rem; letter-spacing: 0.22em;
+  color: var(--green); margin: 2.5rem 0 0.25rem; padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.log-month { display: flex; flex-direction: column; }
+.log-day {
+  display: grid; grid-template-columns: 5.5rem 1fr; gap: 1.25rem;
+  padding: 0.9rem 0; border-bottom: 1px solid var(--border);
+}
+.log-day:last-child { border-bottom: none; }
+.log-date-col { text-align: right; padding-top: 0.15rem; align-self: start; }
+.log-date { display: block; font-family: 'VT323', monospace; font-size: 0.95rem; color: var(--text-dim); letter-spacing: 0.08em; white-space: nowrap; }
+.log-year  { display: block; font-family: 'VT323', monospace; font-size: 0.72rem; color: var(--border-mid); letter-spacing: 0.08em; }
+.log-day-entries { display: flex; flex-direction: column; }
+.log-entry { padding: 0.1rem 0; }
+.log-entry + .log-entry { margin-top: 0.7rem; }
+.log-desc  { margin: 0 0 0.4rem; font-size: 0.95rem; color: var(--text); line-height: 1.6; }
+.log-tags  { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.log-activity-tag {
+  font-family: 'VT323', monospace; font-size: 0.78rem; letter-spacing: 0.08em;
+  padding: 0.05rem 0.45rem; border: 1px solid var(--green-dim); color: var(--green-dim);
+  text-decoration: none;
+}
+a.log-activity-tag:hover { border-color: var(--green); color: var(--green); }
+.log-project-tag {
+  font-family: 'VT323', monospace; font-size: 0.78rem; letter-spacing: 0.08em;
+  padding: 0.05rem 0.55rem 0.05rem 0.4rem;
+  border: 1px solid var(--border-mid); color: var(--text-dim);
+  background: var(--bg-panel); font-style: italic;
+}
+.log-project-tag::before { content: "◈ "; font-style: normal; opacity: 0.6; }
 
 /* ── Mobile ── */
 @media (max-width: 620px) {

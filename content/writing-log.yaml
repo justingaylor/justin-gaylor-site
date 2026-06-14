@@ -1,0 +1,102 @@
+entries:
+  # ── Troglodyte drafting ───────────────────────────────────────────────────────
+  - date: 2026-06-04
+    description: 'Wrote 511 words in "Troglodyte"'
+    activities:
+      - write-daily
+      - one-project
+    project: troglodyte
+
+  - date: 2026-06-06
+    description: 'Wrote 274 words in "Troglodyte"'
+    activities:
+      - write-daily
+      - one-project
+    project: troglodyte
+
+  - date: 2026-06-13
+    description: 'Wrote 416 words in "Troglodyte"'
+    activities:
+      - write-daily
+      - one-project
+    project: troglodyte
+
+  # ── Site work ─────────────────────────────────────────────────────────────────
+  - date: 2026-06-13
+    description: "Created a work log for my writing"
+    activities:
+      - keep-promises
+      - website
+    project: website
+
+  - date: 2026-06-13
+    description: "Added activity slugs to all mandala qualities and wired up quality-based filtering for the writing log."
+    activities:
+      - website
+      - keep-promises
+    project: website
+
+  - date: 2026-06-08
+    description: "Added the Mandala Chart — a 9×9 grid mapping my eight writing qualities to their supporting activities, each linking to its own subpage."
+    activities:
+      - website
+      - keep-promises
+    project: website
+
+  - date: 2026-06-08
+    description: "Added tag filtering with descriptions to the writing and blog listing pages. Added collapsible Scribe's Note callouts and per-image attribution captions to story pages."
+    activities:
+      - website
+    project: website
+
+  - date: 2026-06-07
+    description: "Simplified the site design — moved writing to the top, stripped self-promotional copy, and refocused on letting the work speak for itself."
+    activities:
+      - website
+      - reader-first
+    project: website
+
+  - date: 2026-06-04
+    description: "Added GoatCounter privacy-respecting analytics and a Mastodon contact link."
+    activities:
+      - website
+      - social-media
+    project: website
+
+  - date: 2026-06-03
+    description: "Published Fusa and the Wen-Kamuy, An Unwelcome Journey, Feast with a Kami, and The Princess's Game — four new Sketches of Echizo stories."
+    activities:
+      - self-publish
+    project: sketches-of-echizo
+
+  - date: 2026-06-02
+    description: "Launched RSS feed and full listing pages with pagination. Published Kichibei and the Kappa."
+    activities:
+      - website
+      - self-publish
+    project: sketches-of-echizo
+
+  - date: 2026-06-01
+    description: "Refactored all themes into individual CSS files and built out the theme picker with five distinct visual themes."
+    activities:
+      - website
+    project: website
+
+  - date: 2026-05-31
+    description: "Published Dazik's Wings. Added word count and estimated read time to all stories and blog posts."
+    activities:
+      - self-publish
+      - website
+    project: awakening
+
+  - date: 2026-05-30
+    description: "Launched gaylor.quest. Built a static site generator from scratch with stories, blog, projects, and multiple themes. Deployed via GitHub Actions."
+    activities:
+      - website
+    project: website
+
+  - date: 2026-05-30
+    description: "Published Charles Bottwatter's Infinity Clinic — the first story on the site."
+    activities:
+      - self-publish
+    project: awakening

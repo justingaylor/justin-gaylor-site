@@ -241,6 +241,7 @@ def nav_html(root_prefix="") -> str:
     <li><a href="{root_prefix}index.html#about">ABOUT</a></li>
     <li><a href="{root_prefix}index.html#contact">CONTACT</a></li>
     <li><a href="{root_prefix}mandala.html">THE QUEST</a></li>
+    <li><a href="{root_prefix}log.html">LOG</a></li>
   </ul>
   <div class="theme-picker" aria-label="Theme">
     <button class="theme-dot" data-theme="theme-typewriter"      title="Typewriter"></button>
@@ -341,6 +342,16 @@ def load_tags() -> dict:
     if not path.exists():
         return {}
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+def load_writing_log() -> list[dict]:
+    path = CONTENT_DIR / "writing-log.yaml"
+    if not path.exists():
+        return []
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    entries = data.get("entries", [])
+    entries.sort(key=lambda e: e.get("date", date.today()), reverse=True)
+    return entries
 
 
 def load_mandala() -> dict:
@@ -884,6 +895,169 @@ def build_mandala_quality_page(quality: dict) -> str:
     )
 
 
+def build_writing_log_page(entries: list[dict], mandala_data: dict) -> str:
+    # Build activity-slug → {name, quality_slug, quality_name} index
+    activity_index: dict[str, dict] = {}
+    for q in mandala_data.get("qualities", []):
+        q_slug = q.get("slug", "")
+        q_name = q.get("name", "")
+        for act in q.get("activities", []):
+            if not isinstance(act, dict):
+                continue
+            a_slug = act.get("slug", "")
+            a_name = act.get("name", "")
+            if a_slug and a_name.strip().upper() != "TBD":
+                activity_index[a_slug] = {"name": a_name, "quality_slug": q_slug, "quality_name": q_name}
+
+    def _fmt_log_date(d) -> str:
+        if isinstance(d, (date, datetime)):
+            return d.strftime("%b %d").upper()
+        return str(d).upper()
+
+    def _fmt_log_year(d) -> str:
+        if isinstance(d, (date, datetime)):
+            return d.strftime("%Y")
+        return ""
+
+    def _month_label(d) -> str:
+        if isinstance(d, (date, datetime)):
+            return d.strftime("%B %Y").upper()
+        return str(d).upper()
+
+    def _month_key(e) -> tuple:
+        d = e.get("date")
+        if isinstance(d, (date, datetime)):
+            return (d.year, d.month)
+        return (0, 0)
+
+    def _resolve_activities(act_slugs: list, entry_date) -> tuple[list[dict], list[str]]:
+        """Resolve activity slugs to info dicts; print errors for unknowns. Returns (resolved, quality_slugs)."""
+        resolved = []
+        quality_slugs = []
+        for slug in act_slugs:
+            info = activity_index.get(slug)
+            if info is None:
+                print(f"  ⚠  writing-log: unknown activity slug '{slug}' on entry {entry_date}")
+            else:
+                resolved.append(info)
+                if info["quality_slug"] not in quality_slugs:
+                    quality_slugs.append(info["quality_slug"])
+        return resolved, quality_slugs
+
+    def _render_entry(e: dict) -> str:
+        """Render a single entry body (no date — date is on the day group)."""
+        d = e.get("date")
+        desc = e.get("description", "")
+        act_slugs = e.get("activities") or []
+        project = e.get("project", "")
+
+        resolved_acts, quality_slugs = _resolve_activities(act_slugs, d)
+
+        activity_tags = "".join(
+            f'<a href="mandala/{a["quality_slug"]}.html" class="log-activity-tag">{a["name"]}</a>'
+            for a in resolved_acts
+        )
+        project_tag = f'<span class="log-project-tag">{project}</span>' if project else ""
+        tags_html = f'<div class="log-tags">{activity_tags}{project_tag}</div>' if (activity_tags or project_tag) else ""
+        data_tags = f' data-tags="{",".join(quality_slugs)}"' if quality_slugs else ""
+
+        return f'<div class="log-entry reveal"{data_tags}><p class="log-desc">{desc}</p>{tags_html}</div>'
+
+    def _day_key(e) -> tuple:
+        d = e.get("date")
+        if isinstance(d, (date, datetime)):
+            return (d.year, d.month, d.day)
+        return (0, 0, 0)
+
+    def _render_day(day_entries: list) -> str:
+        d = day_entries[0].get("date")
+        inner = "\n".join(_render_entry(e) for e in day_entries)
+        return f"""<div class="log-day">
+          <div class="log-date-col">
+            <span class="log-date">{_fmt_log_date(d)}</span>
+            <span class="log-year">{_fmt_log_year(d)}</span>
+          </div>
+          <div class="log-day-entries">{inner}</div>
+        </div>"""
+
+    # Collect quality slugs present across all entries (for filter buttons)
+    all_quality_slugs: list[str] = []
+    for e in entries:
+        for a_slug in (e.get("activities") or []):
+            info = activity_index.get(a_slug)
+            if info and info["quality_slug"] not in all_quality_slugs:
+                all_quality_slugs.append(info["quality_slug"])
+
+    # Build quality name lookup for filter button labels
+    quality_names = {q.get("slug", ""): q.get("name", "") for q in mandala_data.get("qualities", [])}
+
+    # Group entries by month → day
+    months: dict[tuple, dict[tuple, list]] = {}
+    for e in entries:
+        m_key = _month_key(e)
+        d_key = _day_key(e)
+        months.setdefault(m_key, {}).setdefault(d_key, []).append(e)
+
+    sections = ""
+    for m_key in sorted(months.keys(), reverse=True):
+        days = months[m_key]
+        first_date = next(iter(days.values()))[0].get("date")
+        label = _month_label(first_date)
+        day_rows = "\n".join(
+            _render_day(days[d_key])
+            for d_key in sorted(days.keys(), reverse=True)
+        )
+        sections += f"""
+      <p class="log-month-label">{label}</p>
+      <div class="log-month">{day_rows}</div>"""
+
+    if not entries:
+        sections = '<p style="color:var(--text-dim);font-style:italic;">No entries yet.</p>'
+
+    filter_html = ""
+    if all_quality_slugs:
+        btns = "\n  ".join(
+            f'<button class="tag-filter-btn" data-tag="{s}">{quality_names.get(s, s).upper()}</button>'
+            for s in all_quality_slugs
+        )
+        filter_html = f"""<div class="tag-filter">
+  <button class="tag-filter-btn active" data-tag="*">ALL</button>
+  {btns}
+</div>"""
+
+    quality_descs = {q.get("slug", ""): q.get("description", "") for q in mandala_data.get("qualities", [])}
+
+    body = f"""
+<div class="section-wrap" style="padding-top:7rem;">
+  <div class="section-header reveal">
+    <h2 class="section-label"><span class="glyph">✦</span>WRITING LOG</h2>
+    <p class="section-sub">PRACTICE, TRACKED</p>
+  </div>
+  {filter_html}
+  <p id="tag-desc" class="tag-desc" hidden></p>
+  <div class="log-list">
+    {sections}
+  </div>
+  <p id="tag-empty" class="tag-empty" hidden>No entries match that quality.</p>
+</div>"""
+
+    log_group_js = """
+document.querySelectorAll('.tag-filter-btn').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.log-day').forEach(day => {
+    day.hidden = !Array.from(day.querySelectorAll('[data-tags]')).some(e => !e.hidden);
+  });
+  document.querySelectorAll('.log-month').forEach(month => {
+    const empty = Array.from(month.querySelectorAll('.log-day')).every(d => d.hidden);
+    month.hidden = empty;
+    const label = month.previousElementSibling;
+    if (label && label.classList.contains('log-month-label')) label.hidden = empty;
+  });
+}));
+"""
+    return page_shell(title=f"Writing Log — {SITE_TITLE}", body=body,
+                      extra_js=_tag_filter_js(quality_descs) + log_group_js)
+
+
 # ── Main build ─────────────────────────────────────────────────────────────────
 
 def build():
@@ -972,6 +1146,11 @@ def build():
     print(f"  ✓  dist/blog.html")
     (DIST_DIR / "projects.html").write_text(build_projects_page(projects, tag_descs), encoding="utf-8")
     print(f"  ✓  dist/projects.html")
+
+    # Build writing log
+    writing_log = load_writing_log()
+    (DIST_DIR / "log.html").write_text(build_writing_log_page(writing_log, mandala), encoding="utf-8")
+    print(f"  ✓  dist/log.html ({len(writing_log)} entries)")
 
     # Build RSS feed
     (DIST_DIR / "rss.xml").write_text(build_rss(stories, blog), encoding="utf-8")
